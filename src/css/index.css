@@ -1,0 +1,421 @@
+/* Variabelen */
+:root {
+  --backgroundcolor: #222222;
+  --Goud: #c5b673;
+  /*--lettertype:  Verdana sans-serif;*/
+  --tekstkleur: white;
+}
+/* Volledige pagina */
+body {
+  background-color: var(--backgroundcolor);
+  font-family: "Akaya Telivigala", cursive;
+  color: var(--tekstkleur);
+}
+/* H1 titels */
+h1,
+header p {
+  font-family: "Dancing Script", cursive;
+}
+
+/*opmaak header*/
+header {
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+header figure:nth-of-type(1) {
+  width: 5%;
+  min-width: 70px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+header figure:nth-of-type(1) img {
+  width: 100%;
+}
+
+header figure:nth-of-type(2) {
+  margin: 0 auto;
+  width: 100%;
+  background-image: url(../images/banner1.jpg);
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-position-y: bottom;
+}
+header h1 {
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  color: var(--backgroundcolor);
+  font-size: 4rem;
+  font-weight: lighter;
+}
+header span {
+  font-weight: bold;
+  color: var(--Goud);
+}
+header p {
+  position: absolute;
+  top: 550px;
+  left: 100px;
+  color: var(--backgroundcolor);
+  font-size: 1.5rem;
+}
+
+/* opmaak section */
+
+main {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+section {
+  width: 40%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+section h2 {
+  text-align: center;
+  color: var(--Goud);
+  padding-bottom: 75px;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+#container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+#box1 {
+  background-image: url("../images/onsaanbod/Vanilla-Ice-Cream-Transparent-Image.png");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#box2 {
+  background-image: url("../images/onsaanbod/mokka.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#box3 {
+  background-image: url("../images/onsaanbod/straciatella.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#box4 {
+  background-image: url("../images/onsaanbod/brazil.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+section h3 {
+  font-weight: lighter;
+  border-bottom: 1px solid var(--Goud);
+  padding-bottom: 20px;
+}
+section p {
+  text-align: center;
+}
+section a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--Goud);
+  padding: 10px 20px;
+  transition: 500ms;
+}
+section a:hover {
+  background-color: white;
+  color: var(--Goud);
+}
+
+/* opmaak article */
+
+article {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+article figure {
+  flex-basis: 50%;
+  text-align: center;
+}
+article div {
+  flex-basis: 50%;
+}
+article div h2 {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  color: var(--Goud);
+  margin-top: 125px;
+  margin-bottom: 30px;
+}
+article div p {
+  width: 75%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+article a button {
+  border: none;
+  background-color: var(--Goud);
+  padding: 10px 20px;
+  color: white;
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 1rem;
+  transition: 500ms;
+}
+article a button:hover {
+  background-color: white;
+  color: var(--Goud);
+  cursor: pointer;
+}
+
+/* opmaak aside */
+
+aside {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+aside iframe {
+  flex-basis: 50%;
+}
+aside div {
+  margin: 0 auto;
+  flex-basis: 25%;
+  text-align: center;
+}
+aside div p {
+  color: var(--Goud);
+  font-size: 1rem;
+}
+aside div h3 {
+  color: var(--tekstkleur);
+  font-family: "Dancing Script", cursive;
+  border-bottom: 1px solid var(--Goud);
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+}
+aside div h3:nth-of-type(3) {
+  border: none;
+}
+
+/* opmaak banner */
+
+#banner {
+  margin-top: 200px;
+  width: 100%;
+  background-image: url(../images/banner2.png);
+  background-repeat: contain;
+  background-size: cover;
+  background-position-y: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  color: black;
+}
+
+/* opmaak sponsor */
+
+#sponsor {
+  width: 100%;
+  margin-top: 200px;
+}
+#sponsor h2 {
+  text-align: center;
+  color: var(--Goud);
+  padding-bottom: 75px;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+#sponsorcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+#sponsor1 {
+  width: 120px;
+  height: 120px;
+  background-image: url(../images/sponsor\ 2.png);
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+}
+#sponsor2 {
+  width: 120px;
+  height: 120px;
+  background-image: url(../images/Sponsor1.png);
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+}
+#sponsor3 {
+  width: 120px;
+  height: 120px;
+  background-image: url(../images/Sponsor3.png);
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+}
+#sponsor4 {
+  width: 120px;
+  height: 120px;
+  background-image: url(../images/sponsor4.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+}
+#sponsorcontainer div div {
+  margin: 0 auto;
+}
+
+/* opmaak footer */
+
+footer {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+footer form {
+  width: 75%;
+}
+footer div:nth-of-type(1) h2 {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 50px;
+}
+#email {
+  border: none;
+  margin-bottom: 50px;
+  padding: 20px;
+  width: 100%;
+  font-family: "Akaya Telivigala", cursive;
+}
+
+textarea {
+  padding: 20px;
+  width: 100%;
+  scroll-behavior: auto;
+  font-family: "Akaya Telivigala", cursive;
+  margin-bottom: 50px;
+}
+textarea::placeholder,
+input:nth-of-type(1)::placeholder {
+  font-size: 1.1rem;
+  color: var(--Goud);
+}
+
+footer div:nth-of-type(1) {
+  flex-basis: 50%;
+}
+
+#footer_buttons {
+  display: flex;
+  width: 100%;
+}
+#submit {
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  background-color: var(--Goud);
+  color: white;
+  transition: 500ms;
+  margin-right: 50px;
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 1rem;
+}
+#submit:hover {
+  background-color: var(--tekstkleur);
+  color: var(--Goud);
+  cursor: pointer;
+}
+#reset {
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  background-color: var(--tekstkleur);
+  color: var(--Goud);
+  transition: 500ms;
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 1rem;
+}
+#reset:hover {
+  background-color: var(--Goud);
+  color: var(--tekstkleur);
+  cursor: pointer;
+}
+
+footer div:nth-of-type(2) {
+  flex-basis: 45%;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 1rem;
+}
+footer div:nth-of-type(2) div {
+  width: 50%;
+  margin: 0 auto;
+}
+footer h3 {
+  border-bottom: 1px solid var(--Goud);
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+}
+footer h3:nth-of-type(4) {
+  border: none;
+}
+footer p {
+  color: var(--Goud);
+  font-family: "Akaya Telivigala", cursive;
+}
+
+/* opmaak social */
+
+body > figure {
+  display: flex;
+  width: 10%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+body > figure img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 766px) {
+  header figure:nth-of-type(2) {
+    margin: 0 auto;
+    width: 300px;
+    background-image: url(../images/banner1.jpg);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+  }
+  div #box1 {
+    background-image: url("../images/onsaanbod/Vanilla-Ice-Cream-Transparent-Image.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}

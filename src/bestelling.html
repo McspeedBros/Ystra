@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="./images/logo.png" rel="shortcut icon" type="./images/logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bestelling.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Eczar:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bestelling</title>
+  </head>
+  <body>
+<!--     
+//TODO Radio button open klap menu, van levering en ophalen
+//TODO Button in Ons aanbod naar Bestelling. 
+//TODO favicon logo toevoegen -->
+    <h1>Welkom bij je bestelling</h1>
+    <h2>
+      Plaats hier jouw bestelling bij Ystra, ambachtelijk ijs met passie bereid!
+    </h2>
+    <div class="form">
+      <form
+        action="https://sheetdb.io/api/v1/ytdi2i160aaco"
+        method="post"
+        id="sheetdb-form"
+      >
+        <label for="name">Geef hier uw naam en voornaam *</label><br />
+        <input
+          type="text"
+          name="data[Naam]"
+          id="name"
+          placeholder="Naam en voornaam"
+          required
+        /><br /><br />
+
+        <label for="email">Geef hier uw e-mailadres *</label><br />
+        <input
+          type="email"
+          name="data[E-mail]"
+          id="email"
+          placeholder="E-mailadres"
+          required
+        /><br /><br />
+
+        <label for="phone">Geef hier uw telefoonnummer *</label><br />
+        <input
+          type="tel"
+          name="data[Telefoonnummer]"
+          id="phone"
+          placeholder="Telefoonnummer"
+          required
+        /><br /><br />
+
+        <label for="levering"
+          >Wilt u uw bestelling laten leveren of haalt u het liever zelf
+          op?</label
+        ><br />
+        <input
+          type="radio"
+          name="data[Levering]"
+          value="leveren"
+          id="leveren"
+        />
+        Levering<br />
+        <input
+          type="radio"
+          name="data[Levering]"
+          value="ophalen"
+          id="ophalen"
+        />
+        Ophaling<br /><br />
+        <label for="address" id="address"
+          >Indien u de bestelling wilt laten leveren, geef hier uw adres</label
+        ><br />
+
+        <input
+          type="text"
+          name="data[Adres]"
+          id="address"
+          placeholder="Adres"
+        />
+        <br /><br /><br />
+
+        <table>
+          <tr>
+            <th>Categorie</th>
+            <th>Product</th>
+            <th>Prijs</th>
+            <th>Inhoud</th>
+            <th>Aantal</th>
+            <th>Smaak</th>
+          </tr>
+
+          <tr>
+            <td rowspan="5">Basic</td>
+            <td>Velvet Vanilla</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalVelvetVanilla1/2L"
+                name="data[VV1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalVelvetVanilla1L"
+                name="data[VV1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Mild Mokka</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalMildMokka1/2L"
+                name="data[MM1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalMildMokka1L"
+                name="data[MM1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Soft Stracciatella</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalSoftStracc1/2L"
+                name="data[SoSt1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalSoftStracc1L"
+                name="data[SoSt1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Milky Chocolat</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalMilkyChoc1/2L"
+                name="data[MC1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalMilkyChoc1L"
+                name="data[MC1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Brazil Chocolat</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalBrazilChoc1/2L"
+                name="data[BC1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalBrazilChoc1L"
+                name="data[BC1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td rowspan="5">Sorbet</td>
+            <td>Sweet Strawberry</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalSweetStraw1/2L"
+                name="data[SwSt1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalSweetStraw1L"
+                name="data[SwSt1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Funky Lemon</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalFunkyLemon1/2L"
+                name="data[FL1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalFunkyLemon1L"
+                name="data[FL1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Raspberry Red</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalRaspRed1/2L"
+                name="data[RR1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalRaspRed1L"
+                name="data[RR1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Tropical Mango</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalTropMango1/2L"
+                name="data[TM1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalTropMango1L"
+                name="data[TM1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Blueberry Boost</td>
+            <td>€ 5,00 - 9,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalBlueBoost1/2L"
+                name="data[BB1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalBlueBoost1L"
+                name="data[BB1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">Nootjes</td>
+            <td>Pure Pistacchio</td>
+            <td>€ 6,00 - 10,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalPurePista1/2L"
+                name="data[PP1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalPurePista1L"
+                name="data[PP1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Piemonte Nuts</td>
+            <td>€ 6,00 - 10,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalPieNuts1/2L"
+                name="data[PN1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalPieNuts1L"
+                name="data[PN1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td rowspan="3">Specials</td>
+            <td>Ruby Pink</td>
+            <td>€ 6,00 - 11,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalRubyPink1/2L"
+                name="data[RP1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalRubyPink1L"
+                name="data[RP1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Chef's Favourite Cookie</td>
+            <td>€ 6,00 - 11,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalChefCookie1/2L"
+                name="data[CC1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalChefCookie1L"
+                name="data[CC1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Mars Delight</td>
+            <td>€ 6,00 - 11,00</td>
+            <td>
+              1/2 liter <br />
+              1 liter
+            </td>
+            <td>
+              <input
+                type="number"
+                id="aantalMarsDel1/2L"
+                name="data[MD1/2]"
+                min="0"
+                max="5"
+                placeholder="0"
+              /><br />
+              <input
+                type="number"
+                id="aantalMarsDel1L"
+                name="data[MD1]"
+                min="0"
+                max="5"
+                placeholder="0"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td rowspan="3">Pralines - Taart - Frisco</td>
+            <td>Yspralines</td>
+            <td>€ 7,50 per doos</td>
+            <td colspan="2">
+              <input type="number" id="aantalYspralines" name="data[aantalYspralines]" min="0" max="6" placeholder="0" />
+            </td>
+            <td>
+             <select name="data[Yspralines]" id="Yspralines">
+                <option value="/">-- Yspralines --</option>
+                <option value="Vanille/Melk">Vanille/Melk</option>
+                <option value="Mokka/Gold">Mokka/Gold</option>
+                <option value="Piemonte/Melk/Nootjes">Piemonte/Melk/Nootjes</option>
+                <option value="Banaan/Fondant">Banaan/Fondant</option>
+                <option value="Mix3">Mix 3 soorten</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Taarten</td>
+            <td>€ 3,50 per persoon</td>
+            <td colspan="2">
+              <select name="data[HhTaart]" id="HoeveelheidTaart">
+                <option value="/">-- AantalPersonen --</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+              </select>
+            </td>
+            <td colspan="2">
+              <select name="data[SmaakTaart]" id="taarten">
+                <option value="/">-- Smaak --</option>
+                <option value="Vanille">Vanille</option>
+                <option value="Chocolade">Chocolade</option>
+                <option value="Aardbei">Aardbei</option>
+                <option value="Stracciatella">Stracciatella</option>
+                <option value="Framboos">Framboos</option>
+              </select><br>
+              <label for="Afwerking">Afwerking: </label><br>
+
+              <input
+          type="radio"
+          name="data[Afwerking]"
+          value="Slagroom"
+          id="Slagroom"
+        />
+        Slagroom<br />
+        <input
+          type="radio"
+          name="data[Afwerking]"
+          value="Merignue"
+          id="Merignue"
+        />
+        Merignue<br /><br />
+
+            </td>
+          </tr>
+          <tr>
+            <td>Frisco's</td>
+            <td>€ 2,20 per stuk</td>
+            <td colspan="2">
+              <input type="number" id="aantalFrisco" name="data[HhFrisco]" min="0" max="10" placeholder="0" />
+            </td>
+            <td colspan="2">
+              <select name="data[Frisco]" id="frisco">
+                <option value="/">-- Smaak --</option>
+                <option value="Vanille/Melk">Vanille/Melk</option>
+                <option value="Mokka/Gold">Mokka/Gold</option>
+                <option value="Framboos/Wit">Framboos/Wit</option>
+            </td>
+          </tr>
+        </table>
+        <br /><br />
+
+        <label for="opmerking"
+          >Heeft u nog opmerkingen of wilt u nog iets kwijt? Laat het dan zeker
+          hier achter!</label
+        ><br />
+        <textarea
+          name="data[Opmerking]"
+          id="opmerking"
+          cols="40"
+          rows="4"
+          placeholder="Opmerking"
+        ></textarea
+        ><br /><br />
+
+        <input
+          type="submit"
+          name="data[plaatsBestelling]"
+          id="plaatsBestelling"
+          value="Plaats bestelling"
+        /><br />
+        <a href="onsaanbod.html"><p>Terug naar Ons aanbod</p></a>
+      </form>
+    </div>
+    <script>
+      let form = document.getElementById("sheetdb-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(document.getElementById("sheetdb-form")),
+        })
+          .then((response) => response.json())
+          .then((html) => {
+            window.open("bevestiging.html", "_self");
+          });
+      });
+      // const box = document.getElementById("leveren");
+
+      // function handleRadioClick() {
+      //   if (document.getElementById("leveren").checked) {
+      //     box.style.display = "block";
+      //   } else {
+      //     box.style.display = "none";
+      //   }
+      // }
+
+      // const radioButtons = document.querySelectorAll('input[type="text"]');
+      // radioButtons.forEach((radio) => {
+      //   radio.addEventListener("click", handleRadioClick);
+      // });
+    </script>
+  </body>
+</html>

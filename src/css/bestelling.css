@@ -1,0 +1,139 @@
+:root {
+    --backgroundcolor: #222222;
+    --Goud: #C5B673;
+    /*--lettertype:  Verdana sans-serif;*/
+    --tekstkleur: white;
+    --font1: font-family: 'Dancing Script', cursive;
+    --font2: font-family: 'Akaya Telivigala', cursive;
+}
+
+body{
+    background-color: var(--backgroundcolor);
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+
+/*opmaak header*/
+header{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+}
+header figure:nth-of-type(1){
+    width: 5%;
+    min-width: 70px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+header figure:nth-of-type(1) img{
+    width: 100%;
+}
+
+header figure:nth-of-type(2){
+    margin: 0 auto;
+    width: 100%;
+    background-image: url(../images/pexels.jpg);
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+}
+header h1{
+    position: absolute;
+    top: 350px;
+    left: 100px;
+    color: var(--backgroundcolor);
+    font-size: 4rem;
+    font-weight: lighter;
+
+}
+h1,h2 {
+    color: var(--Goud);
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 5px solid var(--Goud);
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+table tr {
+    border: 2px solid var(--Goud);
+}
+table tr td {
+    border: 2px solid var(--Goud);
+    padding: 10px;
+    text-align: center;
+}
+table tr td:nth-of-type(3) {
+    width: 15%;
+}
+p {
+    color: var(--Goud);
+    text-align: center;
+}
+header span{
+    font-weight: bold;
+    color: var(--Goud);
+}
+form {
+    color: var(--Goud);
+    text-align: center;
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=text]:focus {
+  background-color: lightblue;
+}
+input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=email]:focus {
+  background-color: lightblue;
+}
+input[type=tel] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=tel]:focus {
+  background-color: lightblue;
+}
+input[type=number] {
+  width: 37%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+table th {
+    width: 15%;
+}
+select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+textarea {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 5px solid var(--Goud);
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+/*TODO CSS Submit button;*/
+/*TODO CSS Submit Homepage & ons aanbod button;*/
