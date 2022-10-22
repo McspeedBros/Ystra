@@ -1,2 +1,2 @@
 # Ystra
- This are the source files of the Ystra website
+ This project is private
