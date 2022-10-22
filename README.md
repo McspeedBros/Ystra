@@ -1,2 +1,2 @@
 # Ystra
- This project is private
+ This project is private$
