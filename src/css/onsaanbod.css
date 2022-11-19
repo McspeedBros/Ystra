@@ -53,101 +53,6 @@ header span{
     font-weight: bold;
     color: var(--Goud);
 }
-/*opmaak container1 */
-/*set them under each other*/
-.container1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-/* opmaak container2 */
-.container2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-/*opmaak container3 */
-/*Pure Pistacchio center */
-.container3 > div:nth-of-type(1){ 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.container3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-/*opmaak container4 */
-.container4{
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.container4 figure{
-    width: 30%;
-    min-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-}
-.container4 figure img{
-    width: 100%;
-}
-.container4 h2{
-    color: var(--Goud);
-    font-size: 2rem;
-    font-weight: lighter;
-    text-align: center;
-}
-.container4 p{
-    color: var(--tekstkleur);
-    font-size: 1.2rem;
-    font-weight: lighter;
-    text-align: center;
-}
-/*opmaak container5 */
-.container5{
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.container5 figure{
-    width: 30%;
-    min-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-}
-.container5 figure img{
-    width: 100%;
-}
-.container5 h2{
-    color: var(--Goud);
-    font-size: 2rem;
-    font-weight: lighter;
-    text-align: center;
-}
-.container5 p{
-    color: var(--tekstkleur);
-    font-size: 1.2rem;
-    font-weight: lighter;
-    text-align: center;
-}
 /* opmaak main */
 
 main{
@@ -335,4 +240,61 @@ body > figure img{
     .container4{
         justify-content: center;
     }
+    /*opmaak container1 */
+/*set them under each other*/
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* opmaak container2 */
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*opmaak container3 */
+/*Pure Pistacchio center */
+.container3 > div:nth-of-type(1){ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*opmaak container4 */
+.container4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*opmaak container5 */
+.container5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Make the footer responsive */
+footer{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    }
+
 }
