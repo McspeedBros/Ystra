@@ -411,21 +411,14 @@ body > figure img {
   header h1 {
     display: none;
   }
-  /*Make the header responsive(background image) for phones */
-  /* header figure:nth-of-type(2) {
-    margin: 0 auto;
-    width: 360px;
-    background-image: url(../images/banner1.jpg);
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    background-position-y: bottom;
-  }	 */
+  header figure:nth-of-type(1) {
+    width: 25%;
+  }
   /*Make the header responsive(background image) for phones */
   header figure:nth-of-type(2) {
     margin: 0 auto;
     width: 360px;
-    background-image: url(../images/pexels-rakicevic-nenad-1262302.jpg);
+    background-image: url(../images/pexels.jpg);
     height: 300px;
     background-size: cover;
     background-position: center;
@@ -458,21 +451,8 @@ body > figure img {
     align-items: center;
   }
   /*Place the text of the header under the picture of the frist article */
-  section:nth-of-type(1) div:nth-of-type(1) {
-    width: 100%;
-    display: flex;
+  .underneeth {
     flex-direction: column;
-    align-items: center;
-  }
-  section:nth-of-type(1) div:nth-of-type(1) h3 {
-    font-size: 1.5rem;
-    font-family: "Dancing Script", cursive;
-    margin-bottom: 50px;
-  }
-  section:nth-of-type(1) div:nth-of-type(1) p {
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 50px;
   }
   /*Place the text of the header under the picture of the second article */
   section:nth-of-type(1) div:nth-of-type(2) {
@@ -490,6 +470,13 @@ body > figure img {
     width: 100%;
     font-size: 1rem;
     margin-bottom: 50px;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 200px;
   }
 
   /*Make the header responsive(background image) for phones */

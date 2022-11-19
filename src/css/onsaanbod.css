@@ -175,22 +175,17 @@ body > figure img{
         position: relative;
         font-family: 'Dancing Script', cursive;
     }
-    header figure:nth-of-type(1){
-        width: 5%;
-        min-width: 70px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        margin-top: 50px;
-    }
+    header figure:nth-of-type(1) {
+        width: 25%;
+      }
     header figure:nth-of-type(1) img{
         width: 100%;
     }
-    
     header figure:nth-of-type(2){
         margin: 0 auto;
-        width: 100%;
+        width: 80%;
         background-image: url(../images/pexels.jpg);
-        height: 700px;
+        height: 500px;
         background-size: cover;
         background-position: center;
         background-position-y: bottom;
@@ -198,7 +193,7 @@ body > figure img{
     header h1{
         position: absolute;
         top: 50%;
-        left: 100px;
+        left: 60px;
         color: var(--backgroundcolor);
         font-size: 4rem;
         font-weight: lighter;
@@ -208,9 +203,11 @@ body > figure img{
         font-weight: bold;
         color: var(--Goud);
     }
-    
-    
-    
+    .container3 > div:nth-of-type(1) {
+       /* background-color: green; */
+       margin-right: 0;
+        margin-left: 0;
+    }
     /* opmaak main */
 
     h2{
@@ -228,13 +225,6 @@ body > figure img{
     }
     p{
         color: white;
-    }
-    
-    .container3{
-        justify-content: center;
-    }
-    .container3 > div:nth-of-type(1){
-        margin-right: 140px;
     }
     
     .container4{
