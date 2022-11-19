@@ -53,5 +53,14 @@ header span{
     font-weight: bold;
     color: var(--Goud);
 }
-
+/*Make this page responsive for phones*/
+@media screen and (max-width: 600px) {
+    header h1{
+        font-size: 2rem;
+        left: 20px;
+    }
+    header figure:nth-of-type(2) {
+        height: 400px;
+    }
+}
 
