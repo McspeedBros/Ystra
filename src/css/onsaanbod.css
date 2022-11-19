@@ -54,98 +54,37 @@ header span{
     color: var(--Goud);
 }
 /*opmaak container1 */
+/*set them under each other*/
 .container1{
-    width: 95%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
-.container1 figure{
-    width: 30%;
-    min-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-}
-.container1 figure img{
-    width: 100%;
-}
-.container1 h2{
-    color: var(--Goud);
-    font-size: 2rem;
-    font-weight: lighter;
-    text-align: center;
-}
-.container1 p{
-    color: var(--tekstkleur);
-    font-size: 1.2rem;
-    font-weight: lighter;
-    text-align: center;
-}
-
-/*opmaak container2 */
+/* opmaak container2 */
 .container2{
-    width: 95%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.container2 figure{
-    width: 30%;
-    min-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-}
-.container2 figure img{
-    width: 100%;
-}
-.container2 h2{
-    color: var(--Goud);
-    font-size: 2rem;
-    font-weight: lighter;
-    text-align: center;
-}
-.container2 p{
-    color: var(--tekstkleur);
-    font-size: 1.2rem;
-    font-weight: lighter;
-    text-align: center;
 }
 /*opmaak container3 */
-.container3{
-    width: 95%;
-    margin: 0 auto;
+/*Pure Pistacchio center */
+.container3 > div:nth-of-type(1){ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.container3{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.container3 figure{
-    width: 30%;
-    min-width: 300px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
     margin-bottom: 50px;
-}
-.container3 figure img{
-    width: 100%;
-}
-.container3 h2{
-    color: var(--Goud);
-    font-size: 2rem;
-    font-weight: lighter;
-    text-align: center;
-}
-.container3 p{
-    color: var(--tekstkleur);
-    font-size: 1.2rem;
-    font-weight: lighter;
-    text-align: center;
 }
 /*opmaak container4 */
 .container4{
@@ -209,8 +148,6 @@ header span{
     font-weight: lighter;
     text-align: center;
 }
-
-
 /* opmaak main */
 
 main{
