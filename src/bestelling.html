@@ -576,11 +576,11 @@
         />
         Ophaling<br /><br />
         <label for="address" id="address"
-          >Indien u de bestelling wilt laten leveren, geef hier uw adres.<br>Als u op ophalen klikt gelieve de dag en het uur op te geven dat u zal langs komen</label
+          >Indien u de bestelling wilt laten leveren, geef hier uw adres.<br>Als u op ophalen klikt gelieve de datum en het uur op te geven dat u zal langs komen</label
         ><br />
         <input
           type="text"
-          name="data[Adres]"
+          name="data[Adres/Ophaaluur]"
           id="address"
           placeholder="Adres / Ophaaluur"
         /><br><br>
@@ -597,14 +597,15 @@
         ></textarea
         ><br /><br />
 
-        <input
+        <!-- <input
           type="submit"
           name="data[plaatsBestelling]"
           id="plaatsBestelling"
           value="Plaats bestelling"
-        /><br />
-        <a href="onsaanbod.html"><p>Terug naar Ons aanbod</p></a>
+        /><br /> -->
+        <p>Het formulier is even in werking. Even geduld!<br> Dus u kan momenteel geen bestelling plaatsen</p>
       </form>
+      <p><a href="onsaanbod.html">Ons Aanbod</a></p>
     </div>
     <script>
       let form = document.getElementById("sheetdb-form");
