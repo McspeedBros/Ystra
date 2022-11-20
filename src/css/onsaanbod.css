@@ -55,6 +55,33 @@ header span{
 }
 /* opmaak main */
 
+main > p >a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--Goud);
+    padding: 10px 20px;
+    transition: 500ms;
+  }
+main > p > a:hover {
+    background-color: white;
+    color: var(--Goud);
+  }
+main > p > a {
+    /* Center the buttons */
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 170px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: var(--Goud);
+    padding: 10px 20px;
+    transition: 500ms;
+  }
 main{
     width: 70%;
     margin: 0 auto;
