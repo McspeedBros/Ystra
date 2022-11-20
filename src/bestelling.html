@@ -555,13 +555,13 @@
                 <option value="GinTonic">Gin Tonic</option>
             </td>
           </tr>
-          //TODO de data moet nog in de sheet gestoken worden en hier de namen aangepast
+          <div>
           <tr>
-            <td rowspan="3">Feestdagen</td>
+            <td rowspan="3" style="color:white">Feestdagen</td>
             <td>Ystaarten en buches</td>
             <td>&euro; 5,00 per persoon</td>
             <td colspan="2">
-              <select name="data[]" id="FHoeveelheidYstaart">
+              <select name="data[FHHtaart]" id="FHoeveelheidYstaart">
                 <option value="/">-- AantalPersonen --</option>
                 <option value="4">4</option>
                 <option value="6">6</option>
@@ -571,7 +571,7 @@
               </select>
             </td>
             <td>
-              <select name="data[]" id="FOnlyDessert">
+              <select name="data[FSmaakTaart]" id="FSmaakTaart">
                 <option value="/">-- Smaak --</option>
                 <option value="VanillaGold">Vanilla Gold</option>
                 <option value="CaramelCrisp">Caramel Crisp</option>
@@ -588,17 +588,14 @@
               <input type="number" id="FAantalOnly" name="data[]" min="0" max="10" placeholder="0">
             </td>
             <td>
-              <select name="data[]" id="FOnly">
-                <option value="/">-- Keuze --</option>
+              <select name="data[Fonly]" id="FOnly">
+                <option value="/">-- Smaak --</option>
                 <option value="ChefsMerveilleux">Chefs' Merveilleux</option>
                 <option value="BerryChristmas">Berry Christmas Mini</option>
                 <option value="GinTonic">Gin Tonic Frisco</option>
-              </select>
-              <select name="data[]" id="FOnlyDessertglas">
-                <option value="/">-- Dessertglas --</option>
-                <option value="Vanille/Pistache">Vanille/Pistache</option>
-                <option value="Vanille/Chocolade">Vanille/Chocolade</option>
-                <option value="Vanille/Aardbei">Vanille/Aardbei</option>
+                <option value="Vanille/Pistache">Dessertglas: Vanille/Pistache</option>
+                <option value="Vanille/Chocolade">Dessertglas: Vanille/Chocolade</option>
+                <option value="Vanille/Aardbei">Dessertglas: Vanille/Aardbei</option>
               </select>
             </td>
           </tr>
@@ -609,17 +606,14 @@
               <input type="number" id="FAantalYspralines" name="data[]" min="0" max="10" placeholder="0">
             </td>
             <td>
-              <select name="data[]" id="FYspralines">
+              <select name="data[FYspralines]" id="FYspralines">
                 <option value="/">-- Yspralines --</option>
-                <option value="Vanille">Vanille</option>
-                <option value="Mokka">Mokka</option>
-                <option value="Piemonte">Piemonte</option>
-                <option value="Banaan">Banaan</option>
                 <option value="Aardbei">Aardbei</option>
                 <option value="Ruby">Ruby</option>
               </select>
             </td>
           </tr>
+        </div>
         </table>
         <br />
         <label for="levering"
