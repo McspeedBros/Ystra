@@ -54,7 +54,7 @@
           id="phone"
           placeholder="Telefoonnummer"
           required
-        /><br /><br />
+        /><br />
 
         <table>
           <tr>
@@ -602,6 +602,14 @@
         </div>
         </table>
         <br />
+        <p class="phonebestelling">Besteld u via gsm gelieve uw bestelling door te geven hieronder in teksteule beschrijving!</p>
+        <textarea
+          name="data[Bestelling]"
+          id="bestelling"
+          cols="40"
+          rows="4"
+          placeholder="Bestelling..."
+        ></textarea><br><br>
         <label for="levering"
           >Wilt u uw bestelling laten leveren of haalt u het liever zelf
           op?</label
@@ -642,13 +650,13 @@
         ></textarea
         ><br /><br />
 
-        <!-- <input
+        <input
           type="submit"
           name="data[plaatsBestelling]"
           id="plaatsBestelling"
           value="Plaats bestelling"
-        /><br /> -->
-        <p>Het formulier is even in werking. Even geduld!<br> U kan momenteel nog geen bestelling plaatsen.</p>
+        /><br />
+        
       </form>
       <p><a href="onsaanbod.html">Ons Aanbod</a></p>
     </div>
@@ -665,14 +673,11 @@
             window.open("bevestiging.html", "_self");
           });
       });
-      // Get mail from spreadsheet and respond with a message the host is rivenstrikes@gmail.com
-      // fetch("https://sheetdb.io/api/v1/2j5q7xq7xj8x1")
-      //   .then((response) => response.json())
-      //   .then((data) => {
-      //     let mail = data[0].mail;
-      //     document.getElementById("sheetdb-form").action =
-      //       "https://sheetdb.io/api/v1/2j5q7xq7xj8x1/mailto:" + mail;
-      //   });
+      // Send confirmation email to user after form submission success (optional) // Uncomment the code below to enable this feature
+      // fetch(form.action, {
+      //   method: form.method,
+      //   body: new FormData(document.getElementById("sheetdb-form")),
+      // })
     </script>
   </body>
 </html>

@@ -161,7 +161,7 @@ input[type=submit] {
 }
 /*Make the text bigger in submit button */
 input[type=submit] {
-  font-size: 1em;
+  font-size: 1.2rem;
 }
 input[type=submit]:hover {
   font-size: 1.2em;
@@ -196,129 +196,64 @@ table tr:nth-last-child(-n+2) input[type=number] {
   background-color: #2C2C2C;
   color: red;
 }
+.phonebestelling {
+  display: none;
+}
+#bestelling {
+  display: none;
+}
 
 
 
-/*Make this page also responsive for phones if to big places images beneeth each other*/
 
+/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 766px) {
-    header figure:nth-of-type(1){
-        width: 20%;
-        min-width: 70px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        margin-top: 50px;
-    }
-    header figure:nth-of-type(2){
-        height: 400px;
-    }
-    header h1{
-        position: absolute;
-        top: 150px;
-        left: 100px;
-        color: var(--backgroundcolor);
-        font-size: 4rem;
-        font-weight: lighter;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        border: 5px solid var(--Goud);
-        margin: 0 auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-    table tr {
-        border: 2px solid var(--Goud);
-    }
-    table tr td {
-        border: 2px solid var(--Goud);
-        padding: 10px;
-        text-align: center;
-    }
-    table tr td:nth-of-type(3) {
-        width: 15%;
-    }
-    p {
-        color: var(--Goud);
-        text-align: center;
-    }
-    header span{
-        font-weight: bold;
-        color: var(--Goud);
-    }
-    form {
-        color: var(--Goud);
-        text-align: center;
-    }
-    input[type=text] {
-      width: 50%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-    }
-    input[type=text]:focus {
-      background-color: lightblue;
-    }
-    input[type=email] {
-      width: 50%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-    }
-    input[type=email]:focus {
-      background-color: lightblue;
-    }
-    input[type=tel] {
-      width: 50%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-    }
-    input[type=tel]:focus {
-      background-color: lightblue;
-    }
-    input[type=number] {
-      width: 37%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-    }
-    table th {
-        width: 15%;
-    }
-    select {
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-    }
-    textarea {
-      width: 50%;
-      height: 150px;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      border: 5px solid var(--Goud);
-      border-radius: 4px;
-      background-color: #f8f8f8;
-      resize: none;
-    }
-    /* Change the last 2 table row backgrounds*/
-    table tr:nth-last-child(-n+2) {
-      background-color: #2C2C2C;
-    }
-/* Change the last 2 table row text color*/
-    table tr:nth-last-child(-n+2) {
-      color: green;
-    }
-/* change style inside the option and select buttons for the last 2 table rows */
-    table tr:nth-last-child(-n+2) select {
-      background-color: #2C2C2C;
-      color: red;
-    }
-/* Change inside style of type number of the last 2 table rows */
-    table tr:nth-last-child(-n+2) input[type=number] {
-      background-color: #2C2C2C;
-      color: red;
-    }
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  form {
+    display: inline-block;
+  }
+  /* Hide the table */
+  table {
+    display: none;
+  }
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+  input[type=submit] {
+    font-family: 'Akaya Telivigala', cursive;
+  }
+  .phonebestelling {
+    display: block;
+  }
 
+  /* Center the textaera with label id bestelling */
+  #bestelling {
+    display: block;
+    margin: 0 auto;
+  }
+  
 }
