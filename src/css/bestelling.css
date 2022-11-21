@@ -179,20 +179,20 @@ input[type=submit]:hover {
   text-decoration: none;
 }
 /* Change the last 3 table row backgrounds*/
-table tr:nth-last-child(-n+3) {
+table tr:nth-last-child(-n+2) {
   background-color: #2C2C2C;
 }
 /* Change the last 3 table row text color*/
-table tr:nth-last-child(-n+3) {
+table tr:nth-last-child(-n+2) {
   color: green;
 }
 /* change style inside the option and select buttons for the last 3 table rows */
-table tr:nth-last-child(-n+3) select {
+table tr:nth-last-child(-n+2) select {
   background-color: #2C2C2C;
   color: red;
 }
 /* Change inside style of type number of the last 3 table rows */
-table tr:nth-last-child(-n+3) input[type=number] {
+table tr:nth-last-child(-n+2) input[type=number] {
   background-color: #2C2C2C;
   color: red;
 }
@@ -302,23 +302,23 @@ table tr:nth-last-child(-n+3) input[type=number] {
       background-color: #f8f8f8;
       resize: none;
     }
-    /* Change the last 3 table row backgrounds*/
-table tr:nth-last-child(-n+3) {
-  background-color: #2C2C2C;
-}
-/* Change the last 3 table row text color*/
-table tr:nth-last-child(-n+3) {
-  color: green;
-}
-/* change style inside the option and select buttons for the last 3 table rows */
-table tr:nth-last-child(-n+3) select {
-  background-color: #2C2C2C;
-  color: red;
-}
-/* Change inside style of type number of the last 3 table rows */
-table tr:nth-last-child(-n+3) input[type=number] {
-  background-color: #2C2C2C;
-  color: red;
-}
+    /* Change the last 2 table row backgrounds*/
+    table tr:nth-last-child(-n+2) {
+      background-color: #2C2C2C;
+    }
+/* Change the last 2 table row text color*/
+    table tr:nth-last-child(-n+2) {
+      color: green;
+    }
+/* change style inside the option and select buttons for the last 2 table rows */
+    table tr:nth-last-child(-n+2) select {
+      background-color: #2C2C2C;
+      color: red;
+    }
+/* Change inside style of type number of the last 2 table rows */
+    table tr:nth-last-child(-n+2) input[type=number] {
+      background-color: #2C2C2C;
+      color: red;
+    }
 
 }
