@@ -21,7 +21,7 @@
   <body>
     <h1>Online Bestelformulier</h1>
     <h2>
-      Plaats hier jouw bestelling bij Ystra, ambachtelijk ijs met passie bereid!
+      Plaats hier uw bestelling bij Ystra, ambachtelijk ijs met passie bereid!
     </h2>
     <div class="form">
       <form
@@ -393,7 +393,7 @@
           </tr>
           <tr>
             <td>Chef's Favourite Cookie</td>
-            <td>&euro; 6,00 - 11,00</td>
+            <td>&euro; 6,00 - 12,00</td>
             <td>
               1/2 liter <br />
               1 liter
@@ -419,7 +419,7 @@
           </tr>
           <tr>
             <td>Mars Delight</td>
-            <td>&euro; 6,00 - 11,00</td>
+            <td>&euro; 6,00 - 12,00</td>
             <td>
               1/2 liter <br />
               1 liter
@@ -599,20 +599,6 @@
               </select>
             </td>
           </tr>
-          <tr>
-            <td>Yspralines</td>
-            <td>&euro; 9,00 per doos</td>
-            <td colspan="2">
-              <input type="number" id="FAantalYspralines" name="data[]" min="0" max="10" placeholder="0">
-            </td>
-            <td>
-              <select name="data[FYspralines]" id="FYspralines">
-                <option value="/">-- Yspralines --</option>
-                <option value="Aardbei">Aardbei</option>
-                <option value="Ruby">Ruby</option>
-              </select>
-            </td>
-          </tr>
         </div>
         </table>
         <br />
@@ -656,12 +642,12 @@
         ></textarea
         ><br /><br />
 
-        <!-- <input
+        <input
           type="submit"
           name="data[plaatsBestelling]"
           id="plaatsBestelling"
           value="Plaats bestelling"
-        /><br /> -->
+        /><br />
         <p>Het formulier is even in werking. Even geduld!<br> U kan momenteel nog geen bestelling plaatsen.</p>
       </form>
       <p><a href="onsaanbod.html">Ons Aanbod</a></p>
@@ -679,6 +665,14 @@
             window.open("bevestiging.html", "_self");
           });
       });
+      // Get mail from spreadsheet and respond with a message the host is rivenstrikes@gmail.com
+      // fetch("https://sheetdb.io/api/v1/2j5q7xq7xj8x1")
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     let mail = data[0].mail;
+      //     document.getElementById("sheetdb-form").action =
+      //       "https://sheetdb.io/api/v1/2j5q7xq7xj8x1/mailto:" + mail;
+      //   });
     </script>
   </body>
 </html>
