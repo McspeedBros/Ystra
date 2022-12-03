@@ -176,6 +176,9 @@ article a button:hover {
   cursor: pointer;
 }
 
+.foto > img{
+  width: 45%;
+}
 /* opmaak aside */
 
 aside {
@@ -285,6 +288,18 @@ aside div h3:nth-of-type(3) {
   background-color: white;
   border-radius: 50%;
 }
+
+#sponsor5 {
+  width: 120px;
+  height: 120px;
+  background-image: url(../images/sponsor5.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+}
+
 #sponsorcontainer div div {
   margin: 0 auto;
 }
