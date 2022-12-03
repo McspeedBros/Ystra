@@ -602,13 +602,14 @@
         </div>
         </table>
         <br />
-        <p class="phonebestelling">Besteld u via gsm gelieve uw bestelling door te geven hieronder in teksteule beschrijving!</p>
+        <p class="phonebestelling">Bestelt u via gsm? Gelieve uw bestelling door te geven hieronder in tekstuele beschrijving!</p>
+        <!-- TODO: placeholder komt niet overeen met vraag?? -->
         <textarea
           name="data[Bestelling]"
           id="bestelling"
           cols="40"
           rows="4"
-          placeholder="Bestelling: Smaak, Hoevelheeid, Afwerking, Extra's, ..."
+          placeholder="Noteer uw adres voor levering of ophaaltijdstip voor ophaling hieronder" 
         ></textarea><br><br>
         <label for="levering"
           >Wilt u uw bestelling laten leveren of haalt u het liever zelf
@@ -647,10 +648,10 @@
           id="opmerking"
           cols="40"
           rows="4"
-          placeholder="Opmerking (voedselallergieen), speciale wensen,..."
+          placeholder="Opmerkingen (voedselallergie&euml;n), speciale wensen,..."
         ></textarea
         ><br /><br />
-
+        <!-- TODO: css voor plaats bestelling knop toevoegen bij mediascreen van pc -->
         <input
           type="submit"
           name="data[plaatsBestelling]"
