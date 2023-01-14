@@ -178,24 +178,24 @@ input[type=submit]:hover {
   margin-bottom: 50px;
   text-decoration: none;
 }
-/* Change the last 3 table row backgrounds*/
+/* Change the last 3 table row backgrounds
 table tr:nth-last-child(-n+2) {
   background-color: #2C2C2C;
 }
 /* Change the last 3 table row text color*/
-table tr:nth-last-child(-n+2) {
+/* table tr:nth-last-child(-n+2) {
   color: green;
-}
+} */
 /* change style inside the option and select buttons for the last 3 table rows */
-table tr:nth-last-child(-n+2) select {
+/* table tr:nth-last-child(-n+2) select {
   background-color: #2C2C2C;
   color: red;
-}
+} */
 /* Change inside style of type number of the last 3 table rows */
-table tr:nth-last-child(-n+2) input[type=number] {
+/* table tr:nth-last-child(-n+2) input[type=number] {
   background-color: #2C2C2C;
   color: red;
-}
+}  */
 .phonebestelling {
   display: none;
 }
