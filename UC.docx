@@ -1,0 +1,20 @@
+UC: Plaats Bestelling
+Primary Actor: Klant
+Stakeholder: Ystra
+Precondities: /
+Postcondities: De klant heeft een bestelling geplaatst.
+Normaal Verloop:
+    1. De klant voegt een product toe aan het winkelmandje
+    2. Het systeem registreert dit product
+    3. De klant gaat naar het winkelmandje
+    4. Het systeem geeft een overzicht terug
+    5. Het syteem vraagt voor de gegevens van de klant
+    6. De klant geeft zijn gegevens in.
+    7. Het systeem valideert.
+    8. Het systeem slaat de gegevens op.
+Alternatief Verloop:
+    3A1.1: De klant wenst een product te verwijderen
+    3A2.1: De klant wenst meerdere hoeveelheid van het product
+
+    7A1.1: Het systeem faalt de validatie
+    7A1.2: Het systeem vraagt opnieuw naar de niet juiste ingevulde gegevens.
