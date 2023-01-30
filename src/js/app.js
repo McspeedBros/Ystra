@@ -89,3 +89,41 @@ function updateQuantity(title, quantityInput) {
     }
   });
 }
+
+var products = document.querySelectorAll(".product");
+
+for (var i = 0; i < products.length; i++) {
+  var product = products[i];
+  var quantityInput = product.querySelector("input[type=number]");
+  var addToCartButton = product.querySelector(".add-to-cart");
+
+  addToCartButton.addEventListener("click", function() {
+    var productName = this.parentElement.querySelector("h3").textContent;
+    var productPrice = this.parentElement.querySelector("p").textContent;
+    var productQuantity = quantityInput.value;
+
+    var cart = localStorage.getItem("cart")
+      ? JSON.parse(localStorage.getItem("cart"))
+      : [];
+    var productIndex = -1;
+    for (var i = 0; i < cart.length; i++) {
+      if (cart[i].name === productName) {
+        productIndex = i;
+        break;
+      }
+    }
+
+    if (productIndex === -1) {
+      cart.push({
+        name: productName,
+        price: productPrice,
+        quantity: productQuantity
+      });
+    } else {
+      cart[productIndex].quantity =
+        parseInt(cart[productIndex].quantity) + parseInt(productQuantity);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  });
+}
