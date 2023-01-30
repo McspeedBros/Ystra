@@ -15,6 +15,11 @@ addToCartButtons.forEach(button => {
   });
 });
 
+function removeItem(title) {
+  cart = cart.filter(item => item.title !== title);
+  renderCart();
+}
+
 function addToCart(title, price, quantity) {
   const item = {
     title,
@@ -48,6 +53,11 @@ function renderCart() {
       ${item.title} - $${item.price} x ${item.quantity} = $${item.price * item.quantity}
       <button class="update-quantity" data-title="${item.title}">Update Quantity</button>
     `;
+    const removeButton = document.createElement("button");
+    removeButton.classList.add("remove");
+    removeButton.dataset.title = item.title;
+    removeButton.textContent = "Remove";
+    listItem.appendChild(removeButton);
     cartList.appendChild(listItem);
   });
   totalCost.textContent = `Total: $${cartTotal.toFixed(2)}`;
@@ -60,13 +70,22 @@ function renderCart() {
       updateQuantity(title, quantityInput);
     });
   });
+  // Make a remove button to remove the item from the cart
+  const removeButtons = document.querySelectorAll(".remove");
+  removeButtons.forEach(button => {
+    button.addEventListener("click", event => {
+      const title = event.target.dataset.title;
+      removeItem(title);
+    });
+  });
 }
 
-function updateQuantity(title, quantity) {
+function updateQuantity(title, quantityInput) {
   cart.forEach(item => {
     if (item.title === title) {
-      item.quantity = parseInt(quantity);
+      item.quantity = parseInt(quantityInput);
+      renderCart();
+      return;
     }
   });
-  renderCart();
 }
