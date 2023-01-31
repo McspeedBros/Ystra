@@ -17,7 +17,7 @@ var cart = JSON.parse(localStorage.getItem("cart")) || [];
       quantityInput.setAttribute("type", "number");
       quantityInput.setAttribute("value", product.quantity);
       quantityInput.setAttribute("min", 1);
-      quantityInput.setAttribute("step", 0.01);
+      quantityInput.setAttribute("step", 1);
       quantityForm.appendChild(quantityInput);
       productQuantityTd.appendChild(quantityForm);
       tr.appendChild(productQuantityTd);
