@@ -29,6 +29,7 @@ header figure:nth-of-type(1){
 }
 header figure:nth-of-type(1) img{
     width: 100%;
+    /* background-color: #222222; */
 }
 
 header figure:nth-of-type(2){
@@ -52,6 +53,19 @@ header h1{
 header span{
     font-weight: bold;
     color: var(--Goud);
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    width: 50px;
+    height: 50px;
+}
+.fixedCart{
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    top: 5px;
+    right: 3.5%;
 }
 /* opmaak main */
 
@@ -104,6 +118,18 @@ section{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 75px;
+}
+
+table{
+    color: white
+}
+
+table td{
+    padding: 4px
+}
+
+input[type="number"] {
+    width: 30px;
 }
 
 h2{

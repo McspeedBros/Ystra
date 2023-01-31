@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+      href="./images/logo.png"
+      rel="shortcut icon"
+      type="./images/logo.png"
+  />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/winkelwagen.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Eczar:wght@800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Winkelmandje</title>
+</head>
+<body>
+  <header>
+    <figure>
+      <a class="fixed" href="index.html"><img src="images/logo.png" alt=""/></a>
+      <a class="fixedCart" href="winkelwagen.html"><img src="images/winkelwagen.png" alt=""></a>
+    </figure>
+  </header>
+
+  <main>
+    <h1>Overzicht</h1>
+
+    <!-- TODO: overzicht gaat met js moeten getoond en append worden -->
+    <div>
+    </div>
+
+    <h1>Gegevens</h1>
+    <form
+    action="https://sheetdb.io/api/v1/ytdi2i160aaco"
+    method="post"
+    id="sheetdb-form"
+  >
+    <label for="name">Geef hier uw naam en voornaam *</label><br />
+    <input
+      type="text"
+      name="data[Naam]"
+      id="name"
+      placeholder="Naam en voornaam"
+      required
+    /><br /><br />
+
+    <label for="email">Geef hier uw e-mailadres *</label><br />
+    <input
+      type="email"
+      name="data[E-mail]"
+      id="email"
+      placeholder="E-mailadres"
+      required
+    /><br /><br />
+
+    <label for="phone">Geef hier uw telefoonnummer *</label><br />
+    <input
+      type="tel"
+      name="data[Telefoonnummer]"
+      id="phone"
+      placeholder="Telefoonnummer"
+      required
+    /><br />
+    <label for="levering"
+          >Wilt u uw bestelling laten leveren of haalt u het liever zelf
+          op?</label
+        ><br />
+        <input
+          type="radio"
+          name="data[Levering]"
+          value="leveren"
+          id="leveren"
+        />
+        Levering<br />
+        <input
+          type="radio"
+          name="data[Levering]"
+          value="ophalen"
+          id="ophalen"
+        />
+        Ophaling<br /><br />
+        <label for="address" id="address"
+          >Indien u de bestelling wilt laten leveren, geef hier uw adres.<br>Als u op ophalen klikt gelieve de datum en het uur op te geven dat u zal langs komen.</label
+        ><br />
+        <input
+          type="text"
+          name="data[Adres/Ophaaluur]"
+          id="address"
+          placeholder="Adres / Ophaaluur"
+          required
+        /><br><br>
+        <label for="opmerking"
+          >Heeft u nog opmerkingen of wilt u nog iets kwijt? Laat het dan zeker
+          hier achter!</label
+        ><br /><br>
+        <textarea
+          name="data[Opmerking]"
+          id="opmerking"
+          cols="40"
+          rows="4"
+          placeholder="Opmerkingen (voedselallergie&euml;n), speciale wensen,..."
+        ></textarea
+        ><br /><br />
+  </main>
+
+  <footer>
+    <section>
+      <p><a href="onsaanbodUPGRADE.html" class="button">Terug</a></p>
+      <input
+          type="submit"
+          name="data[plaatsBestelling]"
+          id="plaatsBestelling"
+          value="Bevestig!"
+          class="button"
+          onclick="window.location.href='./bevestiging.html'"
+        />
+    </section>
+    
+  </footer>
+</body>
+</html>
