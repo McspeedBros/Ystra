@@ -14,3 +14,9 @@ TODO: De bevestig en terug knop mogen gecentreerd zijn en mag dan gwn een beetje
 ## Extra's
 - Op de bevestigingspagina evt iets van foto's zetten van op de insta-pagina?
 - Bij hover over foto's ons aanbod ze lichtjes uitvergroten
+- Iets van animatie ofzo wanneer er iets wordt toegevoegd aan winkelmandje
+- de banner moet op elke pagina nog toegevoegd worden
+- Een terugknop op de onsaanbod pagina?
+- Op de index-pagina is de footer lettertype in vet en moet niet
+- logos op de indexpagina nog aanpassen
+- links achter de fotos van de partners
