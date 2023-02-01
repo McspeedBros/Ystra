@@ -214,10 +214,9 @@ input[type=tel]:focus {
 background-color: lightblue;
 }
 input[type=number] {
-width: 37%;
+border: 5px solid var(--Goud);
+border-radius: 4px;
 padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
 }
 table th {
   width: 15%;

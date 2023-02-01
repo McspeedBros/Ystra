@@ -1,7 +1,6 @@
 var cart = JSON.parse(window.localStorage.getItem("cart")) || [];
 var cartTableBody = document.getElementById("cart-table-body");
 var totalCost = document.getElementById("total-cost");
-console.log(cart);
 var total = 0;
 for (var i = 0; i < cart.length; i++) {
   (function(product) {
@@ -50,6 +49,13 @@ for (var i = 0; i < cart.length; i++) {
     quantityInput.addEventListener("change", function() {
       product.quantity = this.value;
       localStorage.setItem("cart", JSON.stringify(cart));
+
+      // recalculate the total cost
+      total = 0;
+      for (var j = 0; j < cart.length; j++) {
+        total += parseFloat(cart[j].quantity) * parseFloat(cart[j].price.substring(1));
+      }
+      totalCost.textContent = "Totale prijs: €" + total;
     });
   })(cart[i]);
 }
