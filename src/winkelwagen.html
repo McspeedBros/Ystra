@@ -32,8 +32,19 @@
 
   <main>
     <h1>Overzicht</h1>
-
-    <!-- TODO: overzicht gaat met js moeten getoond en append worden -->
+     <table id="cart-table">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Total</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody id="cart-table-body"></tbody>
+</table>
+<p id="total-cost"></p>
     <div>
     </div>
 
@@ -113,7 +124,7 @@
 
   <footer>
     <section>
-      <p><a href="onsaanbodUPGRADE.html" class="button">Terug</a></p>
+      <p><a href="onsaanbod.html" class="button">Terug</a></p>
       <input
           type="submit"
           name="data[plaatsBestelling]"
@@ -125,5 +136,6 @@
     </section>
     
   </footer>
+  <script src="./js/overzicht.js"></script>
 </body>
 </html>
