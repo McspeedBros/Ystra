@@ -23,7 +23,7 @@ function removeItem(title) {
 function addToCart(title, price, quantity) {
   const item = {
     title,
-    price: parseFloat(price.replace("$", "")),
+    price: parseFloat(price.replace("€", "")),
     quantity: parseInt(quantity)
   };
 
@@ -50,7 +50,7 @@ function renderCart() {
     cartTotal += item.price * item.quantity;
     const listItem = document.createElement("li");
     listItem.innerHTML = `
-      ${item.title} - $${item.price} x ${item.quantity} = $${item.price * item.quantity}
+      ${item.title} - €${item.price} x ${item.quantity} = €${item.price * item.quantity}
       <button class="update-quantity" data-title="${item.title}">Update Quantity</button>
     `;
     const removeButton = document.createElement("button");
@@ -60,7 +60,7 @@ function renderCart() {
     listItem.appendChild(removeButton);
     cartList.appendChild(listItem);
   });
-  totalCost.textContent = `Total: $${cartTotal.toFixed(2)}`;
+  totalCost.textContent = `Total: €${cartTotal.toFixed(2)}`;
 
   const updateQuantityButtons = document.querySelectorAll(".update-quantity");
   updateQuantityButtons.forEach(button => {
