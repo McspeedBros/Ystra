@@ -17,6 +17,7 @@ for (var i = 0; i < cart.length; i++) {
     quantityInput.setAttribute("value", product.quantity);
     quantityInput.setAttribute("min", 1);
     quantityInput.setAttribute("step", 1);
+    quantityInput.setAttribute("class", "hoeveelheid")
     quantityForm.appendChild(quantityInput);
     productQuantityTd.appendChild(quantityForm);
     tr.appendChild(productQuantityTd);
@@ -25,16 +26,17 @@ for (var i = 0; i < cart.length; i++) {
     productPriceTd.textContent = product.price;
     tr.appendChild(productPriceTd);
 
-    var productTotalTd = document.createElement("td");
-    productTotalTd.textContent =
-      parseFloat(product.quantity) * parseFloat(product.price.substring(1));
-    tr.appendChild(productTotalTd);
+    // var productTotalTd = document.createElement("td");
+    // productTotalTd.textContent =
+    //   parseFloat(product.quantity) * parseFloat(product.price.substring(1));
+    // tr.appendChild(productTotalTd);
 
     total += parseFloat(product.quantity) * parseFloat(product.price.substring(1));
 
     var removeTd = document.createElement("td");
     var removeButton = document.createElement("button");
     removeButton.textContent = "Verwijder";
+    removeButton.setAttribute("class", "buttonTable");
     removeButton.addEventListener("click", function() {
       var index = cart.indexOf(product);
       cart.splice(index, 1);
@@ -55,9 +57,9 @@ for (var i = 0; i < cart.length; i++) {
       for (var j = 0; j < cart.length; j++) {
         total += parseFloat(cart[j].quantity) * parseFloat(cart[j].price.substring(1));
       }
-      totalCost.textContent = "Totale prijs: €" + total;
+      totalCost.textContent = "Totale prijs: € " + total;
     });
   })(cart[i]);
 }
 
-totalCost.textContent = "Totale prijs: €" + total;
+totalCost.textContent = "Totale prijs: € " + total;

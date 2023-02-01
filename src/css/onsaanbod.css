@@ -20,37 +20,42 @@ header{
     position: relative;
     font-family: 'Dancing Script', cursive;
 }
-header figure:nth-of-type(1){
+header figure:nth-of-type(1) {
     width: 5%;
     min-width: 70px;
     margin: 0 auto;
     margin-bottom: 50px;
     margin-top: 50px;
+    top: 0;
+    background-color: #222222;
 }
 header figure:nth-of-type(1) img{
     width: 100%;
     /* background-color: #222222; */
 }
 
-header figure:nth-of-type(2){
-    margin: 0 auto;
+main figure:nth-of-type(1){
+    /* margin: 0 auto; */
+    /* margin-top: 7%; */
     width: 100%;
+    left: 5%;
     background-image: url(../images/pexels.jpg);
     height: 700px;
     background-size: cover;
     background-position: center;
     background-position-y: bottom;
+    margin-left: 2%;
 }
-header h1{
+h1{
     position: absolute;
     top: 50%;
-    left: 100px;
+    margin-left: 7%;
     color: var(--backgroundcolor);
     font-size: 4rem;
     font-weight: lighter;
-
+    font-family: 'Dancing Script', cursive;
 }
-header span{
+main h1 span{
     font-weight: bold;
     color: var(--Goud);
 }
@@ -62,11 +67,49 @@ header span{
 }
 .fixedCart{
     position: fixed;
-    width: 45px;
-    height: 45px;
     top: 5px;
     right: 3.5%;
 }
+.logo{
+    position: fixed;
+    top: 18px;
+    width: 100px;
+    /* height: 85px; */
+    left: calc(50% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.background{
+    background-color: var(--backgroundcolor);
+    width: 100%;
+    height: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    border-bottom: var(--Goud);
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+.cart{
+    position: fixed;
+    top: 30px;
+    width: 75px;
+    height: 75px;
+    right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* header figure:nth-of-type(1) img{
+    width: 100%;
+    margin-top: 50px;
+    min-width: 70px;
+    /* background-color: #222222; */
+  /* } */
+
 /* opmaak main */
 
 main > p >a {
@@ -109,6 +152,13 @@ section div div{
 
 }
 
+section div p{
+    text-align: center;
+    font-size: 1.2rem;
+
+    margin-top: 10px;
+}
+
 section div img{
     width: 100%;
 }
@@ -118,6 +168,11 @@ section{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 75px;
+}
+
+section:nth-of-type(1){
+    margin-top: 0px;
+    z-index: 1;
 }
 
 table{
@@ -144,6 +199,8 @@ h3{
     border-bottom: 1px solid var(--Goud);
     padding-bottom: 20px;
     color: white;
+    font-size: 1.5rem;
+    color: var(--Goud);
 }
 p{
     color: white;
@@ -172,6 +229,42 @@ p{
     margin-right: 140px;
 }
 
+.add-to-cart{
+    background-color: var(--Goud);
+    color: white;
+    padding: 10px 15px;
+    border: var(--Goud);
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 500ms;
+    float: right;
+}
+.add-to-cart:hover{
+    background-color: white;
+    color: var(--Goud);
+    border-style: inset;
+    transition: 500ms;
+}
+
+.hoeveelheid{
+    padding: 10px 15px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1rem;
+    /* transition: 500ms; */
+    border-color: var(--Goud);
+    border-style: inset;
+}
+.hoeveelheid:focus{
+    outline: none;
+    background-color: lightgray;
+    border-style: inset;
+}
+
 
 /* opmaak footer */
 
@@ -197,7 +290,7 @@ footer h3{
     border-bottom: 1px solid var(--Goud);
     padding-bottom: 20px;
     font-size: 1.5rem;
-
+    color: white;
 }
 footer h3:nth-of-type(4){
     border: none;
@@ -211,14 +304,14 @@ footer p{
 
 body > figure{
     display: flex;
-    width: 10%;
+    width: 15%;
     margin: 0 auto;
     justify-content: space-between;
     margin-bottom: 100px;
 }
 body > figure img{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
 /*Make this page also responsive for phones if to big places images beneeth each other*/
 @media screen and (max-width: 766px) {
@@ -274,7 +367,8 @@ body > figure img{
     h3{
         border-bottom: 1px solid var(--Goud);
         padding-bottom: 20px;
-        color: white;
+        font-size: 1.5rem;
+        color: var(--Goud);
     }
     p{
         color: white;

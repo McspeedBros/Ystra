@@ -24,10 +24,13 @@
 </head>
 <body>
   <header>
+    <section class="background">
     <figure>
-      <a class="fixed" href="index.html"><img src="images/logo.png" alt=""/></a>
-      <a class="fixedCart" href="winkelwagen.html"><img src="images/winkelwagen.png" alt=""></a>
+      <a class="logo" href="index.html"><img src="images/logo.png" alt=""/></a>
+      <!-- <a class="fixedCart" href="winkelwagen.html"><img src="images/winkelwagen.png" alt=""></a> -->
     </figure>
+    </section>
+    
   </header>
 
   <main>
@@ -35,10 +38,9 @@
      <table id="cart-table">
   <thead>
     <tr>
-      <th>Product Naam</th>
+      <th>Product</th>
       <th>Hoeveelheid</th>
       <th>Prijs</th>
-      <th>Totaal</th>
       <th>Verwijder</th>
     </tr>
   </thead>
@@ -79,11 +81,11 @@
       id="phone"
       placeholder="Telefoonnummer"
       required
-    /><br />
+    /><br /><br>
     <label for="levering"
           >Wilt u uw bestelling laten leveren of haalt u het liever zelf
           op?</label
-        ><br />
+        ><br /><br>
         <input
           type="radio"
           name="data[Levering]"
@@ -124,7 +126,13 @@
 
   <footer>
     <section>
-      <p><a href="onsaanbod.html" class="button">Terug</a></p>
+      <input
+          type="button"
+          value="Terug"
+          class="button"
+          onclick="window.location.href='./onsaanbod.html'"
+          style="font-size: 1.2rem;"
+        />
       <input
           type="submit"
           name="data[plaatsBestelling]"
@@ -132,6 +140,7 @@
           value="Bevestig!"
           class="button"
           onclick="window.location.href='./bevestiging.html'"
+          style="font-size: 1.2rem;"
         />
     </section>
     
