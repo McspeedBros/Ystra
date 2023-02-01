@@ -35,7 +35,7 @@ for (var i = 0; i < cart.length; i++) {
 
     var removeTd = document.createElement("td");
     var removeButton = document.createElement("button");
-    removeButton.textContent = "Remove";
+    removeButton.textContent = "Verwijder";
     removeButton.addEventListener("click", function() {
       var index = cart.indexOf(product);
       cart.splice(index, 1);
@@ -54,4 +54,4 @@ for (var i = 0; i < cart.length; i++) {
   })(cart[i]);
 }
 
-totalCost.textContent = "Total cost: €" + total;
+totalCost.textContent = "Totale prijs: €" + total;
