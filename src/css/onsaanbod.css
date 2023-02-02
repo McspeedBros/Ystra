@@ -11,7 +11,29 @@ body{
     background-color: var(--backgroundcolor);
     font-family: 'Akaya Telivigala', cursive;
 }
-
+/* Cart */
+#overview {
+    /* Set the width and height */
+    width: 300px;
+    height: 100%;
+}
+#cart-list {
+    color: var(--Goud);
+}
+.update-quantity {
+    border: 1px solid var(--Goud);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--Goud);
+    font-size: 1.2rem;
+}
+.remove {
+    border: 1px solid var(--Goud);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--Goud);
+    font-size: 1.2rem;
+}
 
 /*opmaak header*/
 header{

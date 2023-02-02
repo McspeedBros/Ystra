@@ -51,7 +51,7 @@ function renderCart() {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
       ${item.title} - €${item.price} x ${item.quantity} = €${item.price * item.quantity}
-      <button class="update-quantity" data-title="${item.title}">Pas Hoeveelheid aan</button>
+      <button class="update-quantity" data-title="${item.title}">Hoeveelheid</button>
     `;
     const removeButton = document.createElement("button");
     removeButton.classList.add("remove");
