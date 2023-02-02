@@ -34,6 +34,9 @@
   </header>
 
   <main>
+    <form
+    id="sheetdb-form"
+  >
     <h1>Overzicht</h1>
      <table id="cart-table">
   <thead>
@@ -51,11 +54,6 @@
     </div>
 
     <h1>Gegevens</h1>
-    <form
-    action="https://sheetdb.io/api/v1/ytdi2i160aaco"
-    method="post"
-    id="sheetdb-form"
-  >
     <label for="name">Geef hier uw naam en voornaam *</label><br />
     <input
       type="text"
@@ -136,10 +134,9 @@
       <input
           type="submit"
           name="data[plaatsBestelling]"
-          id="plaatsBestelling"
+          id="submitbutton"
           value="Bevestig!"
           class="button"
-          onclick="window.location.href='./bevestiging.html'"
           style="font-size: 1.2rem;"
         />
     </section>
