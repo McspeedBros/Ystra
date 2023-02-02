@@ -12,10 +12,16 @@ body{
     font-family: 'Akaya Telivigala', cursive;
 }
 /* Cart */
-#overview {
-    /* Set the width and height */
-    width: 300px;
-    height: 100%;
+#overview1 {
+    /* Align this at the top right of the page */
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* move it a bit to the left */
+    margin-right: 10%;
+    /* bring it up front of the page */
+    z-index: 100;
+
 }
 #cart-list {
     color: var(--Goud);
