@@ -3,7 +3,6 @@
 TODO: Vergeet de onnodige css niet uit de files te halen dat je aankaartte
 TODO: Sociale media logos ook voor Homepage aanpassen
 TODO: De bevestig en terug knop mogen gecentreerd zijn en mag dan gwn een beetje margin tussen zitten.
-TODO: CSS maken voor overzicht shopping cart aanbod => Robin
 
 
 ## Extra's
