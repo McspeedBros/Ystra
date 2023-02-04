@@ -19,13 +19,14 @@ header p {
 
 /*opmaak header*/
 header {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
-header figure:nth-of-type(1) {
-  width: 5%;
-  min-width: 70px;
+.logo {
+  width: 80px;
+  height: 80px;
+  top: 18px;
   margin: 0 auto;
   margin-bottom: 50px;
   margin-top: 50px;
@@ -34,9 +35,18 @@ header figure:nth-of-type(1) img {
   width: 100%;
 }
 
-header figure:nth-of-type(2) {
-  margin: 0 auto;
+header div {
   width: 100%;
+  height: 120px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--Goud);
+  border-bottom-width: 3px;
+  margin-bottom: 50px;
+}
+.banner {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 95%;
   background-image: url(../images/banner1.jpg);
   height: 700px;
   background-size: cover;
@@ -45,7 +55,7 @@ header figure:nth-of-type(2) {
 }
 header h1 {
   position: absolute;
-  top: 350px;
+  top: 440px;
   left: 100px;
   color: var(--backgroundcolor);
   font-size: 4rem;
@@ -57,7 +67,7 @@ header span {
 }
 header p {
   position: absolute;
-  top: 550px;
+  top: 640px;
   left: 100px;
   color: var(--backgroundcolor);
   font-size: 1.5rem;
@@ -70,7 +80,7 @@ main {
   margin: 0 auto;
   margin-top: 200px;
 }
-section {
+main section {
   width: 40%;
   margin: 0 auto;
   font-size: 1.1rem;
@@ -85,36 +95,38 @@ section h2 {
 #container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 #box1 {
   background-image: url("../images/onsaanbod/Vanilla-Ice-Cream-Transparent-Image.png");
-  background-size: 70px;
+  background-size: 130px;
   background-repeat: no-repeat;
   background-position: top;
 }
 #box2 {
   background-image: url("../images/onsaanbod/mokka.png");
-  background-size: 60px;
+  background-size: 120px;
   background-repeat: no-repeat;
   background-position: top;
 }
 #box3 {
   background-image: url("../images/onsaanbod/straciatella.png");
-  background-size: 60px;
+  background-size: 90px;
   background-repeat: no-repeat;
   background-position: top;
 }
 #box4 {
   background-image: url("../images/onsaanbod/brazil.png");
-  background-size: 60px;
+  background-size: 100px;
   background-repeat: no-repeat;
   background-position: top;
 }
 section h3 {
-  font-weight: lighter;
+  font-weight: bold;
   border-bottom: 1px solid var(--Goud);
+  padding-top: 40px;
   padding-bottom: 20px;
+  color: var(--Goud);
 }
 section p {
   text-align: center;
@@ -123,13 +135,17 @@ section a {
   text-decoration: none;
   color: white;
   background-color: var(--Goud);
-  padding: 10px 20px;
+  padding: 8px 15px;
   transition: 500ms;
   margin: 30px;
+  border-radius: 5px;
+  border-color: var(--Goud);
+  border-style: solid;
 }
 section a:hover {
   background-color: white;
   color: var(--Goud);
+  border-style: inset;
 }
 
 
@@ -164,15 +180,19 @@ article div p {
 article a button {
   border: none;
   background-color: var(--Goud);
-  padding: 10px 20px;
+  padding: 9px 15px;
   color: white;
   font-family: "Akaya Telivigala", cursive;
   font-size: 1rem;
   transition: 500ms;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: var(--Goud);
 }
 article a button:hover {
   background-color: white;
   color: var(--Goud);
+  border-style: inset;
   cursor: pointer;
 }
 
@@ -410,14 +430,14 @@ footer p {
 
 body > figure {
   display: flex;
-  width: 10%;
+  width: 15%;
   margin: 0 auto;
   justify-content: space-between;
   margin-bottom: 100px;
 }
 body > figure img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 
 /* make this page responsive for a iphone screen*/
