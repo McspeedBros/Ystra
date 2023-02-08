@@ -7,7 +7,7 @@ TODO: De bevestig en terug knop mogen gecentreerd zijn en mag dan gwn een beetje
 TODO: Index pagina aanbod fotos groter maken ✅
 TODO: Prijs per stuk overzicht
 TODO: Font size groter op overzicht
-TODO: Hover op afbeeldingen nog groter maken
+TODO: Hover op afbeeldingen nog groter maken ✅
 TODO: Data doorgifte Hoeveelheid Aanbod -> Overzicht
 TODO: Logo groter maken op alle pagina's
 
