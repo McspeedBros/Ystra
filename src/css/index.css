@@ -46,9 +46,9 @@ header div {
 .banner {
   margin: 0 auto;
   margin-top: 30px;
-  width: 95%;
-  background-image: url(../images/banner1.jpg);
-  height: 700px;
+  width: 100%;
+  background-image: url(../images/Banner\ homepage\ top.png);
+  height: 1000px;
   background-size: cover;
   background-position: center;
   background-position-y: bottom;
@@ -235,7 +235,7 @@ aside div h3:nth-of-type(3) {
 #banner {
   margin-top: 200px;
   width: 100%;
-  background-image: url(../images/banner2.png);
+  background-image: url(../images/Homepage\ banner\ bottom.png);
   background-repeat: contain;
   background-size: cover;
   background-position-y: center;
