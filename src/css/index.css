@@ -83,14 +83,14 @@ main {
 main section {
   width: 40%;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 section h2 {
   text-align: center;
   color: var(--Goud);
   padding-bottom: 75px;
   font-family: "Dancing Script", cursive;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 #container {
   display: flex;
@@ -166,7 +166,7 @@ article div {
   flex-basis: 50%;
 }
 article div h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Dancing Script", cursive;
   color: var(--Goud);
   margin-top: 125px;
@@ -217,14 +217,14 @@ aside div {
 }
 aside div p {
   color: var(--Goud);
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 aside div h3 {
   color: var(--tekstkleur);
   font-family: "Dancing Script", cursive;
   border-bottom: 1px solid var(--Goud);
   padding-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 aside div h3:nth-of-type(3) {
   border: none;
@@ -243,7 +243,7 @@ aside div h3:nth-of-type(3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Dancing Script", cursive;
   color: black;
 }
@@ -259,7 +259,7 @@ aside div h3:nth-of-type(3) {
   color: var(--Goud);
   padding-bottom: 75px;
   font-family: "Dancing Script", cursive;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 #sponsorcontainer {
   display: flex;
@@ -267,6 +267,9 @@ aside div h3:nth-of-type(3) {
   width: 50%;
   margin: 0 auto;
   text-align: center;
+}
+#sponsorcontainer p {
+  font-size: 1.3rem;
 }
 #sponsor1 {
   width: 120px;
@@ -535,6 +538,9 @@ body > figure img {
     margin: 0 auto;
     margin-top: 200px;
   }
+  #container {
+    font-family: "Dancing Script", cursive;
+  }
 
   /*Make the header responsive(background image) for phones */
   nav {
@@ -633,6 +639,7 @@ body > figure img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 2rem
   }
   #sponsorcontainer {
     width: 100%;
@@ -663,7 +670,7 @@ body > figure img {
     padding: 20px 50px;
   }
   #sponsorcontainer div a:hover {
-    background-color: var(--Goud);
+    /* background-color: var(--Goud); */
     color: var(--tekstkleur);
     cursor: pointer;
   }
@@ -702,5 +709,4 @@ body > figure img {
   footer div:nth-of-type(1) a:nth-of-type(2) {
     margin-top: 50px;
   }
-  
 }
