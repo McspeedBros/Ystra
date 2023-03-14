@@ -20,56 +20,12 @@ header{
   position: relative;
   font-family: 'Dancing Script', cursive;
 }
-/* header figure:nth-of-type(1){
-  width: 5%;
-  min-width: 70px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
-} */
 header figure:nth-of-type(1) img{
-  width: 80px;
-  /* margin-top: 50px; */
-  /* background-color: #222222; */
+  width: 100px;
 }
 
-header figure:nth-of-type(2){
-  margin: 0 auto;
-  width: 100%;
-  background-image: url(../images/pexels.jpg);
-  height: 700px;
-  background-size: cover;
-  background-position: center;
-  background-position-y: bottom;
-}
-header h1{
-  position: absolute;
-  top: 50%;
-  left: 100px;
-  color: var(--backgroundcolor);
-  font-size: 4rem;
-  font-weight: lighter;
-
-}
-header span{
-  font-weight: bold;
-  color: var(--Goud);
-}
 header div {
   padding-bottom: 50px;
-}
-.fixed{
-  position: fixed;
-  top: 0;
-  width: 50px;
-  height: 50px;
-}
-.fixedCart{
-  position: fixed;
-  width: 45px;
-  height: 45px;
-  top: 5px;
-  right: 3.5%;
 }
 
 .background{
@@ -79,25 +35,6 @@ header div {
   border-bottom-color: var(--Goud);
   border-bottom-width: 3px;
   margin-bottom: 50px;
-}
-
-.logo{
-  /* position: fixed; */
-  /* top: 18px;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-  width: 110px;
-  height: 110px;
-  /* top: 15px; */
-  margin: 0 auto;
-  margin-bottom: 50px;
-  margin-top: 10px;
 }
 
 .button{
@@ -253,6 +190,7 @@ table tr td {
   border: 2px solid var(--Goud);
   padding: 10px;
   text-align: center;
+  font-size: 120%;
 }
 table tr td:nth-of-type(3) {
   width: 15%;
