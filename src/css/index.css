@@ -442,6 +442,14 @@ body > figure img {
 
 /* make this page responsive for a iphone screen*/
 @media screen and (max-width: 766px) {
+  .banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   body {
     width: 100%;
   }
@@ -617,6 +625,14 @@ body > figure img {
     background-size: cover;
     background-position: center;
     background-position-y: bottom;
+  }
+  #banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #sponsorcontainer {
     width: 100%;
