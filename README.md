@@ -6,8 +6,6 @@ TODO: De bevestig en terug knop mogen gecentreerd zijn en mag dan gwn een beetje
 
 ## Extra's
 
-- Op de bevestigingspagina evt iets van foto's zetten van op de insta-pagina => Kyana IS klaar maar moet de embedlink nog zien te krijgen
-
 ## Later Paasvakantie
 
 - [ ] Taarten, frisco's, ... kunnen bestellen

@@ -204,7 +204,7 @@ table tr:nth-last-child(-n+2) {
 }
 
 iframe {
-  width: 90%;
+  width: 75%;
   height: 500px;
   border: 0;
   margin: 0 auto;
