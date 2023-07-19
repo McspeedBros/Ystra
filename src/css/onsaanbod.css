@@ -24,18 +24,46 @@ body{
     color: var(--Goud);
 }
 .update-quantity {
+    font-family: var(--font1);
     border: 1px solid var(--Goud);
     border-radius: 5px;
     text-align: center;
-    color: var(--Goud);
+    color: var(--tekstkleur);
+    background-color: var(--Goud);
     font-size: 1.2rem;
+    padding: 3px 7px;
+    border: var(--Goud);
+    border-style: solid;
+    transition: 500ms;
 }
+.update-quantity:hover{
+    background-color: var(--tekstkleur);
+    color: var(--Goud);
+    transition: 500ms;
+    border-style: inset;
+    cursor: pointer;
+}
+
 .remove {
+    font-family: var(--font1);
     border: 1px solid var(--Goud);
     border-radius: 5px;
     text-align: center;
-    color: var(--Goud);
+    color: var(--tekstkleur);
+    background-color: var(--Goud);
     font-size: 1.2rem;
+    padding: 3px 7px;
+    border: var(--Goud);
+    border-style: solid;
+    transition: 500ms;
+}
+.remove:hover{
+    background-color: red;
+    color: var(--tekstkleur);
+    border-style: inset;
+    border-color: red;
+    transition: 500ms;
+    cursor: pointer;
 }
 
 /*opmaak header*/
@@ -283,6 +311,7 @@ p{
     color: var(--Goud);
     border-style: inset;
     transition: 500ms;
+    cursor: pointer;
 }
 
 .hoeveelheid{
@@ -295,11 +324,13 @@ p{
     /* transition: 500ms; */
     border-color: var(--Goud);
     border-style: inset;
+    cursor: pointer;
 }
 .hoeveelheid:focus{
     outline: none;
     background-color: lightgray;
     border-style: inset;
+    cursor: pointer;
 }
 
 

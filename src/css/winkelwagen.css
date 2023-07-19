@@ -60,28 +60,28 @@ header div {
   padding: 8px 15px;
   text-align: center;
   border: none;
-  background-color: var(--Goud);
+  background-color: var(--backgroundcolor);
   color: white;
   transition: 500ms;
   font-size: 1.1rem;
+  /* height: 15px; */
   text-decoration: none;
   font-family: "Akaya Telivigala", cursive;
   border-radius: 4px;
   border: 4px;
   border-style: solid;
-  border-color: var(--Goud);
+  border-color: var(--backgroundcolor);
   cursor: pointer;
 }
 
 .buttonTable:hover{
-  background-color: white;
-  color: var(--Goud);
+  background-color: var(--backgroundcolor);
+  color: var(--tekstkleur);
   border: 4px;
   border-style: inset;
-  border-color: var(--Goud);
-
+  border-color: red;
+  cursor: pointer;
   transition: 500ms;
-
 }
 
 .button:hover{
@@ -191,6 +191,7 @@ table {
 }
 table tr {
   border: 2px solid var(--Goud);
+  height: 30px;
 }
 table tr td {
   border: 2px solid var(--Goud);
