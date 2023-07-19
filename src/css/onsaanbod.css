@@ -97,7 +97,7 @@ main h1 span{
 }
 .logo{
     position: fixed;
-    top: 18px;
+    top: 11px;
     width: 105px;
     /* height: 85px; */
     left: calc(50% - 40px);
@@ -120,7 +120,7 @@ main h1 span{
   }
 .cart{
     position: fixed;
-    top: 20px;
+    top: 25px;
     width: 75px;
     /* height: 75px; */
     right: 4%;

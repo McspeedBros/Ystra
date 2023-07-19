@@ -10,6 +10,7 @@
 body{
   background-color: var(--backgroundcolor);
   font-family: 'Akaya Telivigala', cursive;
+  height: 100%;
 }
 
 h1, h2 {
@@ -28,9 +29,13 @@ p {
   padding-bottom: 30px;
   font-family: 'Akaya Telivigala', cursive;}
 
+.insta {
+  height: 490px;
+}
+
 iframe {
   width: 80%;
-  height: 27em;
+  height: 90%;
   border: 0;
   margin: 0 auto;
   display: block;
