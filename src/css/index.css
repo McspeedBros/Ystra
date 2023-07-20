@@ -92,7 +92,12 @@ section h2 {
   font-family: "Dancing Script", cursive;
   font-size: 3rem;
 }
-#container {
+#container1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+#container2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 75px;
@@ -102,25 +107,84 @@ section h2 {
   background-size: 130px;
   background-repeat: no-repeat;
   background-position: top;
+  transition: 0.5s;
+}
+#box1:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #box2 {
   background-image: url("../images/onsaanbod/mokka.png");
   background-size: 120px;
+  width: 125px;
   background-repeat: no-repeat;
   background-position: top;
+  transition: 0.5s;
+}
+#box2:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #box3 {
   background-image: url("../images/onsaanbod/straciatella.png");
   background-size: 90px;
   background-repeat: no-repeat;
   background-position: top;
+  transition: 0.5s;
+}
+#box3:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 #box4 {
   background-image: url("../images/onsaanbod/brazil.png");
   background-size: 100px;
   background-repeat: no-repeat;
   background-position: top;
+  transition: 0.5s;
 }
+#box4:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+#box5 {
+  background-image: url("../images/hot_items/pralines.png");
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 155px;
+  /* padding-bottom: 15px; */
+  transition: 0.5s;
+}
+#box5:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+#box6 {
+  background-image: url("../images/hot_items/taart4_clean.png");
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 155px;
+  transition: 0.5s;
+}
+#box6:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+#box7 {
+  background-image: url("../images/hot_items/frisco3_clean_CROPPED_ROUNDED.png");
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-position: 50% 12%;
+  width: 155px;
+  transition: 0.5s;
+}
+#box7:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
 section h3 {
   font-weight: bold;
   border-bottom: 1px solid var(--Goud);
@@ -538,7 +602,10 @@ body > figure img {
     margin: 0 auto;
     margin-top: 200px;
   }
-  #container {
+  #container1 {
+    font-family: "Dancing Script", cursive;
+  }
+  #container2 {
     font-family: "Dancing Script", cursive;
   }
 
