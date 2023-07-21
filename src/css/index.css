@@ -101,6 +101,27 @@ section h2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 75px;
+  border-radius: 12px;
+  border-style: inset;
+  border-color: var(--Goud);
+  border-width: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* #stars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
+aside img {
+  width: 35px;
+  height: 35px;
+  margin-right: 0px;
+}
+aside figure {
+  margin: auto;
 }
 #box1 {
   background-image: url("../images/onsaanbod/Vanilla-Ice-Cream-Transparent-Image.png");
@@ -153,12 +174,15 @@ section h2 {
   background-repeat: no-repeat;
   background-position: top;
   width: 155px;
-  /* padding-bottom: 15px; */
   transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
 }
 #box5:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  box-shadow: 0px 0px 15px 0px var(--Goud);
 }
 #box6 {
   background-image: url("../images/hot_items/taart4_clean.png");
@@ -167,10 +191,14 @@ section h2 {
   background-position: top;
   width: 155px;
   transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
 }
 #box6:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  box-shadow: 0px 0px 15px 0px var(--Goud);
 }
 #box7 {
   background-image: url("../images/hot_items/frisco3_clean_CROPPED_ROUNDED.png");
@@ -179,10 +207,14 @@ section h2 {
   background-position: 50% 12%;
   width: 155px;
   transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
 }
 #box7:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  box-shadow: 0px 0px 15px 0px var(--Goud);
 }
 
 section h3 {
@@ -233,7 +265,7 @@ article div h2 {
   font-size: 3rem;
   font-family: "Dancing Script", cursive;
   color: var(--Goud);
-  margin-top: 125px;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 article div p {
@@ -262,17 +294,28 @@ article a button:hover {
 
 .foto > img{
   width: 45%;
+  border-radius: 7px;
+  transition: 500ms;
+}
+.foto > img:hover{
+  transform: scale(1.1);
+  transition: 500ms;
+  box-shadow: 0px 0px 15px 0px var(--Goud);
 }
 /* opmaak aside */
 
-aside {
+.aside {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 aside iframe {
   flex-basis: 50%;
+  border-style: inset;
+  border-color: var(--Goud);
+  border-radius: 10px;
+  border-width: 4px;
 }
 aside div {
   margin: 0 auto;

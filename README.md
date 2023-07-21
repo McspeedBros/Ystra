@@ -11,6 +11,7 @@
 - [ ] Array van data uitprintingen mooier maken voor in de SHEET
 - [x] Links achter sponsors
 - [ ] Nieuwe ijssmaken toevoegen
+- [ ] Winkelmandje clearen na bestelling
 
 ### TODO's 21/07/2023
 - [ ] kader rond hot items zetten (toffe manier zoeken)
