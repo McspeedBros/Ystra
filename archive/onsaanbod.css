@@ -97,7 +97,7 @@ main figure:nth-of-type(1){
     background-size: cover;
     background-position: center;
     background-position-y: bottom;
-    margin-left: 0%;
+    margin-left: 2%;
 }
 h1{
     position: absolute;
@@ -125,10 +125,10 @@ main h1 span{
 }
 .logo{
     position: fixed;
-    top: 10px;
-    width: 110px;
-    height: 110px;
-    left: calc(50% - 55px);
+    top: 11px;
+    width: 105px;
+    /* height: 85px; */
+    left: calc(50% - 40px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,7 +193,7 @@ main > p > a {
     transition: 500ms;
   }
 main{
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 200px;
 }
@@ -204,65 +204,8 @@ main img{
 }
 
 main img:hover{
-    transform: scale(1.2);
+    transform: scale(1.4);
     transition: 500ms;
-}
-
-.product {
-    transition: 500ms;
-    /* box-shadow: 0 0 10px 0; */
-    border-radius: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 7px;
-    padding-top: 25px;
-    /* width: 100%; */
-}
-.product:hover {
-    /* transform: scale(1.1); */
-    transition: 500ms;
-    box-shadow: 0 0 10px var(--tekstkleur);
-    border-radius: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 7px;
-    padding-top: 25px;
-}
-
-.specials {
-    transition: 500ms;
-    /* box-shadow: 0 0 10px 0; */
-    /* border-radius: 10px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    padding-top: 10px; */
-}
-.specials:hover {
-    transition: 500ms;
-    box-shadow: 0 0 10px var(--Goud);
-    border-radius: 10px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    padding-top: 10px;
-}
-
-/* separate images flavours */
-#vanilla {
-    height: 120px;
-    width: auto;
-    margin-right: 5px;
-    margin-top: 2px;
-}
-#mokka {
-    height: 125px;
-    width: auto;
-}
-#stracciatella {
-    height: 130px;
-    width: auto;
-    margin-top: -5px;
 }
 
 
@@ -327,51 +270,21 @@ h3{
 p{
     color: white;
 }
-/* .container1 {
-    width: 90%;
-} */
 
-/* .container2 {
-    border-radius: 10px;
-    border-style: inset;
-    border-color: var(--tekstkleur);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-} */
-
-.container3 {
+.container3{
     justify-content: center;
-    /* border-radius: 10px;
-    border-style: inset;
-    border-color: var(--tekstkleur);
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    width: 350px;
-    margin: 0 auto; */
 }
 .container3 > div:nth-of-type(1){
-    margin-right: 45px;
+    margin-right: 140px;
 }
 
 .container4{
     justify-content: center;
-    /* border-radius: 10px;
-    border-style: inset;
-    border-color: var(--Goud);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    width: 1000px;
-    margin: 0 auto; */
 }
 .container4 > div{
     margin-left: 50px;
     margin-right: 50px;
+
 }
 .container5{
     justify-content: center;

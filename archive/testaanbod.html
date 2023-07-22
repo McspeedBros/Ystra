@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="./images/logo.png"
+      rel="shortcut icon"
+      type="./images/logo.png"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Eczar:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="onsaanbod.css" />
+    <title>Ons aanbod</title>
+  </head>
+  <body>
+    <header>
+      <section class="background">
+        <figure>
+          <a class="logo" href="index.html"><img src="images/logo.png" alt="" /></a>
+          <a class="cart" href="winkelwagen.html"><img src="images/winkelwagen.png" alt=""></a>
+        </figure>
+      </section>
+    </header>
+
+    <main>
+      <!-- <h2>Basic</h2> -->
+      <!-- <h2 id="overview">Shopping Cart</h2> -->
+      <div id="overview1">
+      <ul id="cart-list">
+      </ul>
+      <p id="total-cost"></p>
+    </div>
+
+      <h2>Pralines - Taart - Frisco</h2>
+
+      <section class="container5">
+        <div class="product">
+          <div><img src="images/onsaanbod/pralines.png" alt="" /></div><br><br>
+          <h3>Yspralines</h3>
+          <p>&euro; 9,00 per doos</p>
+          <input class="hoeveelheid" type="number" value="1" min="0">
+          <button class="add-to-cart">+</button>
+        </div>
+
+        <div class="product">
+          <div><img src="images/onsaanbod/taart.png" alt="" /></div><br><br>
+          <h3>Taarten</h3>
+          <p>Vanaf &euro; 4,00 per persoon</p>
+          <input class="hoeveelheid" type="number" value="1" min="0">
+          <button class="add-to-cart">+</button>
+        </div>
+        <div class="product">
+          <div><img src="images/onsaanbod/frisco.png" alt="" /></div><br><br>
+          <h3>Frisco's</h3>
+          <p>&euro; 2,50 per stuk</p>
+          <input class="hoeveelheid" type="number" value="1" min="0">
+          <button class="add-to-cart">+</button>
+        </div>
+      <!-- <p><a href="bestelling.html">Bestelling plaatsen!</a></p> -->
+    </main>
+    <script src="aanbod.js" defer></script>
+  </body>
+</html>

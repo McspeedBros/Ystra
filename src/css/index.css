@@ -119,54 +119,78 @@ aside img {
   width: 35px;
   height: 35px;
   margin-right: 0px;
+  transition: 500ms;
 }
 aside figure {
   margin: auto;
 }
+aside figure img:hover {
+  transform: scale(1.4);
+  transition: 500ms;
+}
 #box1 {
-  background-image: url("../images/onsaanbod/Vanilla-Ice-Cream-Transparent-Image.png");
+  background-image: url("../images/onsaanbod/vanilla.png");
   background-size: 130px;
   background-repeat: no-repeat;
+  width: 135px;
   background-position: top;
   transition: 0.5s;
+  margin-right: 10px;
 }
 #box1:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 #box2 {
-  background-image: url("../images/onsaanbod/mokka.png");
+  background-image: url("../images/onsaanbod/mokka1.png");
   background-size: 120px;
-  width: 125px;
+  width: 135px;
   background-repeat: no-repeat;
   background-position: top;
   transition: 0.5s;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #box2:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 #box3 {
   background-image: url("../images/onsaanbod/straciatella.png");
-  background-size: 90px;
+  background-size: 110px;
+  width: 135px;
   background-repeat: no-repeat;
   background-position: top;
   transition: 0.5s;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: -4px;
 }
+/* #stracciatella {
+  margin-top: -15px;
+  margin-bottom: 15px;
+} */
 #box3:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 #box4 {
-  background-image: url("../images/onsaanbod/brazil.png");
-  background-size: 100px;
+  background-image: url("../images/onsaanbod/milkyChoc1.avif");
+  background-size: 105px;
+  width: 135px;
   background-repeat: no-repeat;
   background-position: top;
   transition: 0.5s;
+  margin-left: 10px;
+  margin-top: 7px;
 }
 #box4:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  cursor: pointer;
 }
 #box5 {
   background-image: url("../images/hot_items/pralines.png");
@@ -183,6 +207,7 @@ aside figure {
   transform: scale(1.1);
   transition: 0.5s;
   box-shadow: 0px 0px 15px 0px var(--Goud);
+  cursor: pointer;
 }
 #box6 {
   background-image: url("../images/hot_items/taart4_clean.png");
@@ -199,6 +224,7 @@ aside figure {
   transform: scale(1.1);
   transition: 0.5s;
   box-shadow: 0px 0px 15px 0px var(--Goud);
+  cursor: pointer;
 }
 #box7 {
   background-image: url("../images/hot_items/frisco3_clean_CROPPED_ROUNDED.png");
@@ -215,6 +241,7 @@ aside figure {
   transform: scale(1.1);
   transition: 0.5s;
   box-shadow: 0px 0px 15px 0px var(--Goud);
+  cursor: pointer;
 }
 
 section h3 {
@@ -627,271 +654,4 @@ body > figure img {
 
 /* make this page responsive for a iphone screen*/
 @media screen and (max-width: 766px) {
-  .banner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  body {
-    width: 100%;
-  }
-  .foto > img{
-    width: 100%;
-  }
-  /* remove the text of the header */
-  header h1 {
-    display: none;
-  }
-  header figure:nth-of-type(1) {
-    width: 25%;
-  }
-  /* Set the 2 buttons responsive for phones beneeth each other */
-  section a {
-    width: 100%;
-    display: block;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 50px;
-  }
-  /*Make the header responsive(background image) for phones */
-  header figure:nth-of-type(2) {
-    margin: 0 auto;
-    width: 360px;
-    background-image: url(../images/pexels.jpg);
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    background-position-y: bottom;
-  }
-  /*Make the header text on the picture responsive for phones */
-  header figure:nth-of-type(2) h1 {
-    font-size: 2rem;
-    margin-top: 100px;
-  }
-  header figure:nth-of-type(2) h2 {
-    font-size: 1.5rem;
-  }
-  section:nth-of-type(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-  section:nth-of-type(1) h2 {
-    font-size: 2rem;
-    font-family: "Dancing Script", cursive;
-    margin-bottom: 50px;
-  }
-  section:nth-of-type(1) div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /*Place the text of the header under the picture of the frist article */
-  .underneeth {
-    flex-direction: column;
-  }
-  /*Place the text of the header under the picture of the second article */
-  section:nth-of-type(1) div:nth-of-type(2) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  section:nth-of-type(1) div:nth-of-type(2) h3 {
-    font-size: 1.5rem;
-    font-family: "Dancing Script", cursive;
-    margin-bottom: 50px;
-  }
-  section:nth-of-type(1) div:nth-of-type(2) p {
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 50px;
-  }
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 200px;
-  }
-  #container1 {
-    font-family: "Dancing Script", cursive;
-  }
-  #container2 {
-    font-family: "Dancing Script", cursive;
-  }
-
-  /*Make the header responsive(background image) for phones */
-  nav {
-    width: 100%;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul li {
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 20px 0;
-  }
-  nav ul li:nth-of-type(1) {
-    border-top: 1px solid var(--Goud);
-  }
-  nav ul li:nth-of-type(2) {
-    border-bottom: 1px solid var(--Goud);
-  }
-  #main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #main img {
-    width: 100%;
-  }
-  #main h1 {
-    font-size: 2rem;
-    padding-bottom: 50px;
-  }
-  #main p {
-    width: 80%;
-    padding-bottom: 50px;
-  }
-  #main a {
-    font-size: 1.5rem;
-    padding: 20px 50px;
-  }
-  #main a:hover {
-    background-color: var(--Goud);
-    color: var(--tekstkleur);
-    cursor: pointer;
-  }
-  #main a:nth-of-type(2) {
-    margin-top: 50px;
-  }
-  aside {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  aside div {
-    width: 80%;
-    padding: 0;
-    margin-bottom: 50px;
-  }
-  aside div h3 {
-    font-size: 2rem;
-    padding-bottom: 50px;
-  }
-  aside div p {
-    font-size: 1.5rem;
-    padding-bottom: 50px;
-  }
-  aside div a {
-    font-size: 1.5rem;
-    padding: 20px 50px;
-  }
-  aside div a:hover {
-    background-color: var(--Goud);
-    color: var(--tekstkleur);
-    cursor: pointer;
-  }
-  aside div a:nth-of-type(2) {
-    margin-top: 50px;
-  }
-  /* Center the banner and the text inside it div of banner */
-  main > div:nth-of-type(1) {
-    width: 100%;
-    height: 300px;
-    background-image: url(../images/pexels-rakicevic-nenad-1262302.jpg);
-    background-size: cover;
-    background-position: center;
-    background-position-y: bottom;
-  }
-  #banner {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem
-  }
-  #sponsorcontainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #sponsorcontainer h2 {
-    font-size: 2rem;
-    padding-bottom: 50px;
-  }
-  #sponsorcontainer div {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #sponsorcontainer div img {
-    width: 100%;
-    padding-bottom: 50px;
-  }
-  #sponsorcontainer div p {
-    font-size: 1.5rem;
-    padding-bottom: 50px;
-  }
-  #sponsorcontainer div a {
-    font-size: 1.5rem;
-    padding: 20px 50px;
-  }
-  #sponsorcontainer div a:hover {
-    /* background-color: var(--Goud); */
-    color: var(--tekstkleur);
-    cursor: pointer;
-  }
-  #sponsorcontainer div a:nth-of-type(2) {
-    margin-top: 50px;
-  }
-  footer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer div:nth-of-type(1) {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  footer div:nth-of-type(1) h3 {
-    font-size: 2rem;
-    padding-bottom: 50px;
-  }
-  footer div:nth-of-type(1) p {
-    font-size: 1.5rem;
-    padding-bottom: 50px;
-  }
-  footer div:nth-of-type(1) a {
-    font-size: 1.5rem;
-    padding: 20px 50px;
-  }
-  footer div:nth-of-type(1) a:hover {
-    background-color: var(--Goud);
-    color: var(--tekstkleur);
-    cursor: pointer;
-  }
-  footer div:nth-of-type(1) a:nth-of-type(2) {
-    margin-top: 50px;
-  }
 }

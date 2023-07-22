@@ -43,30 +43,31 @@
       <h2>Basic</h2>
       <!-- <h2 id="overview">Shopping Cart</h2> -->
       <div id="overview1">
-      <ul id="cart-list">
-      </ul>
-      <p id="total-cost"></p>
-    </div>
+        <ul id="cart-list">
+        </ul>
+        <p id="total-cost"></p>
+      </div>
       <section class="container1">
-      <div class="product">
-        <div>
-          <img
-            src="images/onsaanbod/Vanilla-Ice-Cream-Transparent-Image.png"
-            alt=""
-          />
-        </div>
-        <h3>Velvet Vanilla</h3>
-        <p>&euro; 10.00 - 1L</p>
-        <input class="hoeveelheid" type="number" value="1" min="0">
-        <button class="add-to-cart">+</button>
-        <!-- <br>
-        <p>$12.00</p>
-        <input type="number" value="1" min="0">
-        <button class="add-to-cart">+</button> --> 
-    </div>
         <div class="product">
           <div>
-            <img src="images/onsaanbod/mokka.png" alt="" />
+            <img
+              id="vanilla"
+              src="images/onsaanbod/vanilla.png"
+              alt=""
+            />
+          </div>
+          <h3>Velvet Vanilla</h3>
+          <p>&euro; 10.00 - 1L</p>
+          <input class="hoeveelheid" type="number" value="1" min="0">
+          <button class="add-to-cart">+</button>
+          <!-- <br>
+          <p>$12.00</p>
+          <input type="number" value="1" min="0">
+          <button class="add-to-cart">+</button> --> 
+        </div>
+        <div class="product">
+          <div>
+            <img id="mokka" src="images/onsaanbod/mokka1.png" alt="" />
           </div>
           <h3>Mild Mokka</h3>
           <p>&euro; 10,00 - 1L</p>
@@ -75,7 +76,7 @@
         </div>
         <div class="product">
           <div>
-            <img src="images/onsaanbod/straciatella.png" alt="" />
+            <img id="stracciatella" src="images/onsaanbod/straciatella.png" alt="" />
           </div>
           <h3>Soft Stracciatella</h3>
           <p>&euro; 10,00 - 1L</p>
@@ -85,7 +86,7 @@
 
         <div class="product">
           <div>
-            <img src="images/onsaanbod/brazil.png" alt="" />
+            <img id="milkychoc" src="images/onsaanbod/milkyChoc1.avif" alt="" />
           </div>
           <h3>Milky Chocolate</h3>
           <p>&euro; 10,00 - 1L</p>
@@ -94,8 +95,16 @@
         </div>
 
         <div class="product">
-          <div><img src="images/onsaanbod/brazil.png" alt="" /></div>
+          <div><img id="brazil" src="images/onsaanbod/brazil.png" alt="" /></div>
           <h3>Brazil Chocolate</h3>
+          <p>&euro; 10,00 - 1L</p>
+          <input class="hoeveelheid" type="number" value="1" min="0">
+          <button class="add-to-cart">+</button>
+        </div>
+
+        <div class="product">
+          <div><img id="banana" src="images/onsaanbod/banana1.png" alt="banaan" /></div>
+          <h3>Banana Crazy</h3>
           <p>&euro; 10,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
           <button class="add-to-cart">+</button>
@@ -106,7 +115,7 @@
 
       <section class="container2">
         <div class="product">
-          <div><img src="images/onsaanbod/aardbeien.png" alt="" /></div>
+          <div><img id="strawberry" src="images/onsaanbod/strawberry1.png" alt="" /></div>
           <h3>Sweet Strawberry</h3>
           <p>&euro; 10,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
@@ -114,7 +123,7 @@
         </div>
 
         <div class="product">
-          <div><img src="images/onsaanbod/lemon.jpg" alt="" /></div>
+          <div><img id="lemon" src="images/onsaanbod/lemon1.png" alt="" /></div>
           <h3>Funky Lemon</h3>
           <p>&euro; 10,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
@@ -122,7 +131,7 @@
         </div>
 
         <div class="product">
-          <div><img src="images/onsaanbod/frambozen.png" alt="" /></div>
+          <div><img id="raspberry" src="images/onsaanbod/raspberry.png" alt="" /></div>
           <h3>Raspberry Red</h3>
           <p>&euro; 10,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
@@ -130,7 +139,7 @@
         </div>
 
         <div class="product">
-          <div><img src="images/onsaanbod/mango.png" alt="" /></div>
+          <div><img id="mango" src="images/onsaanbod/mango1.png" alt="" /></div>
           <h3>Tropical Mango</h3>
           <p>&euro; 10,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
@@ -139,7 +148,7 @@
 
         <div class="product">
           <div>
-            <img src="images/onsaanbod/bleuberry.png" alt="" />
+            <img id="blueberry" src="images/onsaanbod/blueberry.png" alt="" />
           </div>
           <h3>Blueberry Boost</h3>
           <p>&euro; 10,00 - 1L</p>
@@ -153,7 +162,7 @@
       <section class="container3">
         <div class="product">
           <div>
-            <img src="images/onsaanbod/pistache.png" alt="" /></div>
+            <img id="pistache" src="images/onsaanbod/pistache1.png" alt="" /></div>
           <h3>Pure Pistacchio</h3>
           <p>&euro; 12,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
@@ -165,7 +174,7 @@
         </div>
 
         <div class="product">
-          <div><img src="images/onsaanbod/hazelnoten.png" alt="" /></div>
+          <div><img id="piemonte" src="images/onsaanbod/hazelnoot.png" alt="" /></div>
           <h3>Piemonte Nuts</h3>
           <p>&euro; 12,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
@@ -176,26 +185,35 @@
       <h2>Specials</h2>
 
       <section class="container4">
-        <div class="product">
-          <div><img src="images/onsaanbod/ruby.png" alt="" /></div>
-          <h3>Ruby Pink</h3>
+        <div class="product specials">
+          <div><img id="amarena" src="images/onsaanbod/amarena_clean.png" alt="" /></div>
+          <h3>Amarena Love</h3>
           <p>&euro; 12,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
           <button class="add-to-cart">+</button>
         </div>
 
-        <div class="product">
-          <div><img src="images/onsaanbod/pimss.png" alt="" /></div>
+        <div class="product specials">
+          <div><img id="pims" src="images/onsaanbod/pimss.png" alt="" /></div>
           <h3>Chef's Favourite <br>Cookie</h3>
           <p>&euro; 12,00 - 1L</p>
           <input class="hoeveelheid" type="number" value="1" min="0">
           <button class="add-to-cart">+</button>
         </div>
+        <!--  -->
 
-        <div class="product">
-          <div><img src="images/onsaanbod/mars.png" alt="" /></div>
+        <div class="product specials">
+          <div><img id="mars" src="images/onsaanbod/mars.png" alt="" /></div>
           <h3>Mars Delight</h3>
           <p>&euro; 12,00 - 1L</p>
+          <input  class="hoeveelheid" type="number" value="1" min="0">
+          <button class="add-to-cart">+</button>
+        </div>
+
+        <div class="product specials">
+          <div><img id="cuberdon" src="images/onsaanbod/cuberdon_clean.png" alt="" /></div>
+          <h3>Cuberdon Candy</h3>
+          <p>&euro; 10,00 - 1L</p>
           <input  class="hoeveelheid" type="number" value="1" min="0">
           <button class="add-to-cart">+</button>
         </div>
@@ -204,19 +222,26 @@
       <h2>Pralines - Taart - Frisco</h2>
 
       <section class="container5">
-        <div>
-          <div><img src="images/onsaanbod/pralines.png" alt="" /></div>
+        <div class="product specials">
+          <div><img id="pralines" src="images/onsaanbod/pralines.png" alt="" /></div><br><br>
           <h3>Yspralines</h3>
-          <p>&euro; 9,00 per doos</p>
+          <p>&euro; 9,00 per doosje per 6</p>
+          <select class="product-option" id="vanille_melk_6">
+            <option value="Vanille/Melk">Vanille/Melk</option>
+            <option value="Piemonte/Melk/Nootjes">Piemonte/Melk/Nootjes</option>
+            <option value="Mix">Mix</option>
+          </select>
+          <input class="hoeveelheid" type="number" value="1" min="0">
+          <button class="add-to-cart">+</button>
         </div>
 
         <div>
-          <div><img src="images/onsaanbod/taart.png" alt="" /></div>
+          <div><img id="taart" src="images/onsaanbod/taart.png" alt="" /></div><br><br>
           <h3>Taarten</h3>
           <p>Vanaf &euro; 4,00 per persoon</p>
         </div>
         <div>
-          <div><img src="images/onsaanbod/frisco.png" alt="" /></div>
+          <div><img id="frisco" src="images/onsaanbod/frisco.png" alt="" /></div><br><br>
           <h3>Frisco's</h3>
           <p>&euro; 2,50 per stuk</p>
         </div>
