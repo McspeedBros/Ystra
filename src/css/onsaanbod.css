@@ -11,6 +11,23 @@ body{
     background-color: var(--backgroundcolor);
     font-family: 'Akaya Telivigala', cursive;
 }
+
+dialog {
+    border-radius: 10px;
+    border-style: inset;
+    border-color: var(--Goud);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 350px;
+    margin: 0 auto;
+    background-color: var(--backgroundcolor);
+    transition: all 2.5s ease-in-out;
+}
+dialog[open] {
+    animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+}
 /* Cart */
 #overview1 {
     position: fixed;
