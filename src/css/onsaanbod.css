@@ -144,7 +144,7 @@ main h1 span{
     margin-left: 0;
     border-bottom: var(--Goud);
     border-bottom-style: solid;
-    border-width: 2px;
+    border-width: 3px;
   }
 .cart{
     position: fixed;
@@ -214,7 +214,7 @@ main img:hover{
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 7px;
+    padding-bottom: 15px;
     padding-top: 25px;
     /* width: 100%; */
 }
@@ -225,27 +225,30 @@ main img:hover{
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 7px;
+    padding-bottom: 15px;
     padding-top: 25px;
 }
 
 .specials {
     transition: 500ms;
-    /* box-shadow: 0 0 10px 0; */
-    /* border-radius: 10px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    padding-top: 10px; */
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
 }
 .specials:hover {
     transition: 500ms;
-    box-shadow: 0 0 10px var(--Goud);
+    box-shadow: 0 0 13px var(--Goud);
     border-radius: 10px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+#marsContainer {
+    width: 175px;
 }
 
 /* separate images flavours */
@@ -258,11 +261,93 @@ main img:hover{
 #mokka {
     height: 125px;
     width: auto;
+    margin-top: 2px;
 }
 #stracciatella {
+    height: 135px;
+    width: auto;
+    margin-top: -4px;
+}
+#milkychoc {
+    height: 115px;
+    width: auto;
+    margin-top: 10px;
+}
+#brazil {
+    height: 105px;
+    width: auto;
+    margin-top: 10px;
+}
+#banana {
+    height: 130px;
+    width: auto;
+    margin-top: -9px;
+}
+#strawberry {
+    height: 130px;
+    width: auto;
+    margin-top: -9px;
+    margin-left: -20px;
+}
+#lemon {
+    height: 110px;
+    width: auto;
+    margin-top: 3px;
+    margin-left: 7.5px;
+}
+#raspberry {
+    height: 125px;
+    width: auto;
+    margin-top: -8px;
+    margin-left: -22.5px;
+}
+#mango {
+    height: 130px;
+    width: auto;
+    margin-top: -6px;
+    margin-left: -7.5px;
+}
+#blueberry {
+    height: 125px;
+    width: auto;
+    margin-top: -6px;
+    margin-left: -35px;
+}
+#pistache {
+    height: 140px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -5px;
+}
+#piemonte {
+    height: 130px;
+    width: auto;
+    margin-top: -10px;
+    margin-left: -22.5px;
+}
+#amarena {
     height: 130px;
     width: auto;
     margin-top: -5px;
+    margin-left: -25px;
+}
+#pims {
+    height: 130px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -25px;
+}
+#mars {
+    height: 95px;
+    width: auto;
+    margin-top: 0px;
+    margin-left: -25px;
+}
+#cuberdon {
+    height: 130px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -20px;
 }
 
 
@@ -370,8 +455,8 @@ p{
     margin: 0 auto; */
 }
 .container4 > div{
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 .container5{
     justify-content: center;
