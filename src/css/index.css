@@ -306,7 +306,7 @@ article a button {
   padding: 9px 15px;
   color: white;
   font-family: "Akaya Telivigala", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: 500ms;
   border-radius: 5px;
   border-style: solid;
@@ -319,12 +319,12 @@ article a button:hover {
   cursor: pointer;
 }
 
-.foto > img{
+.foto > a > img{
   width: 45%;
   border-radius: 7px;
   transition: 500ms;
 }
-.foto > img:hover{
+.foto > a > img:hover{
   transform: scale(1.1);
   transition: 500ms;
   box-shadow: 0px 0px 15px 0px var(--Goud);

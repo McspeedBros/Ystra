@@ -12,7 +12,7 @@ body{
     font-family: 'Akaya Telivigala', cursive;
 }
 
-dialog {
+#taartenDialog {
     border-radius: 10px;
     border-style: inset;
     border-color: var(--Goud);
@@ -23,11 +23,97 @@ dialog {
     width: 350px;
     margin: 0 auto;
     background-color: var(--backgroundcolor);
-    transition: all 2.5s ease-in-out;
 }
-dialog[open] {
-    animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+#taartenDialog[open] {
+    animation: scale-in 500ms;
 }
+#taartenDialog[closing] {
+    animation: scale-out 500ms;
+}
+#taartenDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* Dialog scale-in */
+@keyframes scale-in {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Dialog scale-out */
+@keyframes scale-out {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+/* Dialog fade-in */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Dialog fade-out */
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Dialog slide-in */
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Dialog slide-out */
+@keyframes slide-out {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.button {
+    border: none;
+    background-color: var(--Goud);
+    padding: 9px 15px;
+    color: white;
+    font-family: "Akaya Telivigala", cursive;
+    font-size: 1.2rem;
+    transition: 500ms;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--Goud);
+}
+.button:hover {
+    background-color: white;
+    color: var(--Goud);
+    transition: 500ms;
+    border-style: inset;
+    cursor: pointer;
+}
+
 /* Cart */
 #overview1 {
     position: fixed;
@@ -365,6 +451,27 @@ main img:hover{
     width: auto;
     margin-top: -5px;
     margin-left: -20px;
+}
+.taarten {
+    transition: 500ms;
+    /* box-shadow: 0 0 10px 0; */
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+    margin-top: 1px;
+    /* width: 100%; */
+}
+.taarten:hover {
+    /* transform: scale(1.1); */
+    transition: 500ms;
+    box-shadow: 0 0 10px var(--Goud);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
 }
 
 

@@ -27,12 +27,35 @@ for (var i = 0; i < cart.length; i++) {
   var product = cart[i];
   var tr = document.createElement("tr");
 
-  var productNameTd = document.createElement("td");
-  productNameTd.textContent = product.name;
-  tr.appendChild(productNameTd);
+  var categories = ["Basic", "Sorbet", "Nootjes", "Specials", "Yspralines", "Taarten", "Frisco's"];
+  var productCategory = "";
+  if (product.name == "Velvet Vanilla" || product.name == "Mild Mokka" || product.name == "Soft Stracciatella" || product.name == "Milky Chocolate" || product.name == "Brazil Chocolate" || product.name == "Banana Crazy") {
+    productCategory = categories[0];
+  } else if (product.name == "Sweet Strawberry" || product.name == "Funky Lemon" || product.name == "Raspberry Red" || product.name == "Tropical Mango" || product.name == "Blueberry Boost") {
+    productCategory = categories[1];
+  } else if (product.name == "Pure Pistacchio" || product.name == "Piemonte Nuts") {
+    productCategory = categories[2];
+  } else if (product.name == "Amarena Love" || product.name == "Chef's Favourite Cookie" || product.name == "Mars Delight" || product.name == "Cuberdon Candy") {
+    productCategory = categories[3];
+  } else if (product.name == "Yspralines") {
+    productCategory = categories[4];
+  } else if (product.name == "Taarten") {
+    productCategory = categories[5];
+  } else if (product.name == "Frisco's") {
+    productCategory = categories[6];
+  }
+
+  var productCategoryTd = document.createElement("td");
+  productCategoryTd.textContent = productCategory;
+  tr.appendChild(productCategoryTd);
+
+
+  // var productNameTd = document.createElement("td");
+  // productNameTd.textContent = product.name;
+  // tr.appendChild(productNameTd);
 
   var productOptionTd = document.createElement("td"); // Add a new table cell for the option
-  productOptionTd.textContent = product.option ? product.option : "";
+  productOptionTd.textContent = product.option ? product.option : product.name;
   tr.appendChild(productOptionTd);
 
   var productQuantityTd = document.createElement("td");

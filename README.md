@@ -27,7 +27,11 @@
 - [x] Bug wanneer je op de aanbod pagina hoeveelheid 0 toevoegt en daarna naar winkelmandje gaat, dan gaat hij hoeveelheid 1 toevoegen
 - [x] width's aanpassen op homepagina van flavours
 - [x] algemene width aanpassen van homepagina
+- [ ] Totale prijs bij overzichtspagina klopt niet
+- [ ] frisco gin tonic (€3 euro) toevoegen
 
 - [ ] Uitdenken hoe taarten efficient bestellen? -> Kyana
 - [ ] CSS Dropdown menus -> Kyana
 - [ ] CSS Dialog box and button -> Kyana
+- [ ] Error-message (zie blad) uitwerken op onsaanbod pagina
+- [ ] wanneer je op de verwijderknop klikt bij het overzicht/winkelwagen pagina dan verspringt de pagina altijd vreemd, is dit uberhaupt oplosbaar?

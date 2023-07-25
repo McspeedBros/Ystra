@@ -253,7 +253,7 @@
           </div>
           <br /><br />
           <h3>Yspralines</h3>
-          <p>&euro; 9,00 per doosje per 6</p>
+          <p>&euro; 9,00 per doosje van 6</p>
           <select class="product-option" id="pralines-options">
             <option value="Vanille/Melk">Vanille/Melk</option>
             <option value="Piemonte/Melk/Nootjes">Piemonte/Melk/Nootjes</option>
@@ -263,25 +263,28 @@
           <button class="add-to-cart">+</button>
         </div>
 
-        <div>
+        <div class="taarten">
           <div><img id="taart" src="images/onsaanbod/taart.png" alt="" /></div>
-          <br /><br />
+          <br><br>
           <h3>Taarten</h3>
           <p>Vanaf &euro; 4,00 per persoon</p>
+          <!-- <a href="#taartenDialog">Bestel</a> -->
+          <button id="show" class="button">Ontdek meer</button>
         </div>
 
-        <dialog id="taarten">
+        <dialog id="taartenDialog">
           <form method="dialog">
             <div>
               <h3>Taarten</h3>
-              <p>&euro; 4,00 per persoon</p>
-              <input class="hoeveelheid" type="number" value="1" min="1" />
-              <button class="add-to-cart">+</button>
+              
+              <!-- <input class="hoeveelheid" type="number" value="1" min="1" />
+              <button class="add-to-cart">+</button> -->
             </div>
-            <button>Sluiten</button>
+            <button id="close" type="button" class="button">Sluiten</button>
+            <!-- <a href="#" id="closeButton" class="button">Sluiten</a> -->
           </form>
         </dialog>
-        <button onclick="taarten.showModal()">Meer info</button>
+        
         <div class="product specials">
           <div>
             <img id="frisco" src="images/onsaanbod/frisco.png" alt="" />

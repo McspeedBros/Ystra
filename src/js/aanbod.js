@@ -131,3 +131,23 @@ for (var i = 0; i < products.length; i++) {
     localStorage.setItem("cart", JSON.stringify(cart));
   });
 }
+
+
+var dialog = document.querySelector('#taartenDialog');
+var open = document.querySelector('#show');
+var close = dialog.querySelector('#close');
+
+open.addEventListener('click', () => {
+  dialog.showModal();
+});
+
+close.addEventListener('click', () => {
+  dialog.setAttribute('closing', '');
+  dialog.classList.add('close');
+  dialog.addEventListener('animationend', () => {
+    dialog.removeAttribute('closing');
+    dialog.classList.remove('close');
+    dialog.close();
+  }, {once: true}
+  );
+});
