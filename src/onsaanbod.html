@@ -265,7 +265,7 @@
 
         <div class="taarten">
           <div><img id="taart" src="images/onsaanbod/taart.png" alt="" /></div>
-          <br><br>
+          <br /><br />
           <h3>Taarten</h3>
           <p>Vanaf &euro; 4,00 per persoon</p>
           <!-- <a href="#taartenDialog">Bestel</a> -->
@@ -274,17 +274,46 @@
 
         <dialog id="taartenDialog">
           <form method="dialog">
-            <div>
+            <div class="product specials">
               <h3>Taarten</h3>
-              
-              <!-- <input class="hoeveelheid" type="number" value="1" min="1" />
-              <button class="add-to-cart">+</button> -->
+              <p>Aantal Personen</p>
+              <select class="product-option" id="personen">
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="15+">15+</option>
+              </select>
+              <p>Type</p>
+              <select class="product-option" id="type">
+                <option value="Ijstaart">Ijstaart</option>
+                <option value="Driptaart">Driptaart</option>
+                <option value="Ijslam">Ijslam</option>
+              </select>
+              <p>Smaak</p>
+              <select class="" id="smaak1">
+                <option value="Velvet Vanilla">Velvet Vanilla</option>
+                <option value="Soft Stracciatella">Soft Stracciatella</option>
+                <option value="Milky Chocolate">Milky Chocolate</option>
+                <option value="Sweet Strawberry">Sweet Strawberry</option>
+                <option value="Raspberry Red">Raspberry Red</option>
+                <option value="Piemonte Nuts">Piemonte Nuts</option>
+                <option value="Pure Pistacchio">Pure Pistacchio</option>
+                <option value="Mild Mokka">Mild Mokka</option>
+              </select>
+              <p>Afwerking</p>
+              <select class="product-option" id="afwerking">
+                <option value="Slagroom">Slagroom</option>
+                <option value="Italiaanse Meringue">Italiaanse Meringue</option>
+                <option value="Fruitspiegel">Fruitspiegel</option>
+              </select>
+              <button class="add-to-cart">+</button>
             </div>
             <button id="close" type="button" class="button">Sluiten</button>
-            <!-- <a href="#" id="closeButton" class="button">Sluiten</a> -->
           </form>
         </dialog>
-        
+
         <div class="product specials">
           <div>
             <img id="frisco" src="images/onsaanbod/frisco.png" alt="" />

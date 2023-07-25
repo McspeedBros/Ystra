@@ -32,6 +32,5 @@
 
 - [ ] Uitdenken hoe taarten efficient bestellen? -> Kyana
 - [ ] CSS Dropdown menus -> Kyana
-- [ ] CSS Dialog box and button -> Kyana
+- [x] CSS Dialog box and button -> Kyana
 - [ ] Error-message (zie blad) uitwerken op onsaanbod pagina
-- [ ] wanneer je op de verwijderknop klikt bij het overzicht/winkelwagen pagina dan verspringt de pagina altijd vreemd, is dit uberhaupt oplosbaar?
