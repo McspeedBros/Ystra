@@ -9,6 +9,7 @@
 ## TODO's
 
 - [ ] Bug fix adres ophaal uur data word niet goed doorgegeven, hoeveelheden worden niet doorgegeven naar winkelwagen, Hoeveelheden worden niet juist doorgegeven naar Sheet. -> Robin
+- [ ] Check steken op als winkelwagen leeg is je niet kan versturen -> Robin
 - [ ] Mediascreens Phone onsaanbod
 - [ ] Mediascreens Phone Homepagina
 - [x] Taarten, frisco's, ... kunnen bestellen --> [ ] Logica javascript Frisco's en Pralines nog te implementeren
