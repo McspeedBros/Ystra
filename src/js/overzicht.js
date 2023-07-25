@@ -10,83 +10,97 @@ function formatCart(cartData) {
   for (var i = 0; i < cartData.length; i++) {
     var product = cartData[i];
     var productName = product.name;
+    var productOption = product.option; // Add option to the cart format
     var productQuantity = product.quantity;
     var productPrice = product.price;
 
-    formattedOutput += `- ${productName} x${productQuantity} - ${productPrice}\n`;
+    formattedOutput += `- ${productName} - ${
+      productOption ? productOption : ""
+    } x${productQuantity} - ${productPrice}\n`;
   }
 
   return formattedOutput;
 }
 
+// Populate the cart table with items and options
 for (var i = 0; i < cart.length; i++) {
-  (function(product) {
-    var tr = document.createElement("tr");
+  var product = cart[i];
+  var tr = document.createElement("tr");
 
-    var productNameTd = document.createElement("td");
-    productNameTd.textContent = product.name;
-    tr.appendChild(productNameTd);
+  var productNameTd = document.createElement("td");
+  productNameTd.textContent = product.name;
+  tr.appendChild(productNameTd);
 
-    var productQuantityTd = document.createElement("td");
-    var quantityForm = document.createElement("form");
-    var quantityInput = document.createElement("input");
-    quantityInput.setAttribute("type", "number");
-    quantityInput.setAttribute("value", product.quantity);
-    quantityInput.setAttribute("min", 1);
-    quantityInput.setAttribute("step", 1);
-    quantityInput.setAttribute("class", "hoeveelheid");
-    quantityForm.appendChild(quantityInput);
-    productQuantityTd.appendChild(quantityForm);
-    tr.appendChild(productQuantityTd);
+  var productOptionTd = document.createElement("td"); // Add a new table cell for the option
+  productOptionTd.textContent = product.option ? product.option : "";
+  tr.appendChild(productOptionTd);
 
-    var productPriceTd = document.createElement("td");
-    productPriceTd.textContent = product.price;
-    tr.appendChild(productPriceTd);
+  var productQuantityTd = document.createElement("td");
+  var quantityForm = document.createElement("form");
+  var quantityInput = document.createElement("input");
+  quantityInput.setAttribute("type", "number");
+  quantityInput.setAttribute("value", product.quantity);
+  quantityInput.setAttribute("min", 1);
+  quantityInput.setAttribute("step", 1);
+  quantityInput.setAttribute("class", "hoeveelheid");
+  quantityForm.appendChild(quantityInput);
+  productQuantityTd.appendChild(quantityForm);
+  tr.appendChild(productQuantityTd);
 
-    total += parseFloat(product.quantity) * parseFloat(product.price.substring(1));
+  var productPriceTd = document.createElement("td");
+  productPriceTd.textContent = product.price;
+  tr.appendChild(productPriceTd);
 
-    var removeTd = document.createElement("td");
-    removeTd.style.height = "25px";
-    var removeButton = document.createElement("button");
-    removeButton.setAttribute("class", "buttonTable");
-    removeButton.addEventListener("click", function() {
-      var index = cart.indexOf(product);
-      cart.splice(index, 1);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      location.reload();
-    });
+  total +=
+    parseFloat(product.quantity) * parseFloat(product.price.substring(1));
 
-    var trash = document.createElement("i");
-    trash.setAttribute("class", "fa fa-trash-o");
-    trash.setAttribute("style", "color:red;font-size:30px;");
-    removeButton.appendChild(trash);
+  var removeTd = document.createElement("td");
+  removeTd.style.height = "25px";
+  var removeButton = document.createElement("button");
+  removeButton.setAttribute("class", "buttonTable");
+  removeButton.addEventListener("click", function () {
+    var index = cart.indexOf(product);
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+  });
 
-    removeTd.appendChild(removeButton);
-    tr.appendChild(removeTd);
+  var trash = document.createElement("i");
+  trash.setAttribute("class", "fa fa-trash-o");
+  trash.setAttribute("style", "color:red;font-size:30px;");
+  removeButton.appendChild(trash);
 
-    cartTableBody.appendChild(tr);
+  removeTd.appendChild(removeButton);
+  tr.appendChild(removeTd);
 
-    quantityInput.addEventListener("change", function() {
-      product.quantity = this.value;
-      localStorage.setItem("cart", JSON.stringify(cart));
+  cartTableBody.appendChild(tr);
 
-      // recalculate the total cost
-      total = 0;
-      for (var j = 0; j < cart.length; j++) {
-        total += parseFloat(cart[j].quantity) * parseFloat(cart[j].price.substring(1));
-      }
-      totalCost.textContent = "Totale prijs: € " + total;
-    });
-  })(cart[i]);
-} 
+  quantityInput.addEventListener("change", function () {
+    product.quantity = this.value;
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // recalculate the total cost
+    total = 0;
+    for (var j = 0; j < cart.length; j++) {
+      total +=
+        parseFloat(cart[j].quantity) * parseFloat(cart[j].price.substring(1));
+    }
+    totalCost.textContent = "Totale prijs: € " + total;
+  });
+}
 
 totalCost.textContent = "Totale prijs: € " + total;
 
-submitButton.addEventListener("click", async function(e) {
+submitButton.addEventListener("click", async function (e) {
   e.preventDefault();
 
   // Check if all fields are filled
-  if (document.getElementById("name").value == "" || document.getElementById("email").value == "" || document.getElementById("phone").value == "" || document.getElementById("address").value == "") {
+  if (
+    document.getElementById("name").value == "" ||
+    document.getElementById("email").value == "" ||
+    document.getElementById("phone").value == "" ||
+    document.getElementById("address").value == ""
+  ) {
     alert("Vul alle velden correct in");
     return;
   }
@@ -103,7 +117,7 @@ submitButton.addEventListener("click", async function(e) {
     ["Ophalen", document.getElementById("ophalen").value],
     ["Adres/Ophaaluur", document.getElementById("address").value],
     ["Opmerking", document.getElementById("opmerking").value],
-    ["Product", formattedCartData]
+    ["Product", formattedCartData],
   ];
 
   // Send the data to Google Sheets API
@@ -111,19 +125,16 @@ submitButton.addEventListener("click", async function(e) {
   var result = await fetch(url, {
     method: "post",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      data: [Object.fromEntries(data)]
-    })
+      data: [Object.fromEntries(data)],
+    }),
   });
 
   // Clear the cart
   cart = [];
   localStorage.setItem("cart", JSON.stringify(cart));
-
-  // Log the result status (optional)
-  console.log(result.status);
 
   // Redirect to the confirmation page
   window.open("bevestiging.html", "_self");
