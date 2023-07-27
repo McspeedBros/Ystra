@@ -12,7 +12,7 @@ body{
     font-family: 'Akaya Telivigala', cursive;
 }
 
-#taartenDialog {
+#bestelDialog {
     border-radius: 10px;
     border-style: inset;
     border-color: var(--Goud);
@@ -24,14 +24,14 @@ body{
     margin: 0 auto;
     background-color: var(--backgroundcolor);
 }
-#taartenDialog[open] {
+#bestelDialog[open] {
     animation: scale-in 500ms;
 }
-#taartenDialog[closing] {
-    animation: scale-out 500ms;
+#bestelDialog[closing] {
+    animation: scale-out 450ms;
 }
-#taartenDialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.45);
+#bestelDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Dialog scale-in */
@@ -94,6 +94,144 @@ body{
     }
 }
 
+#taart1 {
+    height: 300px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+}
+#taart1:hover {
+    transform: scale(1);
+}
+
+#taart2 {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+}
+#taart2:hover {
+    transform: scale(1);
+}
+
+#taart3 {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+}
+#taart3:hover {
+    transform: scale(1);
+}
+
+#taart4 {
+    height: 300px;
+    width: auto;
+    margin: auto auto;
+    margin-top: 15px;
+    display: block;
+}
+#taart4:hover {
+    transform: scale(1);
+}
+
+#taart5 {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+}
+#taart5:hover {
+    transform: scale(1);
+}
+
+#taart6 {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+}
+#taart6:hover {
+    transform: scale(1);
+}
+
+#taart7 {
+    height: 300px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+}
+#taart7:hover {
+    transform: scale(1);
+}
+
+.slideshow-content {
+    display: none;
+}
+.fotoDiv {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+}
+
+#fotoDialog {
+    border-radius: 10px;
+    border-style: inset;
+    border-color: var(--Goud);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 450px;
+    height: 550px;
+    margin: auto auto;
+    background-color: var(--backgroundcolor);
+}
+#fotoDialog[open] {
+    animation: scale-in 500ms;
+}
+#fotoDialog[open] .slideshow-content:first-of-type {
+    display: block;
+  }
+#fotoDialog[closing] {
+    animation: scale-out 450ms;
+}
+#fotoDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--Goud);
+    font-weight: bold;
+    font-size: 1.7rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    left: 5px;
+    right: auto;
+}
+.next {
+    left: auto;
+    right: 5px;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover {
+    scale: 1.1;
+}
+.next:hover {
+    scale: 1.1;
+}
+
+div p span {
+    font-weight: bold;
+    color: var(--Goud);
+}
+
 .button {
     border: none;
     background-color: var(--Goud);
@@ -111,6 +249,19 @@ body{
     color: var(--Goud);
     transition: 500ms;
     border-style: inset;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: var(--backgroundcolor);
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.cancel:hover {
+    background-color: var(--backgroundcolor);
+    border: none;
     cursor: pointer;
 }
 

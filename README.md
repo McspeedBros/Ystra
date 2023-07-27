@@ -22,7 +22,7 @@
 - [x] foto's op ons aanbod pagina individueel aanpassen qua grootte en positie -> Kyana
 - [x] link achter de hot items zetten naar insta highlights
 - [x] tekst aanpassen van yspralines naar 'per doosje' of 'per 6', iets in die aard
-- [x] checks op invoervelden bij bestelling
+- [ ] checks op invoervelden bij bestelling
 - [x] homebutton op de bevestigingspagina
 - [x] Bug wanneer je op de aanbod pagina hoeveelheid 0 toevoegt en daarna naar winkelmandje gaat, dan gaat hij hoeveelheid 1 toevoegen
 - [x] width's aanpassen op homepagina van flavours
@@ -30,7 +30,7 @@
 - [ ] Totale prijs bij overzichtspagina klopt niet
 - [ ] frisco gin tonic (€3 euro) toevoegen
 
-- [ ] Uitdenken hoe taarten efficient bestellen? -> Kyana
+- [x] Uitdenken hoe taarten efficient bestellen? -> Kyana
 - [ ] CSS Dropdown menus -> Kyana
 - [x] CSS Dialog box and button -> Kyana
 - [ ] Error-message (zie blad) uitwerken op onsaanbod pagina
