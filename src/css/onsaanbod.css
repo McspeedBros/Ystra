@@ -130,6 +130,18 @@ body{
     }
 }
 
+@keyframes burn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }    
+}
+
 #taart1 {
     height: 300px;
     width: auto;
@@ -276,6 +288,9 @@ body{
 
 .fade {
     animation: fade 0.7s;
+}
+.burn {
+    animation: burn 1s;
 }
 
 div p span {

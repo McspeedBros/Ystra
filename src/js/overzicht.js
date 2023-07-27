@@ -1,5 +1,6 @@
 var cart = JSON.parse(window.localStorage.getItem("cart")) || [];
 var cartTableBody = document.getElementById("cart-table-body");
+var cartTableTaart = document.getElementById("taart-table-body");
 var totalCost = document.getElementById("total-cost");
 var total = 0;
 var submitButton = document.getElementById("submitbutton");
@@ -71,6 +72,9 @@ function formatCart(cartData) {
 
 // Populate the cart table with items and options
 for (var i = 0; i < cart.length; i++) {
+  if (cart[i].name == "Taarten") {
+    continue;
+  }
   var product = cart[i];
   var tr = document.createElement("tr");
 
@@ -183,11 +187,58 @@ for (var i = 0; i < cart.length; i++) {
       total +=
         parseFloat(cart[j].quantity) * parseFloat(cart[j].price.substring(1));
     }
-    totalCost.textContent = "Totale prijs: € " + total;
+    totalCost.textContent = "Totale prijs (excl. taarten): € " + total;
   });
 }
 
-totalCost.textContent = "Totale prijs: € " + total;
+// Populate the cart table with taarten
+for (var i = 0; i < cartItems.length; i++) {
+  var product = cartItems[i];
+  var tr = document.createElement("tr");
+
+  var personenTd = document.createElement("td");
+  personenTd.textContent = product.personen;
+  tr.appendChild(personenTd);
+
+  var typeTd = document.createElement("td");
+  typeTd.textContent = product.type;
+  tr.appendChild(typeTd);
+
+  var smaakTd = document.createElement("td");
+  smaakTd.textContent = product.smaak1;
+  if (product.smaak2) {
+    smaakTd.textContent += ", " + product.smaak2;
+  }
+  tr.appendChild(smaakTd);
+
+  var afwerkingTd = document.createElement("td");
+  afwerkingTd.textContent = product.afwerking;
+  tr.appendChild(afwerkingTd);
+
+  var removeTd = document.createElement("td");
+  removeTd.style.height = "25px";
+  var removeButton = document.createElement("button");
+  removeButton.setAttribute("class", "buttonTable");
+  removeButton.addEventListener("click", function () {
+    var index = cartItems.indexOf(product);
+    cartItems.splice(index, 1);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    location.reload();
+  });
+
+  var trash = document.createElement("i");
+  trash.setAttribute("class", "fa fa-trash-o");
+  trash.setAttribute("style", "color:red;font-size:30px;");
+  removeButton.appendChild(trash);
+
+  removeTd.appendChild(removeButton);
+  tr.appendChild(removeTd);
+
+  cartTableTaart.appendChild(tr);
+}
+
+
+totalCost.textContent = "Totale prijs (excl. taarten): € " + total;
 
 submitButton.addEventListener("click", async function (e) {
   e.preventDefault();
@@ -251,6 +302,9 @@ submitButton.addEventListener("click", async function (e) {
       data: [Object.fromEntries(data)],
     }),
   });
+
+  cartItems = [];
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
   // Clear the cart
   cart = [];
