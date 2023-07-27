@@ -34,3 +34,4 @@
 - [ ] CSS Dropdown menus -> Kyana
 - [x] CSS Dialog box and button -> Kyana
 - [ ] Error-message (zie blad) uitwerken op onsaanbod pagina
+- [ ] CSS op bestelDialog taarten
