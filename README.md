@@ -35,3 +35,4 @@
 - [x] CSS Dialog box and button -> Kyana
 - [ ] Error-message (zie blad) uitwerken op onsaanbod pagina
 - [ ] CSS op bestelDialog taarten
+- [ ] Wanneer je item wilt verwijderen in winkelwagen pagina, dan verwijdert hij verkeerde item (altijd laatste ipv aangeklikte)

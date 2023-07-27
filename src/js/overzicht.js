@@ -4,6 +4,35 @@ var totalCost = document.getElementById("total-cost");
 var total = 0;
 var submitButton = document.getElementById("submitbutton");
 
+// ----------------- CART Taarten -----------------
+// JavaScript-code om de winkelwageninhoud te tonen
+let cartItems = [];
+
+// Haal de gegevens van de taarten op uit de localStorage
+const storedCartItems = localStorage.getItem("cartItems");
+if (storedCartItems) {
+  cartItems = JSON.parse(storedCartItems);
+  updateCart();
+}
+
+function updateCart() {
+  const taartenlijstElement = document.getElementById("taartenlijst");
+  taartenlijstElement.innerHTML = ""; // Wis de huidige inhoud van de taartenlijst
+
+  for (let i = 0; i < cartItems.length; i++) {
+    const item = cartItems[i];
+    const listItem = document.createElement("li");
+    listItem.textContent = `Taart ${i + 1}: ${item.personen} personen, ${
+      item.smaak1
+    }`;
+    if (item.smaak2) {
+      listItem.textContent += `, ${item.smaak2}`;
+    }
+    listItem.textContent += `, ${item.afwerking}`;
+    taartenlijstElement.appendChild(listItem);
+  }
+}
+// -----------------------------------------
 function formatCart(cartData) {
   var formattedOutput = "Cart Items:\n";
 
@@ -27,15 +56,44 @@ for (var i = 0; i < cart.length; i++) {
   var product = cart[i];
   var tr = document.createElement("tr");
 
-  var categories = ["Basic", "Sorbet", "Nootjes", "Specials", "Yspralines", "Taarten", "Frisco's"];
+  var categories = [
+    "Basic",
+    "Sorbet",
+    "Nootjes",
+    "Specials",
+    "Yspralines",
+    "Taarten",
+    "Frisco's",
+  ];
   var productCategory = "";
-  if (product.name == "Velvet Vanilla" || product.name == "Mild Mokka" || product.name == "Soft Stracciatella" || product.name == "Milky Chocolate" || product.name == "Brazil Chocolate" || product.name == "Banana Crazy") {
+  if (
+    product.name == "Velvet Vanilla" ||
+    product.name == "Mild Mokka" ||
+    product.name == "Soft Stracciatella" ||
+    product.name == "Milky Chocolate" ||
+    product.name == "Brazil Chocolate" ||
+    product.name == "Banana Crazy"
+  ) {
     productCategory = categories[0];
-  } else if (product.name == "Sweet Strawberry" || product.name == "Funky Lemon" || product.name == "Raspberry Red" || product.name == "Tropical Mango" || product.name == "Blueberry Boost") {
+  } else if (
+    product.name == "Sweet Strawberry" ||
+    product.name == "Funky Lemon" ||
+    product.name == "Raspberry Red" ||
+    product.name == "Tropical Mango" ||
+    product.name == "Blueberry Boost"
+  ) {
     productCategory = categories[1];
-  } else if (product.name == "Pure Pistacchio" || product.name == "Piemonte Nuts") {
+  } else if (
+    product.name == "Pure Pistacchio" ||
+    product.name == "Piemonte Nuts"
+  ) {
     productCategory = categories[2];
-  } else if (product.name == "Amarena Love" || product.name == "Chef's Favourite Cookie" || product.name == "Mars Delight" || product.name == "Cuberdon Candy") {
+  } else if (
+    product.name == "Amarena Love" ||
+    product.name == "Chef's Favourite Cookie" ||
+    product.name == "Mars Delight" ||
+    product.name == "Cuberdon Candy"
+  ) {
     productCategory = categories[3];
   } else if (product.name == "Yspralines") {
     productCategory = categories[4];
@@ -48,7 +106,6 @@ for (var i = 0; i < cart.length; i++) {
   var productCategoryTd = document.createElement("td");
   productCategoryTd.textContent = productCategory;
   tr.appendChild(productCategoryTd);
-
 
   // var productNameTd = document.createElement("td");
   // productNameTd.textContent = product.name;
@@ -131,8 +188,28 @@ submitButton.addEventListener("click", async function (e) {
   // Get the formatted cart data
   var formattedCartData = formatCart(cart);
 
+  // Get the current date and time
+  // Create a new Date object representing the current date and time
+  const currentDate = new Date();
+
+  // Get the current date
+  const year = currentDate.getFullYear(); // 4-digit year
+  const month = currentDate.getMonth() + 1; // Months are zero-indexed, so we add 1 to get the correct month (1 to 12)
+  const day = currentDate.getDate();
+  const date = `${day}/${month}/${year}`;
+
+  // Get the current time
+  const hours = currentDate.getHours();
+  const minutes = currentDate.getMinutes();
+  const seconds = currentDate.getSeconds();
+  const time = `${hours}:${minutes}:${seconds}`;
+
+  // Combine the date and time
+  const dateTime = `${date} ${time}`;
+
   // Combine other form data and cart data
   var data = [
+    ["Datum", dateTime],
     ["Naam", document.getElementById("name").value],
     ["E-mail", document.getElementById("email").value],
     ["Telefoonnummer", document.getElementById("phone").value],

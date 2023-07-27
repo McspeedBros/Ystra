@@ -12,6 +12,15 @@ body{
     font-family: 'Akaya Telivigala', cursive;
 }
 
+#winkelwagen {
+    height: 50px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+    padding-top: 5px;
+    color: var(--Goud);
+}
+
 #bestelDialog {
     border-radius: 10px;
     border-style: inset;

@@ -132,68 +132,144 @@ for (var i = 0; i < products.length; i++) {
   });
 }
 
+// ---------------------Taarten-----------------
+let cartItems = [];
 
-var besteldialog = document.querySelector('#bestelDialog');
-var bestelopen = document.querySelector('#show');
-var bestelclose = besteldialog.querySelector('#close');
+function showSmaak2Dropdown() {
+  const aantal_personen = document.getElementById("personen").value;
+  const smaak2Dropdown = document.getElementById("smaak2Dropdown");
 
-bestelopen.addEventListener('click', () => {
+  if (aantal_personen >= 10 || aantal_personen == "15+") {
+    smaak2Dropdown.style.display = "block";
+  } else {
+    smaak2Dropdown.style.display = "none";
+  }
+}
+
+function addToCartTaart() {
+  const personen = document.getElementById("personen").value;
+  const type = document.getElementById("type").value;
+  const smaak1 = document.getElementById("smaak1").value;
+  const afwerking = document.getElementById("afwerking").value;
+
+  if (personen >= 10 || personen == "15+") {
+    const smaak2 = document.getElementById("smaak2").value;
+    const item = {
+      personen,
+      type,
+      smaak1,
+      smaak2,
+      afwerking,
+    };
+
+    cartItems.push(item);
+    console.log(cartItems);
+    updateCart();
+    return;
+  }
+
+  const item = {
+    personen,
+    type,
+    smaak1,
+    afwerking,
+  };
+
+  cartItems.push(item);
+  console.log(cartItems);
+  updateCart();
+}
+
+function updateCart() {
+  const winkelwagenElement = document.getElementById("winkelwagen");
+  winkelwagenElement.innerHTML = ""; // Wis de huidige inhoud van de winkelwagen
+
+  for (let i = 0; i < cartItems.length; i++) {
+    const item = cartItems[i];
+    const listItem = document.createElement("li");
+    listItem.textContent = `Taart ${i + 1}: ${item.personen} personen, ${
+      item.smaak1
+    }`;
+    if (item.smaak2) {
+      listItem.textContent += `, ${item.smaak2}`;
+    }
+    listItem.textContent += `, ${item.afwerking}`;
+    winkelwagenElement.appendChild(listItem);
+  }
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+// --------------------------------------------
+
+var besteldialog = document.querySelector("#bestelDialog");
+var bestelopen = document.querySelector("#show");
+var bestelclose = besteldialog.querySelector("#close");
+
+bestelopen.addEventListener("click", () => {
   besteldialog.showModal();
 });
 
-bestelclose.addEventListener('click', () => {
-  besteldialog.setAttribute('closing', '');
-  besteldialog.classList.add('close');
-  besteldialog.addEventListener('animationend', () => {
-    besteldialog.removeAttribute('closing');
-    besteldialog.classList.remove('close');
-    besteldialog.close();
-  }, {once: true}
+bestelclose.addEventListener("click", () => {
+  besteldialog.setAttribute("closing", "");
+  besteldialog.classList.add("close");
+  besteldialog.addEventListener(
+    "animationend",
+    () => {
+      besteldialog.removeAttribute("closing");
+      besteldialog.classList.remove("close");
+      besteldialog.close();
+    },
+    { once: true }
   );
 });
 
+var fotodialog = document.querySelector("#fotoDialog");
+var fotoopen = document.querySelector("#showfoto");
+var fotoclose = fotodialog.querySelector("#closefoto");
 
-var fotodialog = document.querySelector('#fotoDialog');
-var fotoopen = document.querySelector('#showfoto');
-var fotoclose = fotodialog.querySelector('#closefoto');
-
-fotoopen.addEventListener('click', () => {
+fotoopen.addEventListener("click", () => {
   fotodialog.showModal();
 });
 
-fotoclose.addEventListener('click', () => {
-  fotodialog.setAttribute('closing', '');
-  fotodialog.classList.add('close');
-  fotodialog.addEventListener('animationend', () => {
-    fotodialog.removeAttribute('closing');
-    fotodialog.classList.remove('close');
-    fotodialog.close();
-  }, {once: true}
+fotoclose.addEventListener("click", () => {
+  fotodialog.setAttribute("closing", "");
+  fotodialog.classList.add("close");
+  fotodialog.addEventListener(
+    "animationend",
+    () => {
+      fotodialog.removeAttribute("closing");
+      fotodialog.classList.remove("close");
+      fotodialog.close();
+    },
+    { once: true }
   );
 });
-
 
 let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n));
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slideshow-content");
-  
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
   }
 
-  slides[slideIndex-1].style.display = "block";
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
 }
