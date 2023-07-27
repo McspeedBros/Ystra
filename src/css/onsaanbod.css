@@ -126,6 +126,7 @@ body{
     width: auto;
     margin: auto auto;
     display: block;
+    padding-top: 32px;
 }
 #taart1:hover {
     transform: scale(1);
@@ -136,6 +137,7 @@ body{
     width: auto;
     margin: auto auto;
     display: block;
+    padding-top: 5px;
 }
 #taart2:hover {
     transform: scale(1);
@@ -146,6 +148,8 @@ body{
     width: auto;
     margin: auto auto;
     display: block;
+    padding-left: 15px;
+    padding-top: 5px;
 }
 #taart3:hover {
     transform: scale(1);
@@ -157,16 +161,19 @@ body{
     margin: auto auto;
     margin-top: 15px;
     display: block;
+    padding-top: 15px;
+    padding-left: 5px;
 }
 #taart4:hover {
     transform: scale(1);
 }
 
 #taart5 {
-    height: 350px;
+    height: 275px;
     width: auto;
     margin: auto auto;
     display: block;
+    padding-top: 55px;
 }
 #taart5:hover {
     transform: scale(1);
@@ -177,16 +184,18 @@ body{
     width: auto;
     margin: auto auto;
     display: block;
+    padding-top: 20px;
 }
 #taart6:hover {
     transform: scale(1);
 }
 
 #taart7 {
-    height: 300px;
+    height: 325px;
     width: auto;
     margin: auto auto;
     display: block;
+    padding-top: 30px;
 }
 #taart7:hover {
     transform: scale(1);
@@ -199,6 +208,7 @@ body{
     height: 350px;
     width: auto;
     margin: auto auto;
+    padding-bottom: 15px;
 }
 
 #fotoDialog {
