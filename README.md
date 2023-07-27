@@ -36,3 +36,4 @@
 - [ ] Error-message (zie blad) uitwerken op onsaanbod pagina
 - [ ] CSS op bestelDialog taarten
 - [ ] Wanneer je item wilt verwijderen in winkelwagen pagina, dan verwijdert hij verkeerde item (altijd laatste ipv aangeklikte)
+- [ ] error op leveren/ophalen geeft niet juist door

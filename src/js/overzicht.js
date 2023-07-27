@@ -6,7 +6,7 @@ var submitButton = document.getElementById("submitbutton");
 
 // ----------------- CART Taarten -----------------
 // JavaScript-code om de winkelwageninhoud te tonen
-let cartItems = [];
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
 // Haal de gegevens van de taarten op uit de localStorage
 const storedCartItems = localStorage.getItem("cartItems");
@@ -31,6 +31,24 @@ function updateCart() {
     listItem.textContent += `, ${item.afwerking}`;
     taartenlijstElement.appendChild(listItem);
   }
+}
+function formatCartTaart(cartData) {
+  var formattedOutput = "Cart Items:\n";
+
+  for (var i = 0; i < cartData.length; i++) {
+    var product = cartData[i];
+    var productPersonen = product.personen;
+    var productType = product.type;
+    var productSmaak1 = product.smaak1;
+    var productSmaak2 = product.smaak2;
+    var productAfwerking = product.afwerking;
+
+    formattedOutput += `- ${productPersonen} personen - ${productType} - ${productSmaak1} - ${
+      productSmaak2 ? productSmaak2 : ""
+    } - ${productAfwerking}\n`;
+  }
+
+  return formattedOutput;
 }
 // -----------------------------------------
 function formatCart(cartData) {
@@ -187,6 +205,7 @@ submitButton.addEventListener("click", async function (e) {
 
   // Get the formatted cart data
   var formattedCartData = formatCart(cart);
+  var formattedCartDataTaart = formatCartTaart(cartItems);
 
   // Get the current date and time
   // Create a new Date object representing the current date and time
@@ -218,6 +237,7 @@ submitButton.addEventListener("click", async function (e) {
     ["Adres/Ophaaluur", document.getElementById("address").value],
     ["Opmerking", document.getElementById("opmerking").value],
     ["Product", formattedCartData],
+    ["Taart", formattedCartDataTaart],
   ];
 
   // Send the data to Google Sheets API
