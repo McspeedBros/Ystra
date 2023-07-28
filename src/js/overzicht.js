@@ -293,6 +293,16 @@ submitButton.addEventListener("click", async function (e) {
     return;
   }
 
+  if (
+    localStorage.getItem("cart") === null &&
+    localStorage.getItem("cartItems") === null
+  ) {
+    alert(
+      "Je winkelmandje en taartwinkelmandje is leeg. Voeg items of taarten toe voordat je verder gaat."
+    );
+    return;
+  }
+
   // Check if all fields are filled
   if (
     document.getElementById("name").value == "" ||
