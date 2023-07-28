@@ -9,7 +9,6 @@ var submitButton = document.getElementById("submitbutton");
 // JavaScript-code om de winkelwageninhoud te tonen
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-// Haal de gegevens van de taarten op uit de localStorage
 const storedCartItems = localStorage.getItem("cartItems");
 if (storedCartItems) {
   cartItems = JSON.parse(storedCartItems);
@@ -18,7 +17,7 @@ if (storedCartItems) {
 
 function updateCart() {
   const taartenlijstElement = document.getElementById("taartenlijst");
-  taartenlijstElement.innerHTML = ""; // Wis de huidige inhoud van de taartenlijst
+  taartenlijstElement.innerHTML = "";
 
   for (let i = 0; i < cartItems.length; i++) {
     const item = cartItems[i];
@@ -69,6 +68,13 @@ function formatCart(cartData) {
 
   return formattedOutput;
 }
+for (var i = 0; i < cart.length; i++) {
+  cart[i].id = "item-" + i;
+}
+
+for (var i = 0; i < cartItems.length; i++) {
+  cartItems[i].id = "taart-" + i;
+}
 
 // Populate the cart table with items and options
 for (var i = 0; i < cart.length; i++) {
@@ -77,6 +83,8 @@ for (var i = 0; i < cart.length; i++) {
   }
   var product = cart[i];
   var tr = document.createElement("tr");
+
+  tr.setAttribute("data-product-id", product.id);
 
   var categories = [
     "Basic",
@@ -158,13 +166,21 @@ for (var i = 0; i < cart.length; i++) {
 
   var removeTd = document.createElement("td");
   removeTd.style.height = "25px";
+
   var removeButton = document.createElement("button");
   removeButton.setAttribute("class", "buttonTable");
+
   removeButton.addEventListener("click", function () {
-    var index = cart.indexOf(product);
-    cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    location.reload();
+    var row = this.closest("tr");
+    var productId = row.getAttribute("data-product-id");
+
+    // Find the product with the matching ID in the cart array
+    var index = cart.findIndex((item) => item.id === productId);
+    if (index !== -1) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    }
   });
 
   var trash = document.createElement("i");
@@ -178,16 +194,16 @@ for (var i = 0; i < cart.length; i++) {
   cartTableBody.appendChild(tr);
 
   quantityInput.addEventListener("change", function () {
-    product.quantity = this.value;
+    product.quantity = parseFloat(this.value);
     localStorage.setItem("cart", JSON.stringify(cart));
 
     // recalculate the total cost
     total = 0;
     for (var j = 0; j < cart.length; j++) {
-      total +=
-        parseFloat(cart[j].quantity) * parseFloat(cart[j].price.substring(1));
+      total += parseFloat(cart[j].quantity) * parseFloat(cart[j].price);
     }
-    totalCost.textContent = "Totale prijs (excl. taarten): € " + total;
+    totalCost.textContent =
+      "Totale prijs (excl. taarten): € " + total.toFixed(2);
   });
 }
 
@@ -195,6 +211,8 @@ for (var i = 0; i < cart.length; i++) {
 for (var i = 0; i < cartItems.length; i++) {
   var product = cartItems[i];
   var tr = document.createElement("tr");
+
+  tr.setAttribute("data-product-id", product.id);
 
   var personenTd = document.createElement("td");
   personenTd.textContent = product.personen;
@@ -217,13 +235,21 @@ for (var i = 0; i < cartItems.length; i++) {
 
   var removeTd = document.createElement("td");
   removeTd.style.height = "25px";
+
   var removeButton = document.createElement("button");
   removeButton.setAttribute("class", "buttonTable");
+
   removeButton.addEventListener("click", function () {
-    var index = cartItems.indexOf(product);
-    cartItems.splice(index, 1);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    location.reload();
+    var row = this.closest("tr");
+    var productId = row.getAttribute("data-product-id");
+
+    // Find the product with the matching ID in the cartItems array
+    var index = cartItems.findIndex((item) => item.id === productId);
+    if (index !== -1) {
+      cartItems.splice(index, 1);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      location.reload();
+    }
   });
 
   var trash = document.createElement("i");
@@ -237,11 +263,35 @@ for (var i = 0; i < cartItems.length; i++) {
   cartTableTaart.appendChild(tr);
 }
 
-
 totalCost.textContent = "Totale prijs (excl. taarten): € " + total;
+
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
+function validatePhone(phone) {
+  var re = /^(\+32|0)4(60|[789]\d)(\d{2}){3}$/;
+  return re.test(phone);
+}
+
+function getSelectedOption() {
+  const selectOption = document.querySelector(
+    'input[name="data[Levering]"]:checked'
+  );
+  return selectOption.value;
+}
 
 submitButton.addEventListener("click", async function (e) {
   e.preventDefault();
+
+  // Check if cart or cartItems is empty
+  if (cart.length === 0 && cartItems.length === 0) {
+    alert(
+      "Je winkelmandje of taartwinkelmandje is leeg. Voeg items of taarten toe voordat je verder gaat."
+    );
+    return;
+  }
 
   // Check if all fields are filled
   if (
@@ -251,6 +301,17 @@ submitButton.addEventListener("click", async function (e) {
     document.getElementById("address").value == ""
   ) {
     alert("Vul alle velden correct in");
+    return;
+  }
+  // Check if the email is valid
+  if (!validateEmail(document.getElementById("email").value)) {
+    alert("Vul een geldig email adres in");
+    return;
+  }
+
+  // Check if the phone number is valid
+  if (!validatePhone(document.getElementById("phone").value)) {
+    alert("Vul een geldig telefoonnummer in");
     return;
   }
 
@@ -283,8 +344,10 @@ submitButton.addEventListener("click", async function (e) {
     ["Naam", document.getElementById("name").value],
     ["E-mail", document.getElementById("email").value],
     ["Telefoonnummer", document.getElementById("phone").value],
-    ["Levering", document.getElementById("leveren").value],
-    ["Ophalen", document.getElementById("ophalen").value],
+    [
+      "Levering",
+      getSelectedOption(document.getElementsByName("data[Levering]")),
+    ],
     ["Adres/Ophaaluur", document.getElementById("address").value],
     ["Opmerking", document.getElementById("opmerking").value],
     ["Product", formattedCartData],

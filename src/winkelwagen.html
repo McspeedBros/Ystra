@@ -30,7 +30,7 @@
     
   </header>
   <div>
-    <ul id="taartenlijst"></ul>
+    <ul id="taartenlijst" style="display:none;"></ul>
   </div>
   <main>
     <form
@@ -106,6 +106,7 @@
           name="data[Levering]"
           value="leveren"
           id="leveren"
+          onchange="getSelectedOption()"
         />
         Levering<br />
         <input
@@ -113,9 +114,10 @@
           name="data[Levering]"
           value="ophalen"
           id="ophalen"
+          onchange="getSelectedOption()"
         />
         Ophaling<br /><br />
-        <label for="address" id="address"
+        <label for="address"
           >Indien u de bestelling wilt laten leveren, geef hier uw adres.<br>Als u op ophalen klikt, gelieve de datum en het uur op te geven dat u zal langs komen.</label
         ><br />
         <input
