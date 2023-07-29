@@ -47,7 +47,7 @@ body{
 #smaak2Dropdown {
     float: left;
     margin-right: 20px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 /* Center the smaak horizontally */
@@ -65,26 +65,49 @@ body{
   display: table;
   clear: both;
 }
-#smaak1 {
-    /* height: 30px; */
-    margin-bottom: 30px;
-    /* padding-bottom: 30px; */
-}
 #smaak2Dropdown {
     height: 30px;
     /* padding-bottom: 30px; */
 }
 
-dialog p {
+#bestelDialog p {
     font-family: var(--font1);
     font-size: 1.2rem;
     color: var(--tekstkleur);
     margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: left;
 }
 
 .voegtoe {
     font-family: var(--font1);
     font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+.product-option {
+    font-family: var(--font1);
+    font-size: 1.1rem;
+    background-color: var(--backgroundcolor);
+    border-radius: 5px;
+    border-style: inset;
+    border-color: var(--Goud);
+    border-width: 3px;
+    height: 35px;
+    color: var(--tekstkleur);
+
+    /* appearance: none; */
+    background: transparent;
+}
+.product-option:focus {
+    background-color: var(--backgroundcolor);
+    /* color: var(--tekstkleur); */
+    outline: none;
+}
+.product-option:hover {
+    /* background-color: var(--Goud); */
+    /* color: var(--tekstkleur); */
+    cursor: pointer;
 }
 
 /* Dialog scale-in */
@@ -452,21 +475,19 @@ header figure:nth-of-type(1) img{
 }
 
 main figure:nth-of-type(1){
-    /* margin: 0 auto; */
-    /* margin-top: 7%; */
+    background-image: url(../images/pexels_cropped.jpg);
     width: 100%;
-    left: 5%;
-    background-image: url(../images/pexels.jpg);
-    height: 700px;
+    height: 350px;
     background-size: cover;
     background-position: center;
     background-position-y: bottom;
-    margin-left: 0%;
+    /* margin-left: 0%; */
+    margin: 0 auto;
 }
 h1{
     position: absolute;
-    top: 50%;
-    margin-left: 7%;
+    top: 40%;
+    margin-left: 5%;
     color: var(--backgroundcolor);
     font-size: 4rem;
     font-weight: lighter;
