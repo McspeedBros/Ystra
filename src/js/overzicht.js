@@ -271,7 +271,7 @@ function validateEmail(email) {
 }
 
 function validatePhone(phone) {
-  var re = /^(\+32|0)4(60|[789]\d)(\d{2}){3}$/;
+  var re = /^(\+?32|0)4\d{8}$/;
   return re.test(phone);
 }
 
@@ -284,12 +284,29 @@ function getSelectedOption() {
 
 submitButton.addEventListener("click", async function (e) {
   e.preventDefault();
+  const dialogerror = document.getElementById("dialogError");
+  const errortext = dialogerror.querySelector("p");
+  const errorbutton = dialogerror.querySelector("button");
 
   // Check if cart or cartItems is empty
   if (cart.length === 0 && cartItems.length === 0) {
-    alert(
-      "Je winkelmandje of taartwinkelmandje is leeg. Voeg items of taarten toe voordat je verder gaat."
-    );
+    errortext.innerText = `Je winkelmandje is leeg! Voeg items toe voordat je verder gaat.`;
+    dialogerror.showModal();
+
+    errorbutton.addEventListener("click", () => {
+      dialogerror.setAttribute("closing", "");
+      dialogerror.addEventListener(
+        "animationend",
+        () => {
+          dialogerror.removeAttribute("closing");
+          dialogerror.close();
+        },
+        { once: true }
+      );
+    });
+    // alert(
+    //   "Je winkelmandje of taartwinkelmandje zijn leeg. Voeg items toe voordat je verder gaat."
+    // );
     return;
   }
 
@@ -297,9 +314,23 @@ submitButton.addEventListener("click", async function (e) {
     localStorage.getItem("cart") === null &&
     localStorage.getItem("cartItems") === null
   ) {
-    alert(
-      "Je winkelmandje en taartwinkelmandje is leeg. Voeg items of taarten toe voordat je verder gaat."
-    );
+    errortext.textContent = `Je winkelmandje is leeg! Voeg items toe voordat je verder gaat.`;
+    dialogerror.showModal();
+
+    errorbutton.addEventListener("click", () => {
+      dialogerror.setAttribute("closing", "");
+      dialogerror.addEventListener(
+        "animationend",
+        () => {
+          dialogerror.removeAttribute("closing");
+          dialogerror.close();
+        },
+        { once: true }
+      );
+    });
+    // alert(
+    //   "Je winkelmandje en taartwinkelmandje zijn leeg. Voeg items toe voordat je verder gaat."
+    // );
     return;
   }
 
@@ -310,18 +341,60 @@ submitButton.addEventListener("click", async function (e) {
     document.getElementById("phone").value == "" ||
     document.getElementById("address").value == ""
   ) {
-    alert("Vul alle velden correct in");
+    errortext.textContent = `Vul alle velden corect in!`;
+    dialogerror.showModal();
+
+    errorbutton.addEventListener("click", () => {
+      dialogerror.setAttribute("closing", "");
+      dialogerror.addEventListener(
+        "animationend",
+        () => {
+          dialogerror.removeAttribute("closing");
+          dialogerror.close();
+        },
+        { once: true }
+      );
+    });
+    // alert("Vul alle velden correct in");
     return;
   }
   // Check if the email is valid
   if (!validateEmail(document.getElementById("email").value)) {
-    alert("Vul een geldig email adres in");
+    errortext.textContent = `Vul een geldig email adres in!`;
+    dialogerror.showModal();
+
+    errorbutton.addEventListener("click", () => {
+      dialogerror.setAttribute("closing", "");
+      dialogerror.addEventListener(
+        "animationend",
+        () => {
+          dialogerror.removeAttribute("closing");
+          dialogerror.close();
+        },
+        { once: true }
+      );
+    });
+    // alert("Vul een geldig email adres in");
     return;
   }
 
   // Check if the phone number is valid
   if (!validatePhone(document.getElementById("phone").value)) {
-    alert("Vul een geldig telefoonnummer in");
+    errortext.textContent = `Vul een geldig telefoonnummer in!`;
+    dialogerror.showModal();
+
+    errorbutton.addEventListener("click", () => {
+      dialogerror.setAttribute("closing", "");
+      dialogerror.addEventListener(
+        "animationend",
+        () => {
+          dialogerror.removeAttribute("closing");
+          dialogerror.close();
+        },
+        { once: true }
+      );
+    });
+    // alert("Vul een geldig telefoonnummer in");
     return;
   }
 
@@ -376,6 +449,7 @@ submitButton.addEventListener("click", async function (e) {
     }),
   });
 
+  // Clear the cartItems
   cartItems = [];
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
 

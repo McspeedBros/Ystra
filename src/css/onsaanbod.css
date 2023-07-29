@@ -30,7 +30,7 @@ body{
     padding-bottom: 15px;
     padding-top: 15px;
     width: 350px;
-    margin: 0 auto;
+    margin: auto auto;
     background-color: var(--backgroundcolor);
 }
 #bestelDialog[open] {
@@ -41,6 +41,50 @@ body{
 }
 #bestelDialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+#smaak1,
+#smaak2Dropdown {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+/* Center the smaak horizontally */
+/* #smaak1 {
+  margin-left: 5%;
+}
+#smaak2Dropdown {
+  margin-right: 5%;
+} */
+
+
+/* Clear the float after the smaak2Dropdown */
+#smaak2Dropdown::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#smaak1 {
+    /* height: 30px; */
+    margin-bottom: 30px;
+    /* padding-bottom: 30px; */
+}
+#smaak2Dropdown {
+    height: 30px;
+    /* padding-bottom: 30px; */
+}
+
+dialog p {
+    font-family: var(--font1);
+    font-size: 1.2rem;
+    color: var(--tekstkleur);
+    margin-bottom: 10px;
+}
+
+.voegtoe {
+    font-family: var(--font1);
+    font-size: 1.2rem;
 }
 
 /* Dialog scale-in */

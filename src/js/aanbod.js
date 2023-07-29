@@ -137,6 +137,7 @@ let cartItems = [];
 
 function showSmaak2Dropdown() {
   const aantal_personen = document.getElementById("personen").value;
+  const smaak1 = document.getElementById("smaak1");
   const smaak2Dropdown = document.getElementById("smaak2Dropdown");
 
   if (aantal_personen >= 10 || aantal_personen == "15+") {

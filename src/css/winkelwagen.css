@@ -226,6 +226,72 @@ table tr td {
 #afwerking {
   width: 20%;
 }
+
+@keyframes slide-in {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+.dialog {
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border-style: inset;
+  border-color: var(--Goud);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 350px;
+  height: 115px;
+  /* place it in the right under corner */
+  /* position: fixed; */
+  bottom: 0;
+  right: 0;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  background-color: var(--backgroundcolor);
+  animation: slide-out 0.5s;
+}
+.dialog[open] {
+  animation: slide-in 0.5s;
+}
+.dialog[closing] {
+  animation: slide-out 0.5s;
+  animation-fill-mode: forwards;
+}
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.errorbutton {
+  background-color: var(--Goud);
+  color: white;
+  border: solid 3px var(--Goud);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Akaya Telivigala", cursive;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 500ms;
+}
+.errorbutton:hover {
+  background-color: white;
+  color: var(--Goud);
+  border: inset 3px var(--Goud);
+}
 p {
   color: var(--Goud);
   text-align: center;

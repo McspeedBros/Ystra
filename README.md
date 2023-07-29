@@ -27,13 +27,14 @@
 - [x] algemene width aanpassen van homepagina
 - [x] Uitdenken hoe taarten efficient bestellen? -> Kyana
 - [x] CSS Dialog box and button -> Kyana
-- [ ] CSS Error-message (zie blad) uitwerken op onsaanbod pagina
+- [x] CSS Error-message (zie blad) uitwerken op onsaanbod pagina
 - [ ] CSS op bestelDialog taarten
 - [ ] CSS Dropdown menus -> Kyana
 - [ ] Mediascreens Phone onsaanbod
 - [ ] Mediascreens Phone Homepagina
 - [x] Wanneer je item wilt verwijderen in winkelwagen pagina, dan verwijdert hij verkeerde item (altijd laatste ipv aangeklikte)
 - [x] error op leveren/ophalen geeft niet juist door
+- [x] !!! validate phone niet correct in overzicht.js !!!
 
 ## Later
 
