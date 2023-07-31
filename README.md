@@ -34,6 +34,7 @@
 - [x] error op leveren/ophalen geeft niet juist door
 - [x] !!! validate phone niet correct in overzicht.js !!!
 - [x] foto onsaanbod croppen
+- [x] Mediascreens GSM alle paginas
 
 ## Later
 
@@ -42,7 +43,6 @@
 ## Bugs
 
 - [ ] Totale prijs bij overzichtspagina klopt niet -> STAAAT OP DISPLAY NONE PAS OP!
-- [ ] Mediascreens GSM alle paginas
 - [ ] prijs van stukken taart linken: wanneer aantal personen kleiner is dan optie 15+: prijs is 4€ per persoon, wanneer aantal 15+ is, prijs op 0 zetten voor rekening maar erbij zetten dat prijs te bepalen is
 - [ ] GSM Nummer nog is herbekijken de regex
 - [ ] Prijs Floats afronden op 2 cijfers na de komma
