@@ -15,10 +15,11 @@ body{
 #winkelwagen {
     height: 50px;
     width: auto;
-    margin: auto auto;
+    margin: auto 7%;
     display: block;
     padding-top: 5px;
     color: var(--Goud);
+    font-family: 'Akaya Telivigala', cursive;
 }
 
 #bestelDialog {
