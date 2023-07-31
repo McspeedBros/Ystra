@@ -654,4 +654,80 @@ body > figure img {
 
 /* ---------------------------------------- */
 @media screen and (max-width: 766px) {
+  /* complete this media screen to make the whole page responsive */
+  /* 1. remove the banner when you open the site on your phone
+    2. the sponsors set them under each other
+    3. center the text in the footer
+    4. make the footer responsive
+    5. make the header responsive
+    6. make the section responsive
+    7. make the article responsive
+    8. make the aside responsive
+    9. make the social media responsive
+    10. make the banner responsive
+   */
+   .banner {
+    display: none;
+  }
+  #banner {
+    display: none;
+  }
+  #sponsorcontainer {
+    flex-direction: column;
+  }
+  footer div {
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    top: 200px;
+    left: 10px;
+  }
+
+  header p {
+    font-size: 1rem;
+    top: 400px;
+    left: 10px;
+  }
+  .logo {
+    width: 110px;
+    height: 110px;
+  }
+  main section {
+    width: 100%;
+    font-size: 1rem;
+  }
+  article {
+    flex-direction: column;
+  }
+
+  article figure {
+    flex-basis: 100%;
+  }
+
+  article div {
+    flex-basis: 100%;
+    margin-top: 50px;
+  }
+
+  article div h2 {
+    font-size: 2.5rem;
+  }
+
+  article div p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  aside {
+    flex-direction: column;
+  }
+  body > figure {
+    width: 50%;
+  }
+  .foto > a > img{
+    width: 100%;
+  }
 }
