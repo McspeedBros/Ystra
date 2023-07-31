@@ -271,7 +271,7 @@ function validateEmail(email) {
 }
 
 function validatePhone(phone) {
-  var re = /^(\+?32|0)4\d{8}$/;
+  var re = /^((\+32|0)\d{1,9})$/;
   return re.test(phone);
 }
 

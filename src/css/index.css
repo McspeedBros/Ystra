@@ -652,6 +652,6 @@ body > figure img {
   height: 70px;
 }
 
-/* make this page responsive for a iphone screen*/
+/* ---------------------------------------- */
 @media screen and (max-width: 766px) {
 }

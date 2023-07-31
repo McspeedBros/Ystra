@@ -30,15 +30,19 @@
 - [x] CSS Error-message (zie blad) uitwerken op onsaanbod pagina
 - [x] CSS op bestelDialog taarten
 - [x] CSS Dropdown menus -> Kyana
-- [ ] Mediascreens Phone onsaanbod
-- [ ] Mediascreens Phone Homepagina
 - [x] Wanneer je item wilt verwijderen in winkelwagen pagina, dan verwijdert hij verkeerde item (altijd laatste ipv aangeklikte)
 - [x] error op leveren/ophalen geeft niet juist door
 - [x] !!! validate phone niet correct in overzicht.js !!!
 - [x] foto onsaanbod croppen
-- [ ] prijs van stukken taart linken: wanneer aantal personen kleiner is dan optie 15+: prijs is 4€ per persoon, wanneer aantal 15+ is, prijs op 0 zetten voor rekening maar erbij zetten dat prijs te bepalen is
 
 ## Later
 
 - [ ] frisco gin tonic (€3 euro) toevoegen
-- [ ] Totale prijs bij overzichtspagina klopt niet -> Bezig
+
+## Bugs
+
+- [ ] Totale prijs bij overzichtspagina klopt niet -> STAAAT OP DISPLAY NONE PAS OP!
+- [ ] Mediascreens GSM alle paginas
+- [ ] prijs van stukken taart linken: wanneer aantal personen kleiner is dan optie 15+: prijs is 4€ per persoon, wanneer aantal 15+ is, prijs op 0 zetten voor rekening maar erbij zetten dat prijs te bepalen is
+- [ ] GSM Nummer nog is herbekijken de regex
+- [ ] Prijs Floats afronden op 2 cijfers na de komma
