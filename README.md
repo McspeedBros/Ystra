@@ -34,12 +34,12 @@
 - [x] error op leveren/ophalen geeft niet juist door
 - [x] !!! validate phone niet correct in overzicht.js !!!
 - [x] foto onsaanbod croppen
-- [x] Mediascreens GSM alle paginas
+- [x] Mediascreens Aanbod + Index
 
 ## Later
 
 - [ ] frisco gin tonic (€3 euro) toevoegen
-
+- [ ] Mediascreen winkelwagen.css
 ## Bugs
 
 - [ ] Totale prijs bij overzichtspagina klopt niet -> STAAAT OP DISPLAY NONE PAS OP!
