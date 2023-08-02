@@ -534,9 +534,10 @@ main h1 span{
   }
 .cart{
     position: fixed;
-    top: 25px;
-    width: 75px;
+    top: 5%;
+    width: 55px;
     /* height: 75px; */
+    /* width: 3%; */
     right: 4%;
     display: flex;
     justify-content: center;
@@ -744,7 +745,7 @@ main img:hover{
     padding-bottom: 15px;
     padding-top: 25px;
     margin-top: 1px;
-    /* width: 100%; */
+    width: 225px;
 }
 .taarten:hover {
     /* transform: scale(1.1); */
@@ -756,6 +757,11 @@ main img:hover{
     padding-bottom: 15px;
     padding-top: 25px;
 }
+
+/* .taarten button {
+    display: flex;
+    justify-content: center;
+} */
 
 
 
@@ -819,9 +825,10 @@ h3{
 p{
     color: white;
 }
-/* .container1 {
-    width: 90%;
-} */
+/* .container1 { */
+    /* width: 90%; */
+    /* margin-left: -7.5%; */
+/* } */
 
 /* .container2 {
     border-radius: 10px;
@@ -869,8 +876,8 @@ p{
     justify-content: center;
 }
 .container5 > div:nth-of-type(2){
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 
 .add-to-cart{
@@ -932,12 +939,14 @@ footer div{
 footer div div{
     width: 30%;
     margin: 0 auto;
+    font-family: 'Akaya Telivigala', cursive;
 }
 footer h3{
     border-bottom: 1px solid var(--Goud);
     padding-bottom: 20px;
-    font-size: 1.5rem;
     color: white;
+    font-size: 1.6rem;
+    font-weight: lighter;
 }
 footer h3:nth-of-type(4){
     border: none;
@@ -952,13 +961,15 @@ footer p{
 body > figure{
     display: flex;
     width: 15%;
-    margin: 0 auto;
-    justify-content: space-between;
+    margin: auto auto;
+    justify-content: space-around;
     margin-bottom: 100px;
 }
 body > figure img{
     width: 70px;
     height: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
@@ -998,6 +1009,11 @@ body > figure img{
     header span{
         font-weight: bold;
         color: var(--Goud);
+    }
+    .cart {
+        width: 45px;
+        top: 4.5%;
+        right: 5.5%;
     }
     .container3 > div:nth-of-type(1) {
        /* background-color: green; */
@@ -1075,6 +1091,14 @@ footer{
     margin-top: 200px;
     margin-bottom: 100px;
     }
+footer div div{
+    width: 85%;
+    font-family: 'Akaya Telivigala', cursive;
+}
+footer div div h3 {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
     #yspralines {
         width: 200px;
     }

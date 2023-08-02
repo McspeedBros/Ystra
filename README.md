@@ -42,8 +42,10 @@
 - [ ] Mediascreen winkelwagen.css
 ## Bugs
 
-- [ ] Totale prijs bij overzichtspagina klopt niet -> STAAAT OP DISPLAY NONE PAS OP!
+- [ ] Totale prijs bij overzichtspagina klopt niet -> STAAT OP DISPLAY NONE PAS OP!
 - [ ] prijs van stukken taart linken: wanneer aantal personen kleiner is dan optie 15+: prijs is 4€ per persoon, wanneer aantal 15+ is, prijs op 0 zetten voor rekening maar erbij zetten dat prijs te bepalen is
 - [ ] GSM Nummer nog is herbekijken de regex
 - [ ] Prijs Floats afronden op 2 cijfers na de komma
-- [ ] Mediascreen Index.css fotos aanpassen
+- [x] Mediascreen Index.css fotos aanpassen
+- [x] width van de sponsors tussen elkaar gelijk zetten
+- [x] ?? bug bij mild mokka op de aanbod pagina (iets hoger, zie whatsapp) => past zich aan na verloop van tijd

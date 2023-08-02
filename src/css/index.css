@@ -264,6 +264,7 @@ section a {
   border-radius: 5px;
   border-color: var(--Goud);
   border-style: solid;
+  font-size: 1.2rem;
 }
 section a:hover {
   background-color: white;
@@ -293,7 +294,7 @@ article div h2 {
   font-family: "Dancing Script", cursive;
   color: var(--Goud);
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 article div p {
   width: 75%;
@@ -323,6 +324,7 @@ article a button:hover {
   width: 45%;
   border-radius: 7px;
   transition: 500ms;
+  margin-top: -50px;
 }
 .foto > a > img:hover{
   transform: scale(1.1);
@@ -348,6 +350,7 @@ aside div {
   margin: 0 auto;
   flex-basis: 25%;
   text-align: center;
+  margin-top: 35px;
 }
 aside div p {
   color: var(--Goud);
@@ -373,7 +376,7 @@ aside div h3:nth-of-type(3) {
   background-repeat: contain;
   background-size: cover;
   background-position-y: center;
-  height: 750px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,7 +390,7 @@ aside div h3:nth-of-type(3) {
   color: var(--Goud);
   font-family: "Akaya Telivigala", cursive;
   text-align: center;
-  margin-top: 610px;
+  margin-top: 45%;
 }
 
 /* opmaak sponsor */
@@ -407,11 +410,22 @@ aside div h3:nth-of-type(3) {
   display: flex;
   justify-content: space-between;
   width: 75%;
+  max-width: 90%;
+  min-width: 60%;
   margin: 0 auto;
   text-align: center;
 }
-#sponsorcontainer p {
+.sponsors p {
   font-size: 1.3rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.sponsors {
+  width: 14.28%;
+  margin: 0 auto;
+
 }
 #sponsor1 {
   width: 120px;
@@ -484,7 +498,7 @@ aside div h3:nth-of-type(3) {
 #sponsor5 {
   width: 120px;
   height: 120px;
-  background-image: url(../images/sponsor5.jpg);
+  background-image: url(../images/sponsor5.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -628,7 +642,9 @@ footer div:nth-of-type(2) div {
 footer h3 {
   border-bottom: 1px solid var(--Goud);
   padding-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  /* font-family: "Dancing Script", cursive; */
+  font-weight: lighter;
 }
 footer h3:nth-of-type(4) {
   border: none;
@@ -636,6 +652,8 @@ footer h3:nth-of-type(4) {
 footer p {
   color: var(--Goud);
   font-family: "Akaya Telivigala", cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* opmaak social */
@@ -675,16 +693,45 @@ body > figure img {
   #sponsorcontainer {
     flex-direction: column;
   }
+  #sponsorcontainer div p {
+    width: 100%;
+    /* margin: auto auto; */
+  }
+  
+  .sponsors {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #container1 {
+    overflow-x: scroll;
+  }
+  #box1 {
+    background-size: 100px
+  }
+  #box2 {
+    background-size: 100px
+  }
+  #box3 {
+    background-size: 95px
+  }
+  #box4 {
+    background-size: 90px
+  }
+  #box5 {
+    background-size: 100px
+  }
+  #box6 {
+    background-size: 100px
+  }
+  #box7 {
+    background-size: 100px
+  }
   footer div {
     text-align: center;
   }
   footer {
     flex-direction: column;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    top: 200px;
-    left: 10px;
   }
 
   header p {
@@ -696,10 +743,15 @@ body > figure img {
     width: 110px;
     height: 110px;
   }
+  /* main {
+    overflow-y: hidden;
+  } */
   main section {
     width: 100%;
     font-size: 1rem;
+    margin-top: -100px;
   }
+  
   article {
     flex-direction: column;
   }
@@ -724,6 +776,10 @@ body > figure img {
   aside {
     flex-direction: column;
   }
+  /* #map {
+    flex-basis: 100%;
+    height: 500px;
+  } */
   body > figure {
     width: 50%;
   }

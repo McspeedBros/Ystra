@@ -202,6 +202,30 @@ function updateCart() {
 
 // --------------------------------------------
 
+function addBreakBetweenFlavours() {
+  const mokka = document.querySelector("#mokkaText");
+  const mars = document.querySelector("#marsText");
+  const ontdekmeer = document.querySelector("#showfoto");
+  const screenWidth = window.innerWidth;
+
+  // Check if the screen width is between the specified range (400px and 800px)
+  if (screenWidth >= 767 && screenWidth <= 1323) {
+    // Add a <br> tag between 'Mild' and 'Mokka'
+    mokka.innerHTML = 'Mild<br>Mokka';
+    mars.innerHTML = 'Mars<br>Delight';
+    ontdekmeer.innerHTML = 'Details';
+  } else {
+    // Reset the text to the original
+    mokka.innerHTML = 'Mild Mokka';
+    mars.innerHTML = 'Mars Delight';
+    ontdekmeer.innerHTML = 'Ontdek meer';
+  }
+}
+
+// Call the function on page load and whenever the window is resized
+window.addEventListener('load', addBreakBetweenFlavours);
+window.addEventListener('resize', addBreakBetweenFlavours);
+
 var besteldialog = document.querySelector("#bestelDialog");
 var bestelopen = document.querySelector("#show");
 var bestelclose = besteldialog.querySelector("#close");
