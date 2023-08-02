@@ -4,7 +4,7 @@
 
 ## Extra's
 
-- Ystraciatella
+- Ystracciatella
 
 ## TODO's
 
@@ -48,4 +48,4 @@
 - [ ] Prijs Floats afronden op 2 cijfers na de komma
 - [x] Mediascreen Index.css fotos aanpassen
 - [x] width van de sponsors tussen elkaar gelijk zetten
-- [x] ?? bug bij mild mokka op de aanbod pagina (iets hoger, zie whatsapp) => past zich aan na verloop van tijd
+- [x] ?? bug bij mild mokka op de aanbod pagina (iets hoger, zie whatsapp)

@@ -409,7 +409,7 @@ aside div h3:nth-of-type(3) {
 #sponsorcontainer {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 70%;
   max-width: 90%;
   min-width: 60%;
   margin: 0 auto;
