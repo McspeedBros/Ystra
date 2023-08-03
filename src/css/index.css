@@ -2,8 +2,27 @@
 :root {
   --backgroundcolor: #222222;
   --Goud: #c5b673;
+  --scroll: #3b3b3b;
+  --scrollhover: #c5b6735d;
   /*--lettertype:  Verdana sans-serif;*/
   --tekstkleur: white;
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll);
+  border-radius: 10px;
+  /* height: 2px; */
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollhover);
 }
 /* Volledige pagina */
 body {

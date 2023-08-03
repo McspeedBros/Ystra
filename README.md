@@ -49,3 +49,4 @@
 - [x] Mediascreen Index.css fotos aanpassen
 - [x] width van de sponsors tussen elkaar gelijk zetten
 - [x] ?? bug bij mild mokka op de aanbod pagina (iets hoger, zie whatsapp)
+- [ ] mediascreen voor ipad index.html

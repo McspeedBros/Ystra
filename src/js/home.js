@@ -35,3 +35,22 @@ straciatella.addEventListener('click', () => {
 chocolate.addEventListener('click', () => {
   window.location.href = 'onsaanbod.html';
 });
+
+
+function changeWidth() {
+  const sponsors = document.querySelector("#sponsorcontainer");
+  const screenWidth = window.innerWidth;
+
+  // Check if the screen width is between the specified range (400px and 800px)
+  if (screenWidth >= 767 && screenWidth <= 1693) {
+    // change the width of the element
+    sponsors.style.width = "90%";
+  } else {
+    // reset the width of the element
+    sponsors.style.width = "70%";
+  }
+}
+
+// Call the function on page load and whenever the window is resized
+window.addEventListener('load', changeWidth);
+window.addEventListener('resize', changeWidth);

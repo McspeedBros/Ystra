@@ -1,10 +1,29 @@
 :root {
     --backgroundcolor: #222222;
+    --scroll: #3b3b3b;
+    --scrollhover: #c5b6735d;
     --Goud: #C5B673;
     /*--lettertype:  Verdana sans-serif;*/
     --tekstkleur: white;
     --font1: font-family: 'Dancing Script', cursive;
     --font2: font-family: 'Akaya Telivigala', cursive;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+  
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    border-radius: 10px;
+    /* height: 2px; */
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollhover);
 }
 
 body{
@@ -534,7 +553,7 @@ main h1 span{
   }
 .cart{
     position: fixed;
-    top: 5%;
+    top: 40px;
     width: 55px;
     /* height: 75px; */
     /* width: 3%; */
@@ -746,6 +765,7 @@ main img:hover{
     padding-top: 25px;
     margin-top: 1px;
     width: 225px;
+    min-width: 175px;
 }
 .taarten:hover {
     /* transform: scale(1.1); */
@@ -856,8 +876,8 @@ p{
     margin-right: 45px;
 }
 
-.container4{
-    justify-content: center;
+/* .container4{
+    justify-content: center; */
     /* border-radius: 10px;
     border-style: inset;
     border-color: var(--Goud);
@@ -867,10 +887,13 @@ p{
     padding-top: 15px;
     width: 1000px;
     margin: 0 auto; */
-}
-.container4 > div{
+/* } */
+/* .container4 > div{
     margin-left: 35px;
     margin-right: 35px;
+} */
+.container4 > div:nth-of-type(2) {
+    min-width: 175px;
 }
 .container5{
     justify-content: center;
@@ -937,7 +960,7 @@ footer div{
     
 }
 footer div div{
-    width: 30%;
+    width: 40%;
     margin: 0 auto;
     font-family: 'Akaya Telivigala', cursive;
 }
@@ -1012,7 +1035,7 @@ body > figure img{
     }
     .cart {
         width: 45px;
-        top: 4.5%;
+        top: 42px;
         right: 5.5%;
     }
     .container3 > div:nth-of-type(1) {
@@ -1050,6 +1073,7 @@ body > figure img{
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    
 }
 /* opmaak container2 */
 .container2{

@@ -201,24 +201,75 @@ function updateCart() {
 }
 
 // --------------------------------------------
+const mokka = document.querySelector("#mokkaText");
+const mars = document.querySelector("#marsText");
+const cookie = document.querySelector("#cookieText");
+const vanilla = document.querySelector("#vanilla1");
+const banana = document.querySelector("#banana1");
+const strawberry = document.querySelector("#strawberry1");
+const blueberry = document.querySelector("#blueberry1");
+const amarena = document.querySelector("#amarena1");
+const amarenaText = document.querySelector("#amarenaText");
+const cuberdonText = document.querySelector("#cuberdonText");
+const cuberdon = document.querySelector("#cuberdon1");
+const ontdekmeer = document.querySelector("#showfoto");
+const container1 = document.querySelector(".container1");
+const container1height = container1.offsetHeight;
+const container2 = document.querySelector(".container2");
+const container2height = container2.offsetHeight;
+const container3 = document.querySelector(".container3");
+const container3height = container3.offsetHeight;
+const container4 = document.querySelector(".container4");
+const container4height = container4.offsetHeight;
+const title = document.querySelector("main h1");
 
 function addBreakBetweenFlavours() {
-  const mokka = document.querySelector("#mokkaText");
-  const mars = document.querySelector("#marsText");
-  const ontdekmeer = document.querySelector("#showfoto");
   const screenWidth = window.innerWidth;
 
   // Check if the screen width is between the specified range (400px and 800px)
-  if (screenWidth >= 767 && screenWidth <= 1323) {
+  if (screenWidth >= 767 && screenWidth <= 1373) {
+    title.style.top = "30%";
     // Add a <br> tag between 'Mild' and 'Mokka'
     mokka.innerHTML = 'Mild<br>Mokka';
-    mars.innerHTML = 'Mars<br>Delight';
+    // mars.innerHTML = 'Mars<br>Delight';
     ontdekmeer.innerHTML = 'Details';
+    container1.style.overflowX = "scroll";
+    container1.style.height = `${container1height + 27}px`;
+    container1.style.padding = "10px";
+    container1.style.overflowY = "hidden";
+    container2.style.overflowX = "scroll";
+    container2.style.height = `${container2height + 27}px`;
+    container2.style.padding = "10px";
+    container2.style.overflowY = "hidden";
+    container3.style.overflowX = "scroll";
+    container3.style.height = `${container3height + 27}px`;
+    container4.style.overflowX = "scroll";
+    container4.style.height = `${container4height + 27}px`;
+    container4.style.padding = "10px";
+    container4.style.overflowY = "hidden";
+    vanilla.style.marginLeft = "10px";
+    banana.style.marginRight = "10px";
+    strawberry.style.marginLeft = "10px";
+    blueberry.style.marginRight = "10px";
+    amarena.style.marginLeft = "10px";
+    cuberdon.style.marginRight = "10px";
   } else {
     // Reset the text to the original
     mokka.innerHTML = 'Mild Mokka';
-    mars.innerHTML = 'Mars Delight';
+    // mars.innerHTML = 'Mars Delight';
     ontdekmeer.innerHTML = 'Ontdek meer';
+  }
+
+  if (screenWidth >= 767 && screenWidth <= 1083) {
+    amarenaText.innerHTML = 'Amarena<br>Love';
+    mars.innerHTML = 'Mars<br>Delight';
+    cookie.innerHTML = "Chef's Favourite<br>Cookie";
+    cuberdonText.innerHTML = 'Cuberdon<br>Candy';
+  } else {
+    amarenaText.innerHTML = 'Amarena Love';
+    mars.innerHTML = 'Mars Delight';
+    cookie.innerHTML = "Chef's Favourite Cookie";
+    cuberdonText.innerHTML = 'Cuberdon Candy';
   }
 }
 
