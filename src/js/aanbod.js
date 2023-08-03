@@ -134,8 +134,6 @@ for (var i = 0; i < products.length; i++) {
 
 // ---------------------Taarten-----------------
 let cartItems = [];
-// const storedCartItems = localStorage.getItem("cartItems");
-// cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
 
 function showSmaak2Dropdown() {
   const aantal_personen = document.getElementById("personen").value;
@@ -148,76 +146,6 @@ function showSmaak2Dropdown() {
     smaak2Dropdown.style.display = "none";
   }
 }
-
-// function addToCartTaart() {
-//   const personen = document.getElementById("personen").value;
-//   const type = document.getElementById("type").value;
-//   const smaak1 = document.getElementById("smaak1").value;
-//   const afwerking = document.getElementById("afwerking").value;
-//   let prijs = document.getElementById("price").textContent;
-//   const voegtoe = document.getElementById("voegtoe");
-
-//   voegtoe.addEventListener("click", async function (e) {
-//     e.preventDefault();
-//     const dialogerror = document.getElementById("dialogError");
-//     const errortext = dialogerror.querySelector("p");
-//     const errorbutton = dialogerror.querySelector("button");
-  
-//     if (personen == "/" || type == "/" || smaak1 == "/" || afwerking == "/") {
-//       errortext.textContent = "Kies een waarde voor elke optie.";
-//       dialogerror.showModal();
-
-//       errorbutton.addEventListener("click", () => {
-//         dialogerror.setAttribute("closing", "");
-//         dialogerror.addEventListener(
-//           "animationend",
-//           () => {
-//             dialogerror.removeAttribute("closing");
-//             dialogerror.close();
-//           },
-//           { once: true }
-//         );
-//       });
-
-//       return;
-//     }
-//   });
-
-//   if (personen !== "15+") {
-//     prijs = prijs.replace("Prijs: € ", "");
-//   } else {
-//     prijs = "Prijs op aanvraag";
-//   }
-
-//   if (personen >= 10 || personen == "15+") {
-//     const smaak2 = document.getElementById("smaak2").value;
-//     const item = {
-//       personen,
-//       type,
-//       smaak1,
-//       smaak2,
-//       afwerking,
-//       prijs,
-//     };
-
-//     cartItems.push(item);
-//     console.log(cartItems);
-//     updateCart();
-//     // return;
-//   }
-
-//   const item = {
-//     personen,
-//     type,
-//     smaak1,
-//     afwerking,
-//     prijs,
-//   };
-
-//   cartItems.push(item);
-//   console.log(cartItems);
-//   updateCart();
-// }
 
 function addToCartTaart() {
   const personen = document.getElementById("personen").value;
