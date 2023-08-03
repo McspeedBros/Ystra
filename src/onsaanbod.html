@@ -410,8 +410,9 @@
               <select
                 class="product-option"
                 id="personen"
-                onchange="showSmaak2Dropdown()"
+                onchange="showSmaak2Dropdown(), linkPrice()"
               >
+                <option value="/" style="color: #C5B673;" disabled selected>Selecteer optie</option>
                 <option value="6">6</option>
                 <option value="8">8</option>
                 <option value="10">10</option>
@@ -420,12 +421,14 @@
               </select>
               <p>Type</p>
               <select class="product-option" id="type">
+                <option value="/" style="color: #C5B673;" disabled selected>Selecteer optie</option>
                 <option value="ijstaart">ijstaart</option>
                 <option value="driptaart">driptaart</option>
                 <option value="ijslam">ijslam</option>
               </select>
               <p>Smaak</p>
               <select class="product-option" id="smaak1">
+                <option value="/" style="color: #C5B673;" disabled selected>Selecteer optie</option>
                 <option value="Velvet Vanilla">Velvet Vanilla</option>
                 <option value="Soft Stracciatella">Soft Stracciatella</option>
                 <option value="Milky Chocolate">Milky Chocolate</option>
@@ -437,6 +440,7 @@
               </select>
               <div id="smaak2Dropdown" style="display: none">
                 <select class="product-option" id="smaak2">
+                  <option value="/" style="color: #C5B673;" disabled selected>Selecteer optie</option>
                   <option value="Velvet Vanilla">Velvet Vanilla</option>
                   <option value="Soft Stracciatella">Soft Stracciatella</option>
                   <option value="Milky Chocolate">Milky Chocolate</option>
@@ -449,17 +453,30 @@
               </div><br>
               <p style="padding-top: 15px;">Afwerking</p>
               <select class="product-option" id="afwerking">
+                <option value="/" style="color: #C5B673;" disabled selected>Selecteer optie</option>
                 <option value="Slagroom">Slagroom</option>
                 <option value="Italiaanse Meringue">Italiaanse Meringue</option>
                 <option value="Fruitspiegel">Fruitspiegel</option>
               </select><br>
-              <button class="add-to-cart voegtoe" onclick="addToCartTaart()">
+              <p id="price" style="color: #C5B673; font-size: 1.5rem;"></p>
+              <button class="add-to-cart voegtoe" id="voegtoe" onclick="addToCartTaart()">
                 Voeg toe
               </button>
             </div>
             <!-- <button id="close" type="button" class="button">Sluiten</button> -->
           </form>
         </dialog>
+
+        <!-- <div class="dialog-container"> -->
+          <dialog class="dialog" id="dialogError" tabindex="-1">
+            <p id="dialog-text-error"></p>
+            <button id="dialog-button-error" type="button" class="errorbutton">OK</button>
+          </dialog>
+        <!-- </div> -->
+        <!-- <dialog id="dialogError" class="dialog">
+          <p id="dialog-text-error"></p>
+          <button id="dialog-button-error" type="button" class="errorbutton">OK</button>
+        </dialog> -->
 
         <div class="product specials frisco">
           <div>

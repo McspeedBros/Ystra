@@ -233,6 +233,12 @@ for (var i = 0; i < cartItems.length; i++) {
   afwerkingTd.textContent = product.afwerking;
   tr.appendChild(afwerkingTd);
 
+  var prijsTd = document.createElement("td");
+  if (product.prijs == "Prijs op aanvraag") prijsTd.textContent = "Prijs op aanvraag";
+  else
+  prijsTd.textContent = "€ " + product.prijs;
+  tr.appendChild(prijsTd);
+
   var removeTd = document.createElement("td");
   removeTd.style.height = "25px";
 

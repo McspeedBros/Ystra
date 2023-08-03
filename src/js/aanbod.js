@@ -134,6 +134,8 @@ for (var i = 0; i < products.length; i++) {
 
 // ---------------------Taarten-----------------
 let cartItems = [];
+// const storedCartItems = localStorage.getItem("cartItems");
+// cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
 
 function showSmaak2Dropdown() {
   const aantal_personen = document.getElementById("personen").value;
@@ -147,13 +149,150 @@ function showSmaak2Dropdown() {
   }
 }
 
+// function addToCartTaart() {
+//   const personen = document.getElementById("personen").value;
+//   const type = document.getElementById("type").value;
+//   const smaak1 = document.getElementById("smaak1").value;
+//   const afwerking = document.getElementById("afwerking").value;
+//   let prijs = document.getElementById("price").textContent;
+//   const voegtoe = document.getElementById("voegtoe");
+
+//   voegtoe.addEventListener("click", async function (e) {
+//     e.preventDefault();
+//     const dialogerror = document.getElementById("dialogError");
+//     const errortext = dialogerror.querySelector("p");
+//     const errorbutton = dialogerror.querySelector("button");
+  
+//     if (personen == "/" || type == "/" || smaak1 == "/" || afwerking == "/") {
+//       errortext.textContent = "Kies een waarde voor elke optie.";
+//       dialogerror.showModal();
+
+//       errorbutton.addEventListener("click", () => {
+//         dialogerror.setAttribute("closing", "");
+//         dialogerror.addEventListener(
+//           "animationend",
+//           () => {
+//             dialogerror.removeAttribute("closing");
+//             dialogerror.close();
+//           },
+//           { once: true }
+//         );
+//       });
+
+//       return;
+//     }
+//   });
+
+//   if (personen !== "15+") {
+//     prijs = prijs.replace("Prijs: € ", "");
+//   } else {
+//     prijs = "Prijs op aanvraag";
+//   }
+
+//   if (personen >= 10 || personen == "15+") {
+//     const smaak2 = document.getElementById("smaak2").value;
+//     const item = {
+//       personen,
+//       type,
+//       smaak1,
+//       smaak2,
+//       afwerking,
+//       prijs,
+//     };
+
+//     cartItems.push(item);
+//     console.log(cartItems);
+//     updateCart();
+//     // return;
+//   }
+
+//   const item = {
+//     personen,
+//     type,
+//     smaak1,
+//     afwerking,
+//     prijs,
+//   };
+
+//   cartItems.push(item);
+//   console.log(cartItems);
+//   updateCart();
+// }
+
 function addToCartTaart() {
   const personen = document.getElementById("personen").value;
   const type = document.getElementById("type").value;
   const smaak1 = document.getElementById("smaak1").value;
   const afwerking = document.getElementById("afwerking").value;
+  let prijs = document.getElementById("price").textContent;
+  const storedCartItems = localStorage.getItem("cartItems");
+  cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
 
-  if (personen >= 10 || personen == "15+") {
+
+  if (personen >= 10 || personen === "15+") {
+    const smaak2 = document.getElementById("smaak2").value;
+
+    if (smaak2 === "/") {
+      const dialogerror = document.getElementById("dialogError");
+      const errortext = dialogerror.querySelector("p");
+      const errorbutton = dialogerror.querySelector("button");
+  
+      var besteldialog = document.querySelector("#bestelDialog");
+    
+      errortext.textContent = "Kies een waarde voor elke optie.";
+      dialogerror.showModal();
+  
+      errorbutton.addEventListener("click", () => {
+        dialogerror.setAttribute("closing", "");
+        dialogerror.addEventListener(
+          "animationend",
+          () => {
+            dialogerror.removeAttribute("closing");
+            dialogerror.close();
+            besteldialog.showModal();
+          },
+          { once: true }
+        );
+      });
+  
+      return;
+    }
+  }
+
+  if (personen === "/" || type === "/" || smaak1 === "/" || afwerking === "/") {
+    const dialogerror = document.getElementById("dialogError");
+    const errortext = dialogerror.querySelector("p");
+    const errorbutton = dialogerror.querySelector("button");
+
+    var besteldialog = document.querySelector("#bestelDialog");
+  
+    errortext.textContent = "Kies een waarde voor elke optie.";
+    dialogerror.showModal();
+
+    errorbutton.addEventListener("click", () => {
+      dialogerror.setAttribute("closing", "");
+      dialogerror.addEventListener(
+        "animationend",
+        () => {
+          dialogerror.removeAttribute("closing");
+          dialogerror.close();
+          besteldialog.showModal();
+        },
+        { once: true }
+      );
+    });
+
+    return;
+  }
+
+  if (personen !== "15+") {
+    prijs = prijs.replace("Prijs: € ", "");
+  } else {
+    prijs = "Prijs op aanvraag";
+  }
+
+  if (personen >= 10 || personen === "15+") {
+    
     const smaak2 = document.getElementById("smaak2").value;
     const item = {
       personen,
@@ -161,24 +300,31 @@ function addToCartTaart() {
       smaak1,
       smaak2,
       afwerking,
+      prijs,
     };
 
     cartItems.push(item);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    console.log(cartItems);
+    updateCart();
+    return;
+  } else {
+
+    const item = {
+      personen,
+      type,
+      smaak1,
+      afwerking,
+      prijs,
+    };
+
+    cartItems.push(item);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
     console.log(cartItems);
     updateCart();
     return;
   }
-
-  const item = {
-    personen,
-    type,
-    smaak1,
-    afwerking,
-  };
-
-  cartItems.push(item);
-  console.log(cartItems);
-  updateCart();
+  
 }
 
 function updateCart() {
@@ -188,7 +334,7 @@ function updateCart() {
   for (let i = 0; i < cartItems.length; i++) {
     const item = cartItems[i];
     const listItem = document.createElement("li");
-    listItem.textContent = `Taart ${i + 1}: ${item.personen} personen, ${
+    listItem.textContent = `Taart ${i + 1} - € ${item.prijs}: ${item.personen} personen, ${
       item.smaak1
     }`;
     if (item.smaak2) {
@@ -198,6 +344,29 @@ function updateCart() {
     winkelwagenElement.appendChild(listItem);
   }
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+function linkPrice() {
+  const personen = document.getElementById("personen").value;
+  const prijs = document.getElementById("price");
+  let price;
+  
+  if (personen == 6) {
+    prijs.textContent = "Prijs: € 24";
+    price = 24;
+  } else if (personen == 8) {
+    prijs.innerHTML = "Prijs: € 32";
+    price = 32;
+  } else if (personen == 10) {
+    prijs.innerHTML = "Prijs: € 40";
+    price = 40;
+  } else if (personen == 12) {
+    prijs.innerHTML = "Prijs: € 48";
+    price = 48;
+  } else if (personen == "15+") {
+    prijs.innerHTML = "Prijs op aanvraag";
+    price = 0;
+  }
 }
 
 // --------------------------------------------
