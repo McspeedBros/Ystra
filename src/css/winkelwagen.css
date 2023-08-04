@@ -209,6 +209,7 @@ h1,h2 {
 
 table {
   width: 100%;
+  min-width: 610px;
   border-collapse: collapse;
   border: 5px solid var(--Goud);
   margin: 0 auto;
@@ -226,6 +227,13 @@ table tr td {
   text-align: center;
   font-size: 120%;
 }
+#overzichtBestelling {
+  display: none;
+}
+#overzichtTaart {
+  display: none;
+}
+
 #categorie {
   width: 20%;
 }
@@ -233,17 +241,20 @@ table tr td {
   width: 15%;
 }
 #personen {
-  width: 15%
+  width: 11%
 }
 #type {
-  width: 15%;
+  width: 12%;
 
 }
 #smaak {
-  width: 35%;
+  width: 30%;
 }
 #afwerking {
   width: 20%;
+}
+#prijs {
+  width: 15%;
 }
 
 @keyframes slide-in {
@@ -324,55 +335,64 @@ form {
   text-align: center;
 }
 input[type=text] {
-width: 50%;
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
+  width: 50%;
+  min-width: 610px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 input[type=text]:focus {
-background-color: lightgray;
-outline: none;
+  background-color: lightgray;
+  outline: none;
 }
 /*Set a golden border around the input type text*/
 input[type=text] {
-border: 5px inset var(--Goud);
-border-radius: 4px;
+  border: 5px inset var(--Goud);
+  border-radius: 4px;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 1rem;
 }
 input[type=email] {
-border: 5px solid var(--Goud);
-border-radius: 4px;
+  min-width: 610px;
+  border: 5px solid var(--Goud);
+  border-radius: 4px;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 1rem;
 }
 input[type=tel] {
-border: 5px solid var(--Goud);
-border-radius: 4px;
+  min-width: 610px;
+  border: 5px solid var(--Goud);
+  border-radius: 4px;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 1rem;
 }
 input[type=email] {
-width: 50%;
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
-border-style: inset;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-style: inset;
 }
 input[type=email]:focus {
-background-color: lightgray;
-outline: none;
+  background-color: lightgray;
+  outline: none;
 }
 input[type=tel] {
-width: 50%;
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
-border-style: inset;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-style: inset;
 }
 input[type=tel]:focus {
-background-color: lightgray;
-outline: none;
+  background-color: lightgray;
+  outline: none;
 }
 input[type=number] {
-border: 4px solid var(--Goud);
-border-style: inset;
-border-radius: 4px;
-padding: 12px 20px;
+  border: 4px solid var(--Goud);
+  border-style: inset;
+  border-radius: 4px;
+  padding: 12px 20px;
 }
 table th {
   /* width: 15%; */
@@ -380,23 +400,26 @@ table th {
   font-size: 1.2rem
 }
 select {
-padding: 12px 20px;
-margin: 8px 0;
-box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 textarea {
-width: 50%;
-height: 120px;
-padding: 12px 20px;
-box-sizing: border-box;
-border: 5px inset var(--Goud);
-border-radius: 4px;
-background-color: #f8f8f8;
-resize: none;
+  width: 50%;
+  min-width: 610px;
+  height: 120px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 5px inset var(--Goud);
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  font-family: 'Akaya Telivigala', cursive;
+  font-size: 1rem;
 }
 textarea:focus {
-background-color: lightgray;
-outline: none;
+  background-color: lightgray;
+  outline: none;
 }
 
 section div div{
@@ -511,6 +534,44 @@ footer p{
 
 /*Make this page also responsive for phones if to big places images beneeth each other*/
 @media screen and (max-width: 766px) {
-  
+  table {
+    display: none;
+  }
+
+  #overzichtBestelling {
+    display: block;
+  }
+  #overzichtTaart {
+    display: block;
+  }
+
+  #overzichtBestelling ul {
+    color: var(--tekstkleur);
+    font-size: 1.1rem;
+    margin-bottom: -5px;
+    margin-top: -5px;
+  }
+  #overzichtBestelling ul span {
+    color: var(--Goud);
+    font-size: 1.2rem;
+  }
+
+  #overzichtTaart ul {
+    color: var(--tekstkleur);
+    font-size: 1.1rem;
+    margin-bottom: -5px;
+    margin-top: -5px;
+  }
+  #overzichtTaart ul span {
+    color: var(--Goud);
+    font-size: 1.2rem;
+  }
+
+  .verwijderen {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-wrap: wrap;
+  }
 
 }

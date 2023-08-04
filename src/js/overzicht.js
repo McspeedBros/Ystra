@@ -77,6 +77,7 @@ for (var i = 0; i < cartItems.length; i++) {
 }
 
 // Populate the cart table with items and options
+var overzichtBestelling = document.getElementById("overzichtBestelling");
 for (var i = 0; i < cart.length; i++) {
   if (cart[i].name == "Taarten") {
     continue;
@@ -193,6 +194,66 @@ for (var i = 0; i < cart.length; i++) {
 
   cartTableBody.appendChild(tr);
 
+
+  var div = document.createElement("div");
+  var ul = document.createElement("ul");
+  var aside = document.createElement("aside");
+  var verwijderbutton = removeButton.cloneNode(true);
+
+  ul.setAttribute("data-product-id-gsm", product.id);
+
+  ul.innerHTML = "<span>Smaak: </span>";
+  ul.innerHTML += product.option ? product.option : product.name;
+  ul.innerHTML += "<br>";
+
+  ul.innerHTML += "<span>Categorie: </span>";
+  ul.innerHTML += productCategory;
+  ul.innerHTML += "<br>";
+
+  ul.innerHTML += "<span>Hoeveelheid: </span>";
+  ul.innerHTML += product.quantity;
+  ul.innerHTML += "<br>";
+
+  ul.innerHTML += "<span>Prijs: </span>";
+  ul.innerHTML += product.price;
+  ul.innerHTML += "<br>";
+
+  // var hoeveelheidForm = document.createElement("form");
+  // var hoeveelheidInput = document.createElement("input");
+  // hoeveelheidInput.setAttribute("type", "number");
+  // hoeveelheidInput.setAttribute("value", product.quantity);
+  // hoeveelheidInput.setAttribute("min", 1);
+  // hoeveelheidInput.setAttribute("step", 1);
+  // hoeveelheidInput.setAttribute("class", "hoeveelheid");
+  // hoeveelheidForm.appendChild(hoeveelheidInput);
+  // aside.appendChild(hoeveelheidForm);
+
+  
+
+  aside.classList.add("verwijderen");
+  aside.appendChild(verwijderbutton);
+  // aside.innerHTML += "<br>";
+
+  verwijderbutton.addEventListener("click", function () {
+    var ul = this.closest("ul");
+    var dataproductId = ul.getAttribute("data-product-id-gsm");
+
+    // Find the product with the matching ID in the cart array
+    var index = cart.findIndex((item) => item.id === dataproductId);
+    if (index !== -1) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    }
+  });
+
+  div.appendChild(ul);
+  div.appendChild(aside);
+  // overzichtBestelling.appendChild(aside);
+  overzichtBestelling.appendChild(div);
+  
+
+
   quantityInput.addEventListener("change", function () {
     product.quantity = parseFloat(this.value);
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -208,6 +269,7 @@ for (var i = 0; i < cart.length; i++) {
 }
 
 // Populate the cart table with taarten
+var overzichtTaart = document.getElementById("overzichtTaart");
 for (var i = 0; i < cartItems.length; i++) {
   var product = cartItems[i];
   var tr = document.createElement("tr");
@@ -267,6 +329,71 @@ for (var i = 0; i < cartItems.length; i++) {
   tr.appendChild(removeTd);
 
   cartTableTaart.appendChild(tr);
+
+
+  var div = document.createElement("div");
+  var ul = document.createElement("ul");
+  var aside = document.createElement("aside");
+  var verwijderbutton = removeButton.cloneNode(true);
+
+  ul.setAttribute("data-product-id-gsm", product.id);
+
+  ul.innerHTML = "<span>Personen: </span>";
+  ul.innerHTML += product.personen;
+  ul.innerHTML += "<br>";
+
+  ul.innerHTML += "<span>Type: </span>";
+  ul.innerHTML += product.type;
+  ul.innerHTML += "<br>";
+
+  ul.innerHTML += "<span>Smaak: </span>";
+  ul.innerHTML += product.smaak1;
+  if (product.smaak2) {
+    ul.innerHTML += ", " + product.smaak2;
+  }
+  ul.innerHTML += "<br>";
+
+  ul.innerHTML += "<span>Afwerking: </span>";
+  ul.innerHTML += product.afwerking;
+  ul.innerHTML += "<br>";
+
+  ul.innerHTML += "<span>Prijs: </span>";
+  if (product.prijs == "Prijs op aanvraag") ul.innerHTML += "Prijs op aanvraag";
+  else
+  ul.innerHTML += "€ " + product.prijs;
+  ul.innerHTML += "<br>";
+
+  // var hoeveelheidForm = document.createElement("form");
+  // var hoeveelheidInput = document.createElement("input");
+  // hoeveelheidInput.setAttribute("type", "number");
+  // hoeveelheidInput.setAttribute("value", product.quantity);
+  // hoeveelheidInput.setAttribute("min", 1);
+  // hoeveelheidInput.setAttribute("step", 1);
+  // hoeveelheidInput.setAttribute("class", "hoeveelheid");
+  // hoeveelheidForm.appendChild(hoeveelheidInput);
+  // aside.appendChild(hoeveelheidForm);
+  
+  aside.classList.add("verwijderen");
+  aside.appendChild(verwijderbutton);
+  // aside.innerHTML += "<br>";
+
+  verwijderbutton.addEventListener("click", function () {
+    var ul = this.closest("ul");
+    var dataproductId = ul.getAttribute("data-product-id-gsm");
+
+    // Find the product with the matching ID in the cartItems array
+    var index = cartItems.findIndex((item) => item.id === dataproductId);
+    if (index !== -1) {
+      cartItems.splice(index, 1);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      location.reload();
+    }
+  });
+
+  div.appendChild(ul);
+  div.appendChild(aside);
+  // overzichtBestelling.appendChild(aside);
+  overzichtTaart.appendChild(div);
 }
 
 totalCost.textContent = "Totale prijs (excl. taarten): € " + total;
