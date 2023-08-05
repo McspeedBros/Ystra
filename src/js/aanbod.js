@@ -280,16 +280,16 @@ function linkPrice() {
   let price;
   
   if (personen == 6) {
-    prijs.textContent = "Prijs: € 24";
+    prijs.textContent = "Prijs: € 24,00";
     price = 24;
   } else if (personen == 8) {
-    prijs.innerHTML = "Prijs: € 32";
+    prijs.innerHTML = "Prijs: € 32,00";
     price = 32;
   } else if (personen == 10) {
-    prijs.innerHTML = "Prijs: € 40";
+    prijs.innerHTML = "Prijs: € 40,00";
     price = 40;
   } else if (personen == 12) {
-    prijs.innerHTML = "Prijs: € 48";
+    prijs.innerHTML = "Prijs: € 48,00";
     price = 48;
   } else if (personen == "15+") {
     prijs.innerHTML = "Prijs op aanvraag";

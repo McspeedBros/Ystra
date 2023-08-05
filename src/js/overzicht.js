@@ -2,7 +2,7 @@ var cart = JSON.parse(window.localStorage.getItem("cart")) || [];
 var cartTableBody = document.getElementById("cart-table-body");
 var cartTableTaart = document.getElementById("taart-table-body");
 var totalCost = document.getElementById("total-cost");
-var total = 0;
+let total = 0;
 var submitButton = document.getElementById("submitbutton");
 
 // ----------------- CART Taarten -----------------
@@ -162,8 +162,13 @@ for (var i = 0; i < cart.length; i++) {
   productPriceTd.textContent = product.price;
   tr.appendChild(productPriceTd);
 
+  let priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
+  // get the first 5 characters of the price
+  priceOverzicht = priceOverzicht.split(" ")[0];
+  // priceOverzicht = priceOverzicht.substring(0, 5);
+
   total +=
-    parseFloat(product.quantity) * parseFloat(product.price.substring(1));
+    parseFloat(product.quantity) * parseFloat(priceOverzicht);
 
   var removeTd = document.createElement("td");
   removeTd.style.height = "25px";
@@ -252,19 +257,107 @@ for (var i = 0; i < cart.length; i++) {
   // overzichtBestelling.appendChild(aside);
   overzichtBestelling.appendChild(div);
   
+  // let priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
+  // // get the first 5 characters of the price
+  // priceOverzicht = priceOverzicht.substring(0, 5);
 
+  // total +=
+  //   parseFloat(product.quantity) * parseFloat(priceOverzicht);
+
+  // quantityInput.addEventListener("change", function () {
+  //   product.quantity = parseFloat(this.value);
+  //   localStorage.setItem("cart", JSON.stringify(cart));
+
+  //   // recalculate the total cost (use only the price, loop over that)
+  // //   total = 0;
+  // //   for (var j = 0; j < cart.length; j++) {
+  // //     let priceOverzicht = cart[j].price.replace(",", ".").replace("€ ", "");
+  // //     // get the first 5 characters of the price
+  // //     priceOverzicht = priceOverzicht.substring(0, 5);
+  // //     total += parseFloat(cart[j].quantity) * parseFloat(priceOverzicht);
+
+  // //     console.log("cart[j].price:", cart[j].price);
+  // //     console.log("priceOverzicht:", priceOverzicht);
+  // //   }
+  // //   totalCost.textContent =
+  // //   "Totale prijs * : € " + total.toFixed(2);
+  // // });
+
+  // // total = 0;
+  //   for (var j = 0; j < cart.length; j++) {
+  //     let priceOverzicht = cart[j].price;
+
+  //     // Check if the price contains the word "per stuk" or "€"
+  //     if (priceOverzicht.includes("€")) {
+  //       // Extract the numeric price value from the price string
+  //       priceOverzicht = priceOverzicht.replace(",", ".").replace("€ ", "");
+  //       priceOverzicht = priceOverzicht.split(" ")[0];
+  //     } else {
+  //       // For prices like "Aantal Personen" or "Aanta", set the price to 0
+  //       priceOverzicht = 0;
+  //     }
+
+  //     // if the quantity is less than it was before, subtract the difference from the total
+  //     if (cart[j].quantity < product.quantity) {
+  //       total += parseFloat(priceOverzicht);
+  //     } else {
+  //       total -= parseFloat(priceOverzicht);
+  //     }
+  //     // total += parseFloat(cart[j].quantity) * parseFloat(priceOverzicht);
+
+  //     console.log("cart[j].price:", cart[j].price);
+  //     console.log("priceOverzicht:", priceOverzicht);
+  //   }
+
+  // totalCost.textContent = "Totale prijs * : € " + total.toFixed(2);
+  // });
 
   quantityInput.addEventListener("change", function () {
     product.quantity = parseFloat(this.value);
     localStorage.setItem("cart", JSON.stringify(cart));
+  
+    const row = this.closest("tr");
+    // Find the index of the product in the cart
+    const productIndex = row.getAttribute("data-product-id");
 
-    // recalculate the total cost
-    total = 0;
-    for (var j = 0; j < cart.length; j++) {
-      total += parseFloat(cart[j].quantity) * parseFloat(cart[j].price);
+    // Find the product with the matching ID in the cart array
+    var index = cart.findIndex((item) => item.id === productIndex);
+    // const productIndex = cart.findIndex((item) => item.id === product.id);
+    if (index !== -1) {
+      let priceOverzicht = cart[index].price;
+  
+      // Check if the price contains the word "per stuk" or "€"
+      if (priceOverzicht.includes("€")) {
+        // Extract the numeric price value from the price string
+        priceOverzicht = priceOverzicht.replace(",", ".").replace("€ ", "");
+        priceOverzicht = priceOverzicht.split(" ")[0];
+      } else {
+        // For prices like "Aantal Personen" or "Aanta", set the price to 0
+        priceOverzicht = 0;
+      }
+  
+      // Calculate the difference in total cost due to quantity change
+      const prevQuantity = cart[index].quantity;
+      const quantityDifference = product.quantity - prevQuantity;
+  
+      // Update the total cost based on the quantity change
+      total += parseFloat(priceOverzicht) * quantityDifference;
+  
+      // Update the quantity of the product in the cart
+      cart[index].quantity = product.quantity;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      // reload the page
+      location.reload();
+
+
+  
+      console.log("cart[productIndex].price:", cart[index].price);
+      console.log("priceOverzicht:", priceOverzicht);
+    } else {
+      console.error("Product not found in cart");
     }
-    totalCost.textContent =
-      "Totale prijs (excl. taarten): € " + total.toFixed(2);
+  
+    totalCost.textContent = "Totale prijs* : € " + total.toFixed(2);
   });
 }
 
@@ -390,13 +483,30 @@ for (var i = 0; i < cartItems.length; i++) {
     }
   });
 
+  let priceTaart = product.prijs.replace(",", ".");
+  // get the last 5 characters of the price
+  priceTaart = priceTaart.substring(priceTaart.length - 5);
+  if (product.prijs != "Prijs op aanvraag") {
+    total += parseFloat(priceTaart);
+  } else {
+    total += 0;
+  }
+
   div.appendChild(ul);
   div.appendChild(aside);
   // overzichtBestelling.appendChild(aside);
   overzichtTaart.appendChild(div);
 }
 
-totalCost.textContent = "Totale prijs (excl. taarten): € " + total;
+totalCost.textContent = "Totale prijs: € " + total.toFixed(2);
+// if there is a taart for 15+ personen aanwezig, edit the style of #opmerking
+for (var i = 0; i < cartItems.length; i++) {
+  if (cartItems[i].personen === "15+") {
+    totalCost.textContent = "Totale prijs* : € " + total.toFixed(2);
+    document.getElementById("opmerking").style.display = "block";
+    break;
+}
+}
 
 function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;

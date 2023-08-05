@@ -690,7 +690,7 @@ body > figure img {
 }
 
 /* ---------------------------------------- */
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 821px) {
   /* complete this media screen to make the whole page responsive */
   /* 1. remove the banner when you open the site on your phone
     2. the sponsors set them under each other

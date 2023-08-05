@@ -39,17 +39,19 @@
 ## Later
 
 - [ ] frisco gin tonic (€3 euro) toevoegen
-- [ ] Mediascreen winkelwagen.css
+- [x] Mediascreen winkelwagen.css
 ## Bugs
 
-- [ ] Totale prijs bij overzichtspagina klopt niet -> STAAT OP DISPLAY NONE PAS OP!
+- [x] Totale prijs bij overzichtspagina klopt niet -> STAAT OP DISPLAY NONE PAS OP!
 - [x] prijs van stukken taart linken: wanneer aantal personen kleiner is dan optie 15+: prijs is 4€ per persoon, wanneer aantal 15+ is, prijs op 0 zetten voor rekening maar erbij zetten dat prijs te bepalen is
 - [ ] GSM Nummer nog is herbekijken de regex
-- [ ] Prijs Floats afronden op 2 cijfers na de komma
+- [x] Prijs Floats afronden op 2 cijfers na de komma
 - [x] Mediascreen Index.css fotos aanpassen
 - [x] width van de sponsors tussen elkaar gelijk zetten
 - [x] ?? bug bij mild mokka op de aanbod pagina (iets hoger, zie whatsapp)
-- [ ] mediascreen voor ipad index.html
-- [ ] dialog errormessage bij bestelling taarten rare slide-in & -out
-- [ ] css voor tabel taarten aanpassen winkelmandje
-- [ ] opsomming voor mediascreen winkelmandje
+- [x] mediascreen voor ipad index.html
+- [x] dialog errormessage bij bestelling taarten rare slide-in & -out
+- [x] css voor tabel taarten aanpassen winkelmandje
+- [x] opsomming voor mediascreen winkelmandje
+- [ ] removebutton in winkelwagen werkt niet op gsm-formaat
+- [ ] bij hoeveelheidsverandering in winkelwagen, veranderd er een ander random product ook met die hoeveelheid
