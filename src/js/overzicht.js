@@ -229,7 +229,11 @@ for (var i = 0; i < cart.length; i++) {
   ul.innerHTML += "<br>";
 
   ul.innerHTML += "<span>Prijs: </span>";
-  ul.innerHTML += product.price;
+  if (productCategory === "Frisco's" && product.option === "Gin Tonic") {
+    ul.innerHTML += "€ 3,00 per stuk";
+  } else {
+    ul.innerHTML += product.price;
+  }
   ul.innerHTML += "<br>";
 
   // var hoeveelheidForm = document.createElement("form");
