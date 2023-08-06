@@ -159,10 +159,19 @@ for (var i = 0; i < cart.length; i++) {
   tr.appendChild(productQuantityTd);
 
   var productPriceTd = document.createElement("td");
-  productPriceTd.textContent = product.price;
+  if (product.name === "Frisco's" && product.option === "Gin Tonic") {
+    productPriceTd.textContent = "€ 3,00 per stuk";
+  } else {
+    productPriceTd.textContent = product.price;
+  }
   tr.appendChild(productPriceTd);
 
-  let priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
+  let priceOverzicht;
+  if (product.name === "Frisco's" && product.option === "Gin Tonic") {
+    priceOverzicht = "3.00";
+  } else {
+    priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
+  }
   // get the first 5 characters of the price
   priceOverzicht = priceOverzicht.split(" ")[0];
   // priceOverzicht = priceOverzicht.substring(0, 5);

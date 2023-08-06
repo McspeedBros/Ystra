@@ -8,7 +8,12 @@ addToCartButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     const product = event.target.parentElement;
     const title = product.querySelector("h3").textContent;
-    const price = product.querySelector("p").textContent;
+    let price = "";
+    if (title === "Frisco's" && product.querySelector(".product-option").value === "Gin Tonic") {
+      price = "3,00";
+    } else {
+      price = product.querySelector("p").textContent;
+    }
     const quantityInput = product.querySelector("input[type='number']");
     const quantity = quantityInput.value;
     const productOptionsElement = product.querySelector(".product-option");
@@ -100,7 +105,13 @@ for (var i = 0; i < products.length; i++) {
 
   addToCartButton.addEventListener("click", function () {
     var productName = this.parentElement.querySelector("h3").textContent;
-    var productPrice = this.parentElement.querySelector("p").textContent;
+    let price = "";
+    if (title === "Frisco's" && this.parentElement.querySelector(".product-option").value === "Gin Tonic") {
+      price = "3,00";
+    } else {
+      price = this.parentElement.querySelector("p").textContent;
+    }
+    // var productPrice = this.parentElement.querySelector("p").textContent;
     var productQuantity = quantityInput.value;
     var productOption = this.parentElement.querySelector(".product-option");
     var option = productOption ? productOption.value : null;
@@ -120,7 +131,7 @@ for (var i = 0; i < products.length; i++) {
       cart.push({
         name: productName,
         option: option,
-        price: productPrice,
+        price: price,
         quantity: productQuantity,
       });
     } else {
@@ -274,7 +285,7 @@ function updateCart() {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
 
-function linkPrice() {
+function linkPriceTaart() {
   const personen = document.getElementById("personen").value;
   const prijs = document.getElementById("price");
   let price;
@@ -296,6 +307,21 @@ function linkPrice() {
     price = 0;
   }
 }
+
+// function linkPriceFrisco() {
+//   const frisco = document.getElementById("frisco");
+//   let price;
+
+//   if (frisco.value === "Gin Tonic") {
+//     price = 3;
+//   } else {
+//     price = 2.5;
+//   }
+
+//   const prijs = document.getElementById("priceFrisco");
+//   prijs.innerHTML = `Prijs: € ${price.toFixed(2)}`;
+// }
+
 
 // --------------------------------------------
 const mokka = document.querySelector("#mokkaText");

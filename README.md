@@ -38,7 +38,7 @@
 
 ## Later
 
-- [ ] frisco gin tonic (€3 euro) toevoegen
+- [x] frisco gin tonic (€3 euro) toevoegen
 - [x] Mediascreen winkelwagen.css
 ## Bugs
 
