@@ -14,6 +14,7 @@ addToCartButtons.forEach((button) => {
     } else {
       price = product.querySelector("p").textContent;
     }
+    // const price = product.querySelector("p").textContent;
     const quantityInput = product.querySelector("input[type='number']");
     const quantity = quantityInput.value;
     const productOptionsElement = product.querySelector(".product-option");
@@ -111,7 +112,7 @@ for (var i = 0; i < products.length; i++) {
     } else {
       price = this.parentElement.querySelector("p").textContent;
     }
-    // var productPrice = this.parentElement.querySelector("p").textContent;
+    var productPrice = this.parentElement.querySelector("p").textContent;
     var productQuantity = quantityInput.value;
     var productOption = this.parentElement.querySelector(".product-option");
     var option = productOption ? productOption.value : null;
@@ -147,6 +148,27 @@ for (var i = 0; i < products.length; i++) {
 let cartItems = [];
 
 function showSmaak2Dropdown() {
+  const personen = document.getElementById("personen").value;
+  const prijs = document.getElementById("price");
+  let price;
+  
+  if (personen == 6) {
+    prijs.textContent = "Prijs: € 24,00";
+    price = 24;
+  } else if (personen == 8) {
+    prijs.innerHTML = "Prijs: € 32,00";
+    price = 32;
+  } else if (personen == 10) {
+    prijs.innerHTML = "Prijs: € 40,00";
+    price = 40;
+  } else if (personen == 12) {
+    prijs.innerHTML = "Prijs: € 48,00";
+    price = 48;
+  } else if (personen == "15+") {
+    prijs.innerHTML = "Prijs op aanvraag";
+    price = 0;
+  }
+
   const aantal_personen = document.getElementById("personen").value;
   const smaak1 = document.getElementById("smaak1");
   const smaak2Dropdown = document.getElementById("smaak2Dropdown");
@@ -273,9 +295,12 @@ function updateCart() {
   for (let i = 0; i < cartItems.length; i++) {
     const item = cartItems[i];
     const listItem = document.createElement("li");
+    if (item.prijs === "Prijs op aanvraag") {
+      listItem.textContent = `Taart ${i + 1} - Prijs op aanvraag: ${item.personen} personen, ${item.smaak1}, ${item.afwerking}`; }
+    else {
     listItem.textContent = `Taart ${i + 1} - € ${item.prijs}: ${item.personen} personen, ${
       item.smaak1
-    }`;
+    }`; }
     if (item.smaak2) {
       listItem.textContent += `, ${item.smaak2}`;
     }
