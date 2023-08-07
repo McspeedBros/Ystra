@@ -40,6 +40,7 @@
 
 - [x] frisco gin tonic (€3 euro) toevoegen
 - [x] Mediascreen winkelwagen.css
+- [ ] code opschonen
 ## Bugs
 
 - [x] Totale prijs bij overzichtspagina klopt niet -> STAAT OP DISPLAY NONE PAS OP!
@@ -55,3 +56,4 @@
 - [x] opsomming voor mediascreen winkelmandje
 - [ ] removebutton in winkelwagen werkt niet op gsm-formaat
 - [ ] bij hoeveelheidsverandering in winkelwagen, veranderd er een ander random product ook met die hoeveelheid
+- [x] mediascreen bevestiging
