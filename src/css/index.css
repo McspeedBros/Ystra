@@ -113,10 +113,11 @@ section h2 {
 }
 #container1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  /* place it in the center */
+  /* margin: 0 auto; */
+
   margin-bottom: 75px;
-  /* get the height and add 15 px */
-  /* height: 270px; */
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 10px;
@@ -157,7 +158,7 @@ aside figure img:hover {
   background-image: url("../images/onsaanbod/vanilla.png");
   background-size: 130px;
   background-repeat: no-repeat;
-  width: 135px;
+  min-width: 135px;
   background-position: 50% 8%;
   transition: 0.5s;
   border-radius: 10px;
@@ -178,7 +179,7 @@ aside figure img:hover {
 #box2 {
   background-image: url("../images/onsaanbod/mokka1.png");
   background-size: 120px;
-  width: 135px;
+  min-width: 135px;
   background-repeat: no-repeat;
   background-position: 50% 8%;
   border-radius: 10px;
@@ -201,7 +202,7 @@ aside figure img:hover {
 #box3 {
   background-image: url("../images/onsaanbod/straciatella.png");
   background-size: 110px;
-  width: 135px;
+  min-width: 135px;
   background-repeat: no-repeat;
   background-position: 50% 8%;
   border-radius: 10px;
@@ -229,7 +230,7 @@ aside figure img:hover {
 #box4 {
   background-image: url("../images/onsaanbod/milkyChoc1.avif");
   background-size: 105px;
-  width: 135px;
+  min-width: 135px;
   background-repeat: no-repeat;
   background-position: 50% 8%;
   border-radius: 10px;
@@ -379,7 +380,8 @@ article a button:hover {
 }
 
 .foto > a > img{
-  width: 45%;
+  /* width: 45%; */
+  width: 400px;
   border-radius: 7px;
   transition: 500ms;
   margin-top: -50px;

@@ -55,5 +55,5 @@
 - [x] css voor tabel taarten aanpassen winkelmandje
 - [x] opsomming voor mediascreen winkelmandje
 - [ ] removebutton in winkelwagen werkt niet op gsm-formaat
-- [ ] bij hoeveelheidsverandering in winkelwagen, veranderd er een ander random product ook met die hoeveelheid
+- [ ] bij hoeveelheidsverandering in winkelwagen, veranderd er een ander random product ook met die hoeveelheid -> LIJKT ALSOF DIT IS OPGELOST???
 - [x] mediascreen bevestiging

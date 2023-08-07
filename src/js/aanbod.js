@@ -72,7 +72,7 @@ function renderCart() {
     cartTotal += item.price * item.quantity;
     const listItem = document.createElement("li");
     listItem.innerHTML = `
-      ${item.title} - ${item.option ? item.option : ""} - €${item.price} x ${
+      ${item.title} - ${item.option ? item.option + " -" : ""} €${item.price} x ${
       item.quantity
     } = €${item.price * item.quantity}
     `;
@@ -84,7 +84,7 @@ function renderCart() {
     listItem.appendChild(removeButton);
     cartList.appendChild(listItem);
   });
-  totalCost.textContent = `Total: €${cartTotal.toFixed(2)}`;
+  totalCost.textContent = `Totaal: € ${cartTotal.toFixed(2)}`;
 
   const removeButtons = document.querySelectorAll(".remove");
   removeButtons.forEach((button) => {
