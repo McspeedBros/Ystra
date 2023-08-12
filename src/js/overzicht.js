@@ -252,9 +252,22 @@ for (var i = 0; i < cart.length; i++) {
   aside.appendChild(verwijderbutton);
   // aside.innerHTML += "<br>";
 
+  
+
+  div.appendChild(ul);
+  div.appendChild(aside);
+  // overzichtBestelling.appendChild(aside);
+  overzichtBestelling.appendChild(div);
+
+
   verwijderbutton.addEventListener("click", function () {
-    var ul = this.closest("ul");
+    var button = this;
+    console.log(button);
+    var div = button.closest("div");
+    var ul = div.querySelector("ul");
+    console.log(div);
     var dataproductId = ul.getAttribute("data-product-id-gsm");
+    console.log(dataproductId);
 
     // Find the product with the matching ID in the cart array
     var index = cart.findIndex((item) => item.id === dataproductId);
@@ -262,14 +275,10 @@ for (var i = 0; i < cart.length; i++) {
       cart.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
       location.reload();
+    } else {
+      console.error("Product not found in cart");
     }
   });
-
-  div.appendChild(ul);
-  div.appendChild(aside);
-  // overzichtBestelling.appendChild(aside);
-  overzichtBestelling.appendChild(div);
-  
   // let priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
   // // get the first 5 characters of the price
   // priceOverzicht = priceOverzicht.substring(0, 5);
@@ -486,7 +495,10 @@ for (var i = 0; i < cartItems.length; i++) {
   // aside.innerHTML += "<br>";
 
   verwijderbutton.addEventListener("click", function () {
-    var ul = this.closest("ul");
+    var button = this;
+    console.log(button);
+    var div = button.closest("div");
+    var ul = div.querySelector("ul");
     var dataproductId = ul.getAttribute("data-product-id-gsm");
 
     // Find the product with the matching ID in the cartItems array
