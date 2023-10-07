@@ -41,6 +41,7 @@
 - [x] frisco gin tonic (€3 euro) toevoegen
 - [x] Mediascreen winkelwagen.css
 - [ ] code opschonen
+
 ## Bugs
 
 - [x] Totale prijs bij overzichtspagina klopt niet -> STAAT OP DISPLAY NONE PAS OP!

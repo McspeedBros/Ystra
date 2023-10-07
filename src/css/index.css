@@ -232,18 +232,21 @@ aside figure img:hover {
   background-size: 105px;
   min-width: 135px;
   background-repeat: no-repeat;
-  background-position: 50% 8%;
+  background-position: 50% 14%;
   border-radius: 10px;
   transition: 0.5s;
   margin-left: 10px;
-  /* margin-top: 7px; */
   margin-left: 15px;
   margin-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 27px;
+  padding-top: 15px;
   margin-top: 15px;
   margin-right: 15px;
+}
+#box4 figure {
+  padding-top: 4px;
+
 }
 #box4:hover {
   transform: scale(1.1);
