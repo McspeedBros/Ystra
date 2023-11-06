@@ -2,6 +2,12 @@
 
 ## Colab Kyana
 
+## Holiday specials
+- classnames aanpassen voor holiday section 
+- foto's aanpassen
+- tekst aanpassen onder foto?
+- in js file de holiday specials aanpassen (toevoeging in winkelmadje met juiste prijs)
+
 ## Extra's
 
 - Ystracciatella

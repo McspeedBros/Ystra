@@ -668,6 +668,15 @@ submitButton.addEventListener("click", async function (e) {
     return;
   }
 
+  // Check the value of the textrea
+  if (document.getElementById("opmerking").value == "") {
+    alert(document.getElementById("opmerking").value);
+    alert(document.getElementById("opmerking").val());
+    alert(document.getElementById("opmerking").val);
+    alert(document.getElementById("opmerking").text());
+    return;
+  }
+
   // Get the formatted cart data
   var formattedCartData = formatCart(cart);
   var formattedCartDataTaart = formatCartTaart(cartItems);
