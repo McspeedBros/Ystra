@@ -95,6 +95,7 @@ for (var i = 0; i < cart.length; i++) {
     "Yspralines",
     "Taarten",
     "Frisco's",
+    "Holiday Specials",
   ];
   var productCategory = "";
   if (
@@ -132,6 +133,21 @@ for (var i = 0; i < cart.length; i++) {
     productCategory = categories[5];
   } else if (product.name == "Frisco's") {
     productCategory = categories[6];
+  } else if (
+    product.name == "Vanilla Gold" || 
+    product.name == "Caramel Crunch" ||
+    product.name == "Cherry Chocolate" ||
+    product.name == "Berry Christmas" ||
+    product.name == "Choc Crock" ||
+    product.name == "Dome Classic" ||
+    product.name == "Dome Intense" ||
+    product.name == "Dome Cappuccino" ||
+    product.name == "Dome Berry" ||
+    product.name == "Gin Tonic Frisco (per 2)" ||
+    product.name == "Glaasje Vanille & Pistache" ||
+    product.name == "Glaasje Vanille & Chocolade"
+  ) {
+    productCategory = categories[7];
   }
 
   var productCategoryTd = document.createElement("td");
