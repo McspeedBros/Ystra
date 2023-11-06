@@ -526,11 +526,11 @@ for (var i = 0; i < cartItems.length; i++) {
 }
 
 totalCost.textContent = "Totale prijs: € " + total.toFixed(2);
-// if there is a taart for 15+ personen aanwezig, edit the style of #opmerking
+// if there is a taart for 15+ personen aanwezig, edit the style of #comment
 for (var i = 0; i < cartItems.length; i++) {
   if (cartItems[i].personen === "15+") {
     totalCost.textContent = "Totale prijs* : € " + total.toFixed(2);
-    document.getElementById("opmerking").style.display = "block";
+    document.getElementById("comment").style.display = "block";
     break;
 }
 }
