@@ -29,10 +29,43 @@ addToCartButtons.forEach((button) => {
           price = "40,00";
           option = "Vanilla Gold";
         }
-        // product.querySelector(".product-option").value = "Vanilla Gold";
-    }
-    
-    else {
+    } else if (title === "Caramel Crunch") {
+        if (product.querySelector(".product-option").value === "4P") {
+          price = "25,00";
+          option = "Caramel Crunch";
+        }
+        else if (product.querySelector(".product-option").value === "8P") {
+          price = "40,00";
+          option = "Caramel Crunch";
+        }
+    } else if (title === "Cherry Chocolate") {
+        if (product.querySelector(".product-option").value === "4P") {
+          price = "25,00";
+          option = "Cherry Chocolate";
+        }
+        else if (product.querySelector(".product-option").value === "8P") {
+          price = "40,00";
+          option = "Cherry Chocolate";
+        }
+    } else if (title === "Berry Christmas") {
+        if (product.querySelector(".product-option").value === "6P") {
+          price = "32,00";
+          option = "Berry Christmas";
+        }
+        else if (product.querySelector(".product-option").value === "10P") {
+          price = "45,00";
+          option = "Berry Christmas";
+        }
+    } else if (title === "Choc Crock") {
+        if (product.querySelector(".product-option").value === "6P") {
+          price = "32,00";
+          option = "Choc Crock";
+        }
+        else if (product.querySelector(".product-option").value === "12P") {
+          price = "48,00";
+          option = "Choc Crock";
+        }
+    } else {
       price = product.querySelector("p").textContent;
     }
 

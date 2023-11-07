@@ -165,6 +165,14 @@ for (var i = 0; i < cart.length; i++) {
 
   if (product.name === "Vanilla Gold") {
     option = "Vanilla Gold";
+  } else if (product.name === "Caramel Crunch") {
+    option = "Caramel Crunch";
+  } else if (product.name === "Cherry Chocolate") {
+    option = "Cherry Chocolate";
+  } else if (product.name === "Berry Christmas") {
+    option = "Berry Christmas";
+  } else if (product.name === "Choc Crock") {
+    option = "Choc Crock";
   }
     // product.querySelector(".product-option").value = "Vanilla Gold";
 
@@ -193,8 +201,31 @@ for (var i = 0; i < cart.length; i++) {
     } else if (product.option === "8P") {
       productPriceTd.textContent = "€ 40,00 - 8P";
     }
+  } else if (product.name === "Caramel Crunch") {
+    if (product.option === "4P") {
+      productPriceTd.textContent = "€ 25,00 - 4P";
+    } else if (product.option === "8P") {
+      productPriceTd.textContent = "€ 40,00 - 8P";
+    }
+  } else if (product.name === "Cherry Chocolate") {
+    if (product.option === "4P") {
+      productPriceTd.textContent = "€ 25,00 - 4P";
+    } else if (product.option === "8P") {
+      productPriceTd.textContent = "€ 40,00 - 8P";
+    }
+  } else if (product.name === "Berry Christmas") {
+    if (product.option === "6P") {
+      productPriceTd.textContent = "€ 32,00 - 6P";
+    } else if (product.option === "10P") {
+      productPriceTd.textContent = "€ 45,00 - 10P";
+    }
+  } else if (product.name === "Choc Crock") {
+    if (product.option === "6P") {
+      productPriceTd.textContent = "€ 32,00 - 6P";
+    } else if (product.option === "12P") {
+      productPriceTd.textContent = "€ 48,00 - 12P";
+    }
   }
-  
   else {
     productPriceTd.textContent = product.price;
   }
@@ -209,8 +240,31 @@ for (var i = 0; i < cart.length; i++) {
     } else if (product.option === "8P") {
       priceOverzicht = "40.00";
     }
+  } else if (product.name === "Caramel Crunch") {
+    if (product.option === "4P") {
+      priceOverzicht = "25.00";
+    } else if (product.option === "8P") {
+      priceOverzicht = "40.00";
+    }
+  } else if (product.name === "Cherry Chocolate") {
+    if (product.option === "4P") {
+      priceOverzicht = "25.00";
+    } else if (product.option === "8P") {
+      priceOverzicht = "40.00";
+    }
+  } else if (product.name === "Berry Christmas") {
+    if (product.option === "6P") {
+      priceOverzicht = "32.00";
+    } else if (product.option === "10P") {
+      priceOverzicht = "45.00";
+    }
+  } else if (product.name === "Choc Crock") {
+    if (product.option === "6P") {
+      priceOverzicht = "32.00";
+    } else if (product.option === "12P") {
+      priceOverzicht = "48.00";
+    }
   }
-  
   else {
     priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
   }
