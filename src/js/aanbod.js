@@ -9,19 +9,39 @@ addToCartButtons.forEach((button) => {
     const product = event.target.parentElement;
     const title = product.querySelector("h3").textContent;
     let price = "";
+    let option;
+
+    const productOptionsElement = product.querySelector(".product-option");
+    option = productOptionsElement
+      ? productOptionsElement.value
+      : null;
+
     if (title === "Frisco's" && product.querySelector(".product-option").value === "Gin Tonic") {
       price = "3,00";
-    } else {
+    } 
+    // code for the holiday specials
+    else if (title === "Vanilla Gold") {
+        if (product.querySelector(".product-option").value === "4P") {
+          price = "25,00";
+          option = "Vanilla Gold";
+        }
+        else if (product.querySelector(".product-option").value === "8P") {
+          price = "40,00";
+          option = "Vanilla Gold";
+        }
+        // product.querySelector(".product-option").value = "Vanilla Gold";
+    }
+    
+    else {
       price = product.querySelector("p").textContent;
     }
+
+    
     // const price = product.querySelector("p").textContent;
     const quantityInput = product.querySelector("input[type='number']");
     const quantity = quantityInput.value;
-    const productOptionsElement = product.querySelector(".product-option");
-    const selectedOption = productOptionsElement
-      ? productOptionsElement.value
-      : null;
-    addToCart(title, price, quantity, selectedOption);
+    
+    addToCart(title, price, quantity, option);
   });
 });
 
@@ -497,3 +517,26 @@ function showSlides(n) {
 
   slides[slideIndex - 1].style.display = "block";
 }
+
+
+// write a function to get the length of the items in the cart
+function getCartLength() {
+  const storedCartItems = localStorage.getItem("cartItems");
+  const storedItems = localStorage.getItem("cart");
+  let cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+  let cart = storedItems ? JSON.parse(storedItems) : [];
+  let length = cartItems.length + cart.length;
+  return length;
+}
+
+// write a function to change the text of the cart button everytime an item is added or removed to the cart
+function changeCartButtonText() {
+  const cartButton = document.querySelector("#cart-button");
+  const cartLength = getCartLength();
+  cartButton.textContent = cartLength;
+}
+
+// call the function on page load, and everytime an item is added or removed from the cart (a change in the local storage or a click on the add to cart button)
+window.addEventListener("load", changeCartButtonText);
+window.addEventListener("storage", changeCartButtonText);
+window.addEventListener("click", changeCartButtonText);

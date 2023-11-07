@@ -124,7 +124,8 @@ for (var i = 0; i < cart.length; i++) {
     product.name == "Amarena Love" ||
     product.name == "Chef's Favourite Cookie" ||
     product.name == "Mars Delight" ||
-    product.name == "Cuberdon Candy"
+    product.name == "Cuberdon Candy" ||
+    product.name == "Speculoos Special"
   ) {
     productCategory = categories[3];
   } else if (product.name == "Yspralines") {
@@ -159,7 +160,16 @@ for (var i = 0; i < cart.length; i++) {
   // tr.appendChild(productNameTd);
 
   var productOptionTd = document.createElement("td"); // Add a new table cell for the option
-  productOptionTd.textContent = product.option ? product.option : product.name;
+
+  let option = product.option ? product.option : product.name;
+
+  if (product.name === "Vanilla Gold") {
+    option = "Vanilla Gold";
+  }
+    // product.querySelector(".product-option").value = "Vanilla Gold";
+
+
+  productOptionTd.textContent = option;
   tr.appendChild(productOptionTd);
 
   var productQuantityTd = document.createElement("td");
@@ -177,7 +187,15 @@ for (var i = 0; i < cart.length; i++) {
   var productPriceTd = document.createElement("td");
   if (product.name === "Frisco's" && product.option === "Gin Tonic") {
     productPriceTd.textContent = "€ 3,00 per stuk";
-  } else {
+  } else if (product.name === "Vanilla Gold") {
+    if (product.option === "4P") {
+      productPriceTd.textContent = "€ 25,00 - 4P";
+    } else if (product.option === "8P") {
+      productPriceTd.textContent = "€ 40,00 - 8P";
+    }
+  }
+  
+  else {
     productPriceTd.textContent = product.price;
   }
   tr.appendChild(productPriceTd);
@@ -185,7 +203,15 @@ for (var i = 0; i < cart.length; i++) {
   let priceOverzicht;
   if (product.name === "Frisco's" && product.option === "Gin Tonic") {
     priceOverzicht = "3.00";
-  } else {
+  } else if (product.name === "Vanilla Gold") {
+    if (product.option === "4P") {
+      priceOverzicht = "25.00";
+    } else if (product.option === "8P") {
+      priceOverzicht = "40.00";
+    }
+  }
+  
+  else {
     priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
   }
   // get the first 5 characters of the price
@@ -681,15 +707,6 @@ submitButton.addEventListener("click", async function (e) {
       );
     });
     // alert("Vul een geldig telefoonnummer in");
-    return;
-  }
-
-  // Check the value of the textrea
-  if (document.getElementById("opmerking").value == "") {
-    alert(document.getElementById("opmerking").value);
-    alert(document.getElementById("opmerking").val());
-    alert(document.getElementById("opmerking").val);
-    alert(document.getElementById("opmerking").text());
     return;
   }
 

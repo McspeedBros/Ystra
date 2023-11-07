@@ -3,6 +3,9 @@
     --scroll: #3b3b3b;
     --scrollhover: #c5b6735d;
     --Goud: #C5B673;
+    --Rood: #CC231E;
+    --Groen: #34A65F;
+    --Donkergroen: #0F8A5F;
     /*--lettertype:  Verdana sans-serif;*/
     --tekstkleur: white;
     --font1: font-family: 'Dancing Script', cursive;
@@ -618,6 +621,31 @@ main h1 span{
     justify-content: center;
     align-items: center;
 }
+.cart-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    color: var(--backgroundcolor);
+    border: var(--backgroundcolor);
+    border-style: inset;
+    border-width: 2px;
+    /* background-color: var(--Goud); */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: normal;
+    float: top right;
+    margin-left: 60px;
+    margin-top: -28px;
+    padding-top: -5px;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-family: 'Pacifico', cursive;
+}
 /* header figure:nth-of-type(1) img{
     width: 100%;
     margin-top: 50px;
@@ -707,6 +735,37 @@ main img:hover{
     padding-right: 15px;
     padding-bottom: 15px;
     padding-top: 25px;
+}
+
+.christmas {
+    transition: 500ms;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.christmas:nth-child(even):hover {
+    transition: 500ms;
+    box-shadow: 0 0 13px var(--Groen);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.christmas:nth-child(odd):hover {
+    transition: 500ms;
+    box-shadow: 0 0 13px var(--Rood);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+.christmas select {
+    width: 100%;
 }
 
 #marsContainer {
