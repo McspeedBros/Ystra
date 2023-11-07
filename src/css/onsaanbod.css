@@ -787,7 +787,128 @@ main img:hover{
     width: 175px;
 }
 
+#vanillagold1 {
+    min-width: 175px;
+}
+#caramelcrunch1 {
+    min-width: 175px;
+}
+#cherrychoc1 {
+    min-width: 175px;
+}
+#berrychristmas1 {
+    min-width: 175px;
+}
+#choccrock1 {
+    min-width: 175px;
+}
+#domeclassic1 {
+    min-width: 180px;
+}
+#domeintense1 {
+    min-width: 180px;
+}
+#domecappuccino1 {
+    min-width: 180px;
+}
+#domeberry1 {
+    min-width: 180px;
+}
+#gintonicfrisco1 {
+    min-width: 275px;
+}
+#yspralinesmix1 {
+    min-width: 275px;
+}
+#glaspistache1 {
+    min-width: 275px;
+}
+#glaschoc1 {
+    min-width: 275px;
+}
+
 /* separate images flavours */
+#vanillagold {
+    height: 115px;
+    width: auto;
+    margin-left: -7px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+#caramelcrunch {
+    height: 130px;
+    width: auto;
+    margin-top: -10px;
+    margin-left: -13px;
+}
+#cherrychoc {
+    height: 120px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -11px;
+}
+#berrychristmas {
+    height: 125px;
+    width: auto;
+    margin-top: -8px;
+    margin-left: -15px;
+}
+#choccrock {
+    height: 125px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -15px;
+}
+#domeclassic {
+    height: 125px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+#domeintense {
+    height: 130px;
+    width: auto;
+    margin-top: -22px;
+    margin-left: -15px;
+}
+#domecappuccino {
+    height: 125px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+#domeberry {
+    height: 125px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -15px;
+}
+#gintonicfrisco {
+    height: 125px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -15px;
+}
+#yspralinesmix {
+    height: 125px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -15px;
+}
+#glaspistache {
+    height: 125px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+#glaschoc {
+    height: 125px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+
 #vanilla {
     height: 120px;
     width: auto;
