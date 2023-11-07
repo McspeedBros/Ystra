@@ -4,6 +4,9 @@
   --Goud: #c5b673;
   --scroll: #3b3b3b;
   --scrollhover: #c5b6735d;
+  --Rood: #CC231E;
+  --Groen: #34A65F;
+  --Donkergroen: #0F8A5F;
   /*--lettertype:  Verdana sans-serif;*/
   --tekstkleur: white;
 }
@@ -66,7 +69,7 @@ header div {
   margin: 0 auto;
   margin-top: 30px;
   width: 100%;
-  background-image: url(../images/Banner\ homepage\ top.png);
+  background-image: url(../images/banner_holidays.png);
   height: 1000px;
   background-size: cover;
   background-position: center;
@@ -100,7 +103,7 @@ main {
   margin-top: 200px;
 }
 main section {
-  width: 40%;
+  width: 75%;
   margin: 0 auto;
   font-size: 1.3rem;
 }
@@ -135,6 +138,38 @@ section h2 {
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+@keyframes christmas {
+  0% {
+    box-shadow: 0px 0px 20px 0px var(--Rood);
+  }
+  33.33% {
+    /* box-shadow: 0px 0px 15px 0px var(--tekstkleur); */
+  }
+  50% {
+    box-shadow: 0px 0px 20px 0px var(--Groen);
+  }
+  100% {
+    box-shadow: 0px 0px 20px 0px var(--Rood);
+  }
+}
+
+#containerholiday {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+  border-radius: 12px;
+  border-style: double;
+  border-color: black;
+  border-width: 5px;
+  /* border-color: white;
+  border-width: 1px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  animation: christmas 3s infinite;
 }
 /* #stars {
   display: flex;
@@ -259,34 +294,38 @@ aside figure img:hover {
   background-size: 130px;
   background-repeat: no-repeat;
   background-position: top;
-  width: 155px;
+  width: 225px;
   transition: 0.5s;
-  padding-left: 7px;
+  padding-left: 20px;
   padding-right: 7px;
   border-radius: 10px;
 }
 #box5:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 0.5s;
-  box-shadow: 0px 0px 15px 0px var(--Goud);
+  /* box-shadow: 0px 0px 15px 0px var(--Goud); */
   cursor: pointer;
+  background-size: 145px;
+  background-position: 50% -5%;
 }
 #box6 {
   background-image: url("../images/hot_items/taart4_clean.png");
   background-size: 130px;
   background-repeat: no-repeat;
   background-position: top;
-  width: 155px;
+  width: 230px;
   transition: 0.5s;
   padding-left: 7px;
   padding-right: 7px;
   border-radius: 10px;
 }
 #box6:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 0.5s;
-  box-shadow: 0px 0px 15px 0px var(--Goud);
+  /* box-shadow: 0px 0px 15px 0px var(--Goud); */
   cursor: pointer;
+  background-size: 145px;
+  background-position: 50% -5%;
 }
 #box7 {
   background-image: url("../images/hot_items/frisco3_clean_CROPPED_ROUNDED.png");
@@ -300,10 +339,110 @@ aside figure img:hover {
   border-radius: 10px;
 }
 #box7:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 0.5s;
-  box-shadow: 0px 0px 15px 0px var(--Goud);
+  /* box-shadow: 0px 0px 15px 0px var(--Goud); */
   cursor: pointer;
+  background-size: 145px;
+  background-position: 50% 5%;
+}
+#box8 {
+  background-image: url("../images/onsaanbod/speculoos.png");
+  background-size: 175px;
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  width: 175px;
+  transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+#box8:hover {
+  /* transform: scale(1.1); */
+  transition: 0.5s;
+  /* box-shadow: 0px 0px 15px 0px var(--tekstkleur); */
+  cursor: pointer;
+  background-size: 190px;
+  background-position: 50% 5%;
+}
+
+#holiday1 {
+  background-image: url("../images/holiday_specials/cherry_chocolate.png");
+  background-size: 170px;
+  background-repeat: no-repeat;
+  background-position: 50% 12%;
+  width: 190px;
+  transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+  margin-left: -5px;
+}
+#holiday1:hover {
+  /* transform: scale(1.1); */
+  transition: 0.5s;
+  /* box-shadow: 0px 0px 15px 0px var(--Goud); */
+  cursor: pointer;
+  background-size: 185px;
+  background-position: 50% 5%;
+}
+#holiday2 {
+  background-image: url("../images/holiday_specials/berry_christmas.png");
+  background-size: 170px;
+  background-repeat: no-repeat;
+  background-position: 50% 12%;
+  width: 190px;
+  transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+  margin-left: -15px;
+}
+#holiday2:hover {
+  /* transform: scale(1.1); */
+  transition: 0.5s;
+  /* box-shadow: 0px 0px 15px 0px var(--Goud); */
+  cursor: pointer;
+  background-size: 185px;
+  background-position: 50% 5%;
+}
+#holiday3 {
+  background-image: url("../images/holiday_specials/dome_berry.png");
+  background-size: 170px;
+  background-repeat: no-repeat;
+  background-position: 50% 12%;
+  width: 190px;
+  transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+}
+#holiday3:hover {
+  /* transform: scale(1.1); */
+  transition: 0.5s;
+  /* box-shadow: 0px 0px 15px 0px var(--Goud); */
+  cursor: pointer;
+  background-size: 185px;
+  background-position: 50% 5%;
+}
+#holiday4 {
+  background-image: url("../images/holiday_specials/Glaasje_VanilleChocolade.png");
+  background-size: 170px;
+  background-repeat: no-repeat;
+  background-position: 50% 12%;
+  width: 300px;
+  transition: 0.5s;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+}
+#holiday4:hover {
+  /* transform: scale(1.1); */
+  transition: 0.5s;
+  /* box-shadow: 0px 0px 15px 0px var(--Goud); */
+  cursor: pointer;
+  background-size: 185px;
+  background-position: 50% 5%;
 }
 
 section h3 {
@@ -312,6 +451,20 @@ section h3 {
   padding-top: 40px;
   padding-bottom: 20px;
   color: var(--Goud);
+}
+h4:nth-of-type(1) {
+  font-weight: bold;
+  color: var(--tekstkleur);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+h4 {
+  font-weight: bold;
+  color: var(--Goud);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 section p {
   text-align: center;
