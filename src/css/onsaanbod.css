@@ -391,7 +391,7 @@ body{
     padding-right: 15px;
     padding-bottom: 15px;
     padding-top: 15px;
-    width: 350px;
+    width: 375px;
     height: 115px;
     bottom: 0;
     right: 0;
@@ -410,6 +410,10 @@ body{
 .dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
+/* .error {
+    padding-left: -11px;
+    padding-right: 1px;
+} */
 .errorbutton {
     background-color: var(--Goud);
     color: white;
@@ -437,6 +441,8 @@ body{
     margin-bottom: 25px;
     margin-top: 25px;
     font-size: 1.2rem;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
 div p span {
@@ -644,6 +650,16 @@ main h1 span{
     padding-right: 2px;
     padding-left: 2px;
     font-family: 'Pacifico', cursive;
+    transition: 500ms;
+}
+.cart:hover > .cart-button {
+    background-color: var(--backgroundcolor);
+    color: white;
+    border: var(--Goud);
+    border-style: inset;
+    border-width: 2px;
+    transition: 500ms;
+    cursor: pointer;
 }
 /* header figure:nth-of-type(1) img{
     width: 100%;

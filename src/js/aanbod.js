@@ -28,6 +28,8 @@ addToCartButtons.forEach((button) => {
         else if (product.querySelector(".product-option").value === "8P") {
           price = "40,00";
           option = "Vanilla Gold";
+        } else {
+          option = "/";
         }
     } else if (title === "Caramel Crunch") {
         if (product.querySelector(".product-option").value === "4P") {
@@ -37,6 +39,8 @@ addToCartButtons.forEach((button) => {
         else if (product.querySelector(".product-option").value === "8P") {
           price = "40,00";
           option = "Caramel Crunch";
+        } else {
+          option = "/";
         }
     } else if (title === "Cherry Chocolate") {
         if (product.querySelector(".product-option").value === "4P") {
@@ -46,6 +50,8 @@ addToCartButtons.forEach((button) => {
         else if (product.querySelector(".product-option").value === "8P") {
           price = "40,00";
           option = "Cherry Chocolate";
+        } else {
+          option = "/";
         }
     } else if (title === "Berry Christmas") {
         if (product.querySelector(".product-option").value === "6P") {
@@ -55,6 +61,8 @@ addToCartButtons.forEach((button) => {
         else if (product.querySelector(".product-option").value === "10P") {
           price = "45,00";
           option = "Berry Christmas";
+        } else {
+          option = "/";
         }
     } else if (title === "Choc Crock") {
         if (product.querySelector(".product-option").value === "6P") {
@@ -64,6 +72,8 @@ addToCartButtons.forEach((button) => {
         else if (product.querySelector(".product-option").value === "12P") {
           price = "48,00";
           option = "Choc Crock";
+        } else {
+          option = "/";
         }
     } else {
       price = product.querySelector("p").textContent;
@@ -73,8 +83,38 @@ addToCartButtons.forEach((button) => {
     // const price = product.querySelector("p").textContent;
     const quantityInput = product.querySelector("input[type='number']");
     const quantity = quantityInput.value;
+
+    // if the option is different from "/", add the item to the cart with the option, else dont add the item to the cart at all and show an error message
+    if (option === "/") {
+      const dialogerror = document.getElementById("dialogError");
+      const errortext = dialogerror.querySelector("p");
+      const errorbutton = dialogerror.querySelector("button");
+
+      // remove the item from the cart and local storage
+      // removeItem(title, option);
     
-    addToCart(title, price, quantity, option);
+      errortext.textContent = `Kies een geschikte optie voor ${title}.`;
+      dialogerror.showModal();
+
+      errorbutton.addEventListener("click", () => {
+        dialogerror.setAttribute("closing", "");
+        dialogerror.addEventListener(
+          "animationend",
+          () => {
+            dialogerror.removeAttribute("closing");
+            dialogerror.close();
+          },
+          { once: true }
+        );
+      });
+     
+    } else {
+      addToCart(title, price, quantity, option);
+    }
+
+
+    
+    // addToCart(title, price, quantity, option);
   });
 });
 
@@ -160,40 +200,101 @@ for (var i = 0; i < products.length; i++) {
   addToCartButton.addEventListener("click", function () {
     var productName = this.parentElement.querySelector("h3").textContent;
     let price = "";
+    var productOption = this.parentElement.querySelector(".product-option");
+    let option = productOption ? productOption.value : null;
+
     if (title === "Frisco's" && this.parentElement.querySelector(".product-option").value === "Gin Tonic") {
       price = "3,00";
+    } else if (title === "Vanilla Gold") {
+        if (product.querySelector(".product-option").value === "4P") {
+          price = "25,00";
+          option = "Vanilla Gold";
+        }
+        else if (product.querySelector(".product-option").value === "8P") {
+          price = "40,00";
+          option = "Vanilla Gold";
+        } else {
+          option = "/";
+        }
+    } else if (title === "Caramel Crunch") {
+        if (product.querySelector(".product-option").value === "4P") {
+          price = "25,00";
+          option = "Caramel Crunch";
+        }
+        else if (product.querySelector(".product-option").value === "8P") {
+          price = "40,00";
+          option = "Caramel Crunch";
+        } else {
+          option = "/";
+        }
+    } else if (title === "Cherry Chocolate") {
+        if (product.querySelector(".product-option").value === "4P") {
+          price = "25,00";
+          option = "Cherry Chocolate";
+        }
+        else if (product.querySelector(".product-option").value === "8P") {
+          price = "40,00";
+          option = "Cherry Chocolate";
+        } else {
+          option = "/";
+        }
+    } else if (title === "Berry Christmas") {
+        if (product.querySelector(".product-option").value === "6P") {
+          price = "32,00";
+          option = "Berry Christmas";
+        }
+        else if (product.querySelector(".product-option").value === "10P") {
+          price = "45,00";
+          option = "Berry Christmas";
+        } else {
+          option = "/";
+        }
+    } else if (title === "Choc Crock") {
+        if (product.querySelector(".product-option").value === "6P") {
+          price = "32,00";
+          option = "Choc Crock";
+        }
+        else if (product.querySelector(".product-option").value === "12P") {
+          price = "48,00";
+          option = "Choc Crock";
+        } else {
+          option = "/";
+        }
     } else {
       price = this.parentElement.querySelector("p").textContent;
     }
     var productPrice = this.parentElement.querySelector("p").textContent;
     var productQuantity = quantityInput.value;
-    var productOption = this.parentElement.querySelector(".product-option");
-    var option = productOption ? productOption.value : null;
+    
 
-    var cart = localStorage.getItem("cart")
-      ? JSON.parse(localStorage.getItem("cart"))
-      : [];
-    var productIndex = -1;
-    for (var i = 0; i < cart.length; i++) {
-      if (cart[i].name === productName && cart[i].option === option) {
-        productIndex = i;
-        break;
+    if (option !== "/") {
+      var cart = localStorage.getItem("cart")
+        ? JSON.parse(localStorage.getItem("cart"))
+        : [];
+      var productIndex = -1;
+      for (var i = 0; i < cart.length; i++) {
+        if (cart[i].name === productName && cart[i].option === option) {
+          productIndex = i;
+          break;
+        }
       }
+
+      if (productIndex === -1) {
+        cart.push({
+          name: productName,
+          option: option,
+          price: price,
+          quantity: productQuantity,
+        });
+      } else {
+        cart[productIndex].quantity =
+          parseInt(cart[productIndex].quantity) + parseInt(productQuantity);
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
     }
 
-    if (productIndex === -1) {
-      cart.push({
-        name: productName,
-        option: option,
-        price: price,
-        quantity: productQuantity,
-      });
-    } else {
-      cart[productIndex].quantity =
-        parseInt(cart[productIndex].quantity) + parseInt(productQuantity);
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart()
   });
 }
 
