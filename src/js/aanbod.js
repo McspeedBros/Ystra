@@ -660,9 +660,7 @@ function getCartLength() {
   let cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
   let cart = storedItems ? JSON.parse(storedItems) : [];
   let length = 0;
-  cartItems.forEach((item) => {
-    length += parseInt(item.quantity);
-  });
+  // length += cartItems.length;
   cart.forEach((item) => {
     length += parseInt(item.quantity);
   });
