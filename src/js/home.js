@@ -36,6 +36,27 @@ chocolate.addEventListener('click', () => {
   window.location.href = 'onsaanbod.html';
 });
 
+const holiday1 = document.getElementById('holiday1');
+const holiday2 = document.getElementById('holiday2');
+const holiday3 = document.getElementById('holiday3');
+const holiday4 = document.getElementById('holiday4');
+
+holiday1.addEventListener('click', () => {
+  window.location.href = 'onsaanbod.html';
+});
+
+holiday2.addEventListener('click', () => {
+  window.location.href = 'onsaanbod.html';
+});
+
+holiday3.addEventListener('click', () => {
+  window.location.href = 'onsaanbod.html';
+});
+
+holiday4.addEventListener('click', () => {
+  window.location.href = 'onsaanbod.html';
+});
+
 
 function changeWidth() {
   const sponsors = document.querySelector("#sponsorcontainer");

@@ -1324,6 +1324,13 @@ body > figure img{
     }
     /*opmaak container1 */
 /*set them under each other*/
+.holiday{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .container1{
     display: flex;
     flex-direction: column;
@@ -1387,5 +1394,11 @@ footer div div h3 {
         margin-top: 5px;
         margin-left: 3px;
     }
-
+    #dialogError {
+        margin-right: 3px;
+    }
+    #cart-button {
+        /* margin-top: -28px; */
+        margin-right: 15px;
+    }
 }

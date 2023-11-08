@@ -310,10 +310,24 @@ for (var i = 0; i < cart.length; i++) {
   var aside = document.createElement("aside");
   var verwijderbutton = removeButton.cloneNode(true);
 
+  let optiongsm = product.option ? product.option : product.name;
+
+  if (product.name === "Vanilla Gold") {
+    optiongsm = "Vanilla Gold";
+  } else if (product.name === "Caramel Crunch") {
+    optiongsm = "Caramel Crunch";
+  } else if (product.name === "Cherry Chocolate") {
+    optiongsm = "Cherry Chocolate";
+  } else if (product.name === "Berry Christmas") {
+    optiongsm = "Berry Christmas";
+  } else if (product.name === "Choc Crock") {
+    optiongsm = "Choc Crock";
+  }
+
   ul.setAttribute("data-product-id-gsm", product.id);
 
   ul.innerHTML = "<span>Smaak: </span>";
-  ul.innerHTML += product.option ? product.option : product.name;
+  ul.innerHTML += optiongsm;
   ul.innerHTML += "<br>";
 
   ul.innerHTML += "<span>Categorie: </span>";
@@ -327,6 +341,36 @@ for (var i = 0; i < cart.length; i++) {
   ul.innerHTML += "<span>Prijs: </span>";
   if (productCategory === "Frisco's" && product.option === "Gin Tonic") {
     ul.innerHTML += "€ 3,00 per stuk";
+  } else if (product.name === "Vanilla Gold") {
+    if (product.option === "4P") {
+      ul.innerHTML += "€ 25,00 - 4P";
+    } else if (product.option === "8P") {
+      ul.innerHTML += "€ 40,00 - 8P";
+    }
+  } else if (product.name === "Caramel Crunch") {
+    if (product.option === "4P") {
+      ul.innerHTML += "€ 25,00 - 4P";
+    } else if (product.option === "8P") {
+      ul.innerHTML += "€ 40,00 - 8P";
+    }
+  } else if (product.name === "Cherry Chocolate") {
+    if (product.option === "4P") {
+      ul.innerHTML += "€ 25,00 - 4P";
+    } else if (product.option === "8P") {
+      ul.innerHTML += "€ 40,00 - 8P";
+    }
+  } else if (product.name === "Berry Christmas") {
+    if (product.option === "6P") {
+      ul.innerHTML += "€ 32,00 - 6P";
+    } else if (product.option === "10P") {
+      ul.innerHTML += "€ 45,00 - 10P";
+    }
+  } else if (product.name === "Choc Crock") {
+    if (product.option === "6P") {
+      ul.innerHTML += "€ 32,00 - 6P";
+    } else if (product.option === "12P") {
+      ul.innerHTML += "€ 48,00 - 12P";
+    }
   } else {
     ul.innerHTML += product.price;
   }

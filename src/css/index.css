@@ -136,8 +136,9 @@ section h2 {
   border-width: 5px;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  min-width: 700px;
 }
 
 @keyframes christmas {
@@ -169,6 +170,7 @@ section h2 {
   padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
+  min-width: 700px;
   animation: christmas 3s infinite;
 }
 /* #stars {
@@ -352,6 +354,7 @@ aside figure img:hover {
   background-repeat: no-repeat;
   background-position: 50% 10%;
   width: 175px;
+  min-width: 175px;
   transition: 0.5s;
   padding-left: 7px;
   padding-right: 20px;
@@ -368,7 +371,7 @@ aside figure img:hover {
 
 #holiday1 {
   background-image: url("../images/holiday_specials/cherry_chocolate.png");
-  background-size: 170px;
+  background-size: 140px;
   background-repeat: no-repeat;
   background-position: 50% 12%;
   width: 190px;
@@ -383,12 +386,12 @@ aside figure img:hover {
   transition: 0.5s;
   /* box-shadow: 0px 0px 15px 0px var(--Goud); */
   cursor: pointer;
-  background-size: 185px;
+  background-size: 155px;
   background-position: 50% 5%;
 }
 #holiday2 {
   background-image: url("../images/holiday_specials/berry_christmas.png");
-  background-size: 170px;
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: 50% 12%;
   width: 190px;
@@ -403,12 +406,12 @@ aside figure img:hover {
   transition: 0.5s;
   /* box-shadow: 0px 0px 15px 0px var(--Goud); */
   cursor: pointer;
-  background-size: 185px;
+  background-size: 165px;
   background-position: 50% 5%;
 }
 #holiday3 {
   background-image: url("../images/holiday_specials/dome_berry.png");
-  background-size: 170px;
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: 50% 12%;
   width: 190px;
@@ -422,12 +425,12 @@ aside figure img:hover {
   transition: 0.5s;
   /* box-shadow: 0px 0px 15px 0px var(--Goud); */
   cursor: pointer;
-  background-size: 185px;
+  background-size: 165px;
   background-position: 50% 5%;
 }
 #holiday4 {
   background-image: url("../images/holiday_specials/Glaasje_VanilleChocolade.png");
-  background-size: 170px;
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: 50% 12%;
   width: 300px;
@@ -441,7 +444,7 @@ aside figure img:hover {
   transition: 0.5s;
   /* box-shadow: 0px 0px 15px 0px var(--Goud); */
   cursor: pointer;
-  background-size: 185px;
+  background-size: 165px;
   background-position: 50% 5%;
 }
 
@@ -929,6 +932,45 @@ body > figure img {
     margin-left: 10px;
     /* padding-right: 10px; */
   }
+  #container2 {
+    /* overflow-x: scroll; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0%;
+    width: 60%;
+    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-right: 10px; */
+  }
+  h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+  h4:nth-of-type(1) {
+    font-size: 2rem;
+    margin-bottom: 3px;
+  }
+  #containerholiday {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-right: 10px; */
+  }
+  #holiday4 {
+    min-width: 175px;
+    width: 175px;
+  }
   #box1 {
     background-size: 100px;
     margin-left: -10px;
@@ -944,13 +986,18 @@ body > figure img {
     /* margin-right: 10px; */
   }
   #box5 {
-    background-size: 100px;
+    width: 230px;
+    padding-left: 10px;
   }
   #box6 {
-    background-size: 100px;
+    width: 230px;
   }
   #box7 {
-    background-size: 100px;
+    width: 230px;
+  }
+  #box8 {
+    width: 230px;
+    padding-left: 20px;
   }
   footer div {
     text-align: center;
@@ -1014,4 +1061,5 @@ body > figure img {
   section {
     overflow-x: hidden;
   }
+
 }

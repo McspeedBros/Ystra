@@ -653,15 +653,32 @@ function showSlides(n) {
 }
 
 
-// write a function to get the length of the items in the cart
+// write a function to get the length of the items in the cart and keep in mind the quantity of each item
 function getCartLength() {
   const storedCartItems = localStorage.getItem("cartItems");
   const storedItems = localStorage.getItem("cart");
   let cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
   let cart = storedItems ? JSON.parse(storedItems) : [];
-  let length = cartItems.length + cart.length;
+  let length = 0;
+  cartItems.forEach((item) => {
+    length += parseInt(item.quantity);
+  });
+  cart.forEach((item) => {
+    length += parseInt(item.quantity);
+  });
   return length;
 }
+
+
+
+// function getCartLength() {
+//   const storedCartItems = localStorage.getItem("cartItems");
+//   const storedItems = localStorage.getItem("cart");
+//   let cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+//   let cart = storedItems ? JSON.parse(storedItems) : [];
+//   let length = cartItems.length + cart.length;
+//   return length;
+// }
 
 // write a function to change the text of the cart button everytime an item is added or removed to the cart
 function changeCartButtonText() {
