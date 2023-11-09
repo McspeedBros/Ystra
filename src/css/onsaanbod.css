@@ -733,6 +733,11 @@ main img:hover{
     padding-bottom: 15px;
     padding-top: 25px;
 }
+.product h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .specials {
     transition: 500ms;
@@ -1033,6 +1038,11 @@ main img:hover{
     padding-right: 15px;
     padding-bottom: 15px;
     padding-top: 25px;
+}
+.taarten h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .taarten button {

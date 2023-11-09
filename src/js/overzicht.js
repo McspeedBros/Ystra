@@ -145,6 +145,7 @@ for (var i = 0; i < cart.length; i++) {
     product.name == "Dome Cappuccino" ||
     product.name == "Dome Berry" ||
     product.name == "Gin Tonic Frisco (per 2)" ||
+    product.name == "Yspralines Mix" ||
     product.name == "Glaasje Vanille & Pistache" ||
     product.name == "Glaasje Vanille & Chocolade"
   ) {
@@ -194,36 +195,36 @@ for (var i = 0; i < cart.length; i++) {
 
   var productPriceTd = document.createElement("td");
   if (product.name === "Frisco's" && product.option === "Gin Tonic") {
-    productPriceTd.textContent = "€ 3,00 per stuk";
+    productPriceTd.textContent = "\u20AC 3,00 per stuk";
   } else if (product.name === "Vanilla Gold") {
     if (product.option === "4P") {
-      productPriceTd.textContent = "€ 25,00 - 4P";
+      productPriceTd.textContent = "\u20AC 25,00 - 4P";
     } else if (product.option === "8P") {
-      productPriceTd.textContent = "€ 40,00 - 8P";
+      productPriceTd.textContent = "\u20AC 40,00 - 8P";
     }
   } else if (product.name === "Caramel Crunch") {
     if (product.option === "4P") {
-      productPriceTd.textContent = "€ 25,00 - 4P";
+      productPriceTd.textContent = "\u20AC 25,00 - 4P";
     } else if (product.option === "8P") {
-      productPriceTd.textContent = "€ 40,00 - 8P";
+      productPriceTd.textContent = "\u20AC 40,00 - 8P";
     }
   } else if (product.name === "Cherry Chocolate") {
     if (product.option === "4P") {
-      productPriceTd.textContent = "€ 25,00 - 4P";
+      productPriceTd.textContent = "\u20AC 25,00 - 4P";
     } else if (product.option === "8P") {
-      productPriceTd.textContent = "€ 40,00 - 8P";
+      productPriceTd.textContent = "\u20AC 40,00 - 8P";
     }
   } else if (product.name === "Berry Christmas") {
     if (product.option === "6P") {
-      productPriceTd.textContent = "€ 32,00 - 6P";
+      productPriceTd.textContent = "\u20AC 32,00 - 6P";
     } else if (product.option === "10P") {
-      productPriceTd.textContent = "€ 45,00 - 10P";
+      productPriceTd.textContent = "\u20AC 45,00 - 10P";
     }
   } else if (product.name === "Choc Crock") {
     if (product.option === "6P") {
-      productPriceTd.textContent = "€ 32,00 - 6P";
+      productPriceTd.textContent = "\u20AC 32,00 - 6P";
     } else if (product.option === "12P") {
-      productPriceTd.textContent = "€ 48,00 - 12P";
+      productPriceTd.textContent = "\u20AC 48,00 - 12P";
     }
   }
   else {
@@ -266,7 +267,7 @@ for (var i = 0; i < cart.length; i++) {
     }
   }
   else {
-    priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
+    priceOverzicht = product.price.replace(",", ".").replace("\u20AC ", "");
   }
   // get the first 5 characters of the price
   priceOverzicht = priceOverzicht.split(" ")[0];
@@ -340,36 +341,36 @@ for (var i = 0; i < cart.length; i++) {
 
   ul.innerHTML += "<span>Prijs: </span>";
   if (productCategory === "Frisco's" && product.option === "Gin Tonic") {
-    ul.innerHTML += "€ 3,00 per stuk";
+    ul.innerHTML += "\u20AC 3,00 per stuk";
   } else if (product.name === "Vanilla Gold") {
     if (product.option === "4P") {
-      ul.innerHTML += "€ 25,00 - 4P";
+      ul.innerHTML += "\u20AC 25,00 - 4P";
     } else if (product.option === "8P") {
-      ul.innerHTML += "€ 40,00 - 8P";
+      ul.innerHTML += "\u20AC 40,00 - 8P";
     }
   } else if (product.name === "Caramel Crunch") {
     if (product.option === "4P") {
-      ul.innerHTML += "€ 25,00 - 4P";
+      ul.innerHTML += "\u20AC 25,00 - 4P";
     } else if (product.option === "8P") {
-      ul.innerHTML += "€ 40,00 - 8P";
+      ul.innerHTML += "\u20AC 40,00 - 8P";
     }
   } else if (product.name === "Cherry Chocolate") {
     if (product.option === "4P") {
-      ul.innerHTML += "€ 25,00 - 4P";
+      ul.innerHTML += "\u20AC 25,00 - 4P";
     } else if (product.option === "8P") {
-      ul.innerHTML += "€ 40,00 - 8P";
+      ul.innerHTML += "\u20AC 40,00 - 8P";
     }
   } else if (product.name === "Berry Christmas") {
     if (product.option === "6P") {
-      ul.innerHTML += "€ 32,00 - 6P";
+      ul.innerHTML += "\u20AC 32,00 - 6P";
     } else if (product.option === "10P") {
-      ul.innerHTML += "€ 45,00 - 10P";
+      ul.innerHTML += "\u20AC 45,00 - 10P";
     }
   } else if (product.name === "Choc Crock") {
     if (product.option === "6P") {
-      ul.innerHTML += "€ 32,00 - 6P";
+      ul.innerHTML += "\u20AC 32,00 - 6P";
     } else if (product.option === "12P") {
-      ul.innerHTML += "€ 48,00 - 12P";
+      ul.innerHTML += "\u20AC 48,00 - 12P";
     }
   } else {
     ul.innerHTML += product.price;
@@ -419,7 +420,7 @@ for (var i = 0; i < cart.length; i++) {
       console.error("Product not found in cart");
     }
   });
-  // let priceOverzicht = product.price.replace(",", ".").replace("€ ", "");
+  // let priceOverzicht = product.price.replace(",", ".").replace("\u20AC ", "");
   // // get the first 5 characters of the price
   // priceOverzicht = priceOverzicht.substring(0, 5);
 
@@ -433,7 +434,7 @@ for (var i = 0; i < cart.length; i++) {
   //   // recalculate the total cost (use only the price, loop over that)
   // //   total = 0;
   // //   for (var j = 0; j < cart.length; j++) {
-  // //     let priceOverzicht = cart[j].price.replace(",", ".").replace("€ ", "");
+  // //     let priceOverzicht = cart[j].price.replace(",", ".").replace("\u20AC ", "");
   // //     // get the first 5 characters of the price
   // //     priceOverzicht = priceOverzicht.substring(0, 5);
   // //     total += parseFloat(cart[j].quantity) * parseFloat(priceOverzicht);
@@ -442,17 +443,17 @@ for (var i = 0; i < cart.length; i++) {
   // //     console.log("priceOverzicht:", priceOverzicht);
   // //   }
   // //   totalCost.textContent =
-  // //   "Totale prijs * : € " + total.toFixed(2);
+  // //   "Totale prijs * : \u20AC " + total.toFixed(2);
   // // });
 
   // // total = 0;
   //   for (var j = 0; j < cart.length; j++) {
   //     let priceOverzicht = cart[j].price;
 
-  //     // Check if the price contains the word "per stuk" or "€"
-  //     if (priceOverzicht.includes("€")) {
+  //     // Check if the price contains the word "per stuk" or "\u20AC"
+  //     if (priceOverzicht.includes("\u20AC")) {
   //       // Extract the numeric price value from the price string
-  //       priceOverzicht = priceOverzicht.replace(",", ".").replace("€ ", "");
+  //       priceOverzicht = priceOverzicht.replace(",", ".").replace("\u20AC ", "");
   //       priceOverzicht = priceOverzicht.split(" ")[0];
   //     } else {
   //       // For prices like "Aantal Personen" or "Aanta", set the price to 0
@@ -471,7 +472,7 @@ for (var i = 0; i < cart.length; i++) {
   //     console.log("priceOverzicht:", priceOverzicht);
   //   }
 
-  // totalCost.textContent = "Totale prijs * : € " + total.toFixed(2);
+  // totalCost.textContent = "Totale prijs * : \u20AC " + total.toFixed(2);
   // });
 
   quantityInput.addEventListener("change", function () {
@@ -488,10 +489,10 @@ for (var i = 0; i < cart.length; i++) {
     if (index !== -1) {
       let priceOverzicht = cart[index].price;
   
-      // Check if the price contains the word "per stuk" or "€"
-      if (priceOverzicht.includes("€")) {
+      // Check if the price contains the word "per stuk" or "\u20AC"
+      if (priceOverzicht.includes("\u20AC")) {
         // Extract the numeric price value from the price string
-        priceOverzicht = priceOverzicht.replace(",", ".").replace("€ ", "");
+        priceOverzicht = priceOverzicht.replace(",", ".").replace("\u20AC ", "");
         priceOverzicht = priceOverzicht.split(" ")[0];
       } else {
         // For prices like "Aantal Personen" or "Aanta", set the price to 0
@@ -519,7 +520,7 @@ for (var i = 0; i < cart.length; i++) {
       console.error("Product not found in cart");
     }
   
-    totalCost.textContent = "Totale prijs* : € " + total.toFixed(2);
+    totalCost.textContent = "Totale prijs* : \u20AC " + total.toFixed(2);
   });
 }
 
@@ -553,7 +554,7 @@ for (var i = 0; i < cartItems.length; i++) {
   var prijsTd = document.createElement("td");
   if (product.prijs == "Prijs op aanvraag") {prijsTd.textContent = "Prijs op aanvraag";}
   else {
-    prijsTd.textContent = "€ " + product.prijs;
+    prijsTd.textContent = "\u20AC " + product.prijs;
   }
   
   tr.appendChild(prijsTd);
@@ -617,7 +618,7 @@ for (var i = 0; i < cartItems.length; i++) {
   ul.innerHTML += "<span>Prijs: </span>";
   if (product.prijs == "Prijs op aanvraag") ul.innerHTML += "Prijs op aanvraag";
   else
-  ul.innerHTML += "€ " + product.prijs;
+  ul.innerHTML += "\u20AC " + product.prijs;
   ul.innerHTML += "<br>";
 
   // var hoeveelheidForm = document.createElement("form");
@@ -665,11 +666,11 @@ for (var i = 0; i < cartItems.length; i++) {
   overzichtTaart.appendChild(div);
 }
 
-totalCost.textContent = "Totale prijs: € " + total.toFixed(2);
+totalCost.textContent = "Totale prijs: \u20AC " + total.toFixed(2);
 // if there is a taart for 15+ personen aanwezig, edit the style of #comment
 for (var i = 0; i < cartItems.length; i++) {
   if (cartItems[i].personen === "15+") {
-    totalCost.textContent = "Totale prijs* : € " + total.toFixed(2);
+    totalCost.textContent = "Totale prijs* : \u20AC " + total.toFixed(2);
     document.getElementById("comment").style.display = "block";
     break;
 }

@@ -19,6 +19,7 @@ const vanilla = document.getElementById('box1');
 const mokka = document.getElementById('box2');
 const straciatella = document.getElementById('box3');
 const chocolate = document.getElementById('box4');
+const speculoos = document.getElementById('box8');
 
 vanilla.addEventListener('click', () => {
   window.location.href = 'onsaanbod.html';
@@ -33,6 +34,10 @@ straciatella.addEventListener('click', () => {
 });
 
 chocolate.addEventListener('click', () => {
+  window.location.href = 'onsaanbod.html';
+});
+
+speculoos.addEventListener('click', () => {
   window.location.href = 'onsaanbod.html';
 });
 

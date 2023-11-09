@@ -228,6 +228,7 @@ aside figure img:hover {
   background-size: 130px;
   background-repeat: no-repeat;
   min-width: 135px;
+  width: 175px;
   background-position: 50% 8%;
   transition: 0.5s;
   border-radius: 10px;
@@ -245,10 +246,16 @@ aside figure img:hover {
   box-shadow: 0px 0px 15px 0px var(--tekstkleur);
   cursor: pointer;
 }
+#box1 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #box2 {
   background-image: url("../images/onsaanbod/mokka1.png");
   background-size: 120px;
   min-width: 135px;
+  width: 175px;
   background-repeat: no-repeat;
   background-position: 50% 8%;
   border-radius: 10px;
@@ -268,10 +275,16 @@ aside figure img:hover {
   box-shadow: 0px 0px 15px 0px var(--tekstkleur);
   cursor: pointer;
 }
+#box2 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #box3 {
   background-image: url("../images/onsaanbod/straciatella.png");
   background-size: 110px;
   min-width: 135px;
+  width: 175px;
   background-repeat: no-repeat;
   background-position: 50% 8%;
   border-radius: 10px;
@@ -296,10 +309,16 @@ aside figure img:hover {
   box-shadow: 0px 0px 15px 0px var(--tekstkleur);
   cursor: pointer;
 }
+#box3 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #box4 {
   background-image: url("../images/onsaanbod/milkyChoc1.avif");
   background-size: 105px;
   min-width: 135px;
+  width: 175px;
   background-repeat: no-repeat;
   background-position: 50% 14%;
   border-radius: 10px;
@@ -315,7 +334,6 @@ aside figure img:hover {
 }
 #box4 figure {
   padding-top: 4px;
-
 }
 #box4:hover {
   transform: scale(1.1);
@@ -323,12 +341,17 @@ aside figure img:hover {
   box-shadow: 0px 0px 15px 0px var(--tekstkleur);
   cursor: pointer;
 }
+#box4 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #box5 {
   background-image: url("../images/hot_items/pralines.png");
   background-size: 130px;
   background-repeat: no-repeat;
   background-position: top;
-  width: 225px;
+  width: 230px;
   transition: 0.5s;
   padding-left: 20px;
   padding-right: 7px;
@@ -341,6 +364,11 @@ aside figure img:hover {
   cursor: pointer;
   background-size: 145px;
   background-position: 50% -5%;
+}
+#box5 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #box6 {
   background-image: url("../images/hot_items/taart4_clean.png");
@@ -361,12 +389,17 @@ aside figure img:hover {
   background-size: 145px;
   background-position: 50% -5%;
 }
+#box6 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #box7 {
   background-image: url("../images/hot_items/frisco3_clean_CROPPED_ROUNDED.png");
   background-size: 130px;
   background-repeat: no-repeat;
   background-position: 50% 12%;
-  width: 155px;
+  width: 230px;
   transition: 0.5s;
   padding-left: 7px;
   padding-right: 7px;
@@ -380,12 +413,17 @@ aside figure img:hover {
   background-size: 145px;
   background-position: 50% 5%;
 }
+#box7 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #box8 {
   background-image: url("../images/onsaanbod/speculoos.png");
   background-size: 175px;
   background-repeat: no-repeat;
   background-position: 50% 10%;
-  width: 175px;
+  width: 230px;
   min-width: 175px;
   transition: 0.5s;
   padding-left: 7px;
@@ -400,6 +438,11 @@ aside figure img:hover {
   background-size: 190px;
   background-position: 50% 5%;
 }
+#box8 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #holiday1 {
   background-image: url("../images/holiday_specials/cherry_chocolate.png");
@@ -409,7 +452,7 @@ aside figure img:hover {
   width: 190px;
   transition: 0.5s;
   padding-left: 7px;
-  padding-right: 7px;
+  padding-right: 15px;
   border-radius: 10px;
   margin-left: -5px;
 }
@@ -421,6 +464,11 @@ aside figure img:hover {
   background-size: 155px;
   background-position: 50% 5%;
 }
+#holiday1 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #holiday2 {
   background-image: url("../images/holiday_specials/berry_christmas.png");
   background-size: 150px;
@@ -428,7 +476,7 @@ aside figure img:hover {
   background-position: 50% 12%;
   width: 190px;
   transition: 0.5s;
-  padding-left: 7px;
+  padding-left: 15px;
   padding-right: 7px;
   border-radius: 10px;
   margin-left: -15px;
@@ -440,6 +488,11 @@ aside figure img:hover {
   cursor: pointer;
   background-size: 165px;
   background-position: 50% 5%;
+}
+#holiday2 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #holiday3 {
   background-image: url("../images/holiday_specials/dome_berry.png");
@@ -460,6 +513,11 @@ aside figure img:hover {
   background-size: 165px;
   background-position: 50% 5%;
 }
+#holiday3 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #holiday4 {
   background-image: url("../images/holiday_specials/Glaasje_VanilleChocolade.png");
   background-size: 150px;
@@ -478,6 +536,11 @@ aside figure img:hover {
   cursor: pointer;
   background-size: 165px;
   background-position: 50% 5%;
+}
+#holiday4 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section h3 {
@@ -1011,7 +1074,7 @@ body > figure img {
     margin-top: -50px;
   }
   #containerholiday {
-    overflow-x: scroll;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1022,9 +1085,24 @@ body > figure img {
     margin-right: auto;
     /* padding-right: 10px; */
   }
+  #holiday1 {
+    width: 230px;
+    padding-left: 20px;
+  }
+  #holiday2 {
+    width: 230px;
+    padding-left: 20px;
+  }
+  #holiday3 {
+    width: 230px;
+  }
   #holiday4 {
-    min-width: 175px;
-    width: 175px;
+    width: 230px;
+  }
+  #holiday4 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #box1 {
     background-size: 100px;
@@ -1042,17 +1120,21 @@ body > figure img {
   }
   #box5 {
     width: 230px;
-    padding-left: 10px;
+    padding-left: 7px;
+    background-size: 110px;
   }
   #box6 {
     width: 230px;
+    background-size: 110px;
   }
   #box7 {
     width: 230px;
+    background-size: 110px;
   }
   #box8 {
     width: 230px;
     padding-left: 20px;
+    background-size: 155px;
   }
   footer div {
     text-align: center;
