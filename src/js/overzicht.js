@@ -848,8 +848,7 @@ submitButton.addEventListener("click", async function (e) {
     ["Taart", formattedCartDataTaart],
   ];
 
-  // Send the data to Google Sheets API
-  var url = "https://sheetdb.io/api/v1/ytdi2i160aaco";
+  var url = `https://sheetdb.io/api/v1/${CONFIG.GOOGLE_SHEET_API_KEY}`;
   var result = await fetch(url, {
     method: "post",
     headers: {
