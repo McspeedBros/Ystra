@@ -470,11 +470,11 @@ function linkPriceTaart() {
   let price;
   
   if (personen == 6) {
-    prijs.textContent = "Prijs: € 24,00";
-    price = 24;
+    prijs.textContent = "Prijs: € 30,00";
+    price = 30;
   } else if (personen == 8) {
-    prijs.innerHTML = "Prijs: € 32,00";
-    price = 32;
+    prijs.innerHTML = "Prijs: € 36,00";
+    price = 36;
   } else if (personen == 10) {
     prijs.innerHTML = "Prijs: € 40,00";
     price = 40;
