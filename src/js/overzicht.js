@@ -140,14 +140,12 @@ for (var i = 0; i < cart.length; i++) {
     product.name == "Cherry Chocolate" ||
     product.name == "Berry Christmas" ||
     product.name == "Choc Crock" ||
-    product.name == "Dome Classic" ||
-    product.name == "Dome Intense" ||
-    product.name == "Dome Cappuccino" ||
+    product.name == "Café Glace" ||
     product.name == "Dome Berry" ||
-    product.name == "Gin Tonic Frisco (per 2)" ||
-    product.name == "Yspralines Mix" ||
-    product.name == "Glaasje Vanille & Pistache" ||
-    product.name == "Glaasje Vanille & Chocolade"
+    product.name == "Dome Caramel" ||
+    product.name == "Dome Manon" ||
+    product.name == "Merveilleux" ||
+    product.name == "Yspralines Mix"
   ) {
     productCategory = categories[7];
   }

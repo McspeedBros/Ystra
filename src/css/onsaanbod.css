@@ -807,30 +807,25 @@ main img:hover{
 #choccrock1 {
     min-width: 175px;
 }
-#domeclassic1 {
-    min-width: 180px;
-}
-#domeintense1 {
-    min-width: 180px;
-}
-#domecappuccino1 {
+#cafeglace1 {
     min-width: 180px;
 }
 #domeberry1 {
     min-width: 180px;
 }
-#gintonicfrisco1 {
-    min-width: 275px;
+#domecaramel1 {
+    min-width: 180px;
+}
+#domemanon1 {
+    min-width: 180px;
+}
+#merveilleux1 {
+    min-width: 180px;
 }
 #yspralinesmix1 {
     min-width: 275px;
 }
-#glaspistache1 {
-    min-width: 275px;
-}
-#glaschoc1 {
-    min-width: 275px;
-}
+
 
 /* separate images flavours */
 #vanillagold {
@@ -864,34 +859,34 @@ main img:hover{
     margin-top: -13px;
     margin-left: -15px;
 }
-#domeclassic {
-    height: 125px;
-    width: auto;
-    margin-top: -15px;
-    margin-left: -15px;
-}
-#domeintense {
-    height: 130px;
-    width: auto;
-    margin-top: -22px;
-    margin-left: -15px;
-}
-#domecappuccino {
+#cafeglace {
     height: 125px;
     width: auto;
     margin-top: -15px;
     margin-left: -15px;
 }
 #domeberry {
+    height: 130px;
+    width: auto;
+    margin-top: -22px;
+    margin-left: -15px;
+}
+#domecaramel {
+    height: 125px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+#domemanon {
     height: 125px;
     width: auto;
     margin-top: -13px;
     margin-left: -15px;
 }
-#gintonicfrisco {
+#merveilleux {
     height: 125px;
     width: auto;
-    margin-top: -13px;
+    margin-top: -15px;
     margin-left: -15px;
 }
 #yspralinesmix {
@@ -899,18 +894,6 @@ main img:hover{
     width: auto;
     margin-top: -5px;
     margin-left: -15px;
-}
-#glaspistache {
-    height: 125px;
-    width: auto;
-    margin-top: -5px;
-    margin-left: -5px;
-}
-#glaschoc {
-    height: 125px;
-    width: auto;
-    margin-top: -5px;
-    margin-left: -5px;
 }
 
 
