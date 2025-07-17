@@ -60,6 +60,82 @@ main {
     padding: 0 2rem;
 }
 
+/* Search Section */
+.search-section {
+    background: var(--backgroundcolor);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid var(--Goud);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.search-section h2 {
+    font-size: 1.8rem;
+    color: var(--Goud);
+    margin-bottom: 1rem;
+    font-family: "Dancing Script", cursive;
+}
+
+.search-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--Goud);
+    border-radius: 25px;
+    background-color: var(--backgroundcolor);
+    color: var(--tekstkleur);
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: "Akaya Telivigala", cursive;
+}
+
+.search-input:focus {
+    border-color: var(--Goud);
+    box-shadow: 0 0 10px rgba(197, 182, 115, 0.3);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.clear-search {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--Goud);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.clear-search:hover {
+    background-color: rgba(197, 182, 115, 0.2);
+}
+
+.clear-search.show {
+    display: block;
+}
+
+.search-results {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--tekstkleur);
+}
+
 /* FAQ Container */
 .faq-container {
     background: var(--backgroundcolor);
@@ -130,12 +206,12 @@ main {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    transition: max-height 0.4s ease, padding 0.3s ease;
     background-color: rgba(197, 182, 115, 0.05);
 }
 
 .faq-answer.active {
-    max-height: 200px;
+    max-height: 1000px; /* Increased for longer content */
     padding: 1.5rem 2rem;
 }
 
@@ -266,6 +342,7 @@ figure a img:hover {
     
     .faq-answer.active {
         padding: 1rem 1.5rem;
+        max-height: 1000px; /* Increased for mobile too */
     }
     
     .contact-info {

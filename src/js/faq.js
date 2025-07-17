@@ -76,6 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', () => {
         document.body.style.opacity = '1';
     });
+
+    // Initialize search functionality
+    initializeSearch();
 });
 
 // Initialize page with fade-in effect
@@ -94,10 +97,11 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Add search functionality (basic)
+// Add search functionality (enhanced)
 function searchFAQ(searchTerm) {
     const faqItems = document.querySelectorAll('.faq-item');
     const normalizedSearchTerm = searchTerm.toLowerCase();
+    let visibleCount = 0;
     
     faqItems.forEach(item => {
         const questionText = item.querySelector('.faq-question h3').textContent.toLowerCase();
@@ -105,8 +109,57 @@ function searchFAQ(searchTerm) {
         
         if (questionText.includes(normalizedSearchTerm) || answerText.includes(normalizedSearchTerm)) {
             item.style.display = 'block';
+            visibleCount++;
         } else {
             item.style.display = 'none';
+        }
+    });
+
+    // Update search results
+    const searchResults = document.getElementById('searchResults');
+    if (searchTerm.trim() === '') {
+        searchResults.textContent = '';
+    } else if (visibleCount === 0) {
+        searchResults.textContent = 'Geen resultaten gevonden.';
+    } else {
+        searchResults.textContent = `${visibleCount} ${visibleCount === 1 ? 'resultaat' : 'resultaten'} gevonden.`;
+    }
+}
+
+// Initialize search functionality
+function initializeSearch() {
+    const searchInput = document.getElementById('faqSearch');
+    const clearButton = document.getElementById('clearSearch');
+    const searchResults = document.getElementById('searchResults');
+
+    if (!searchInput || !clearButton || !searchResults) return;
+
+    // Search input event listener
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value;
+        searchFAQ(searchTerm);
+        
+        // Show/hide clear button
+        if (searchTerm.trim() !== '') {
+            clearButton.classList.add('show');
+        } else {
+            clearButton.classList.remove('show');
+        }
+    });
+
+    // Clear button event listener
+    clearButton.addEventListener('click', function() {
+        searchInput.value = '';
+        searchFAQ('');
+        clearButton.classList.remove('show');
+        searchInput.focus();
+    });
+
+    // Enter key search
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            searchFAQ(this.value);
         }
     });
 }
