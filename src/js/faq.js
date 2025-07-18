@@ -163,6 +163,12 @@ function initializeSearch() {
         }
     });
 }
+function openWhatsAppChat() {
+      const phoneNumber = '32470721968'; // Vul hier je telefoonnummer in zonder "+" of "00"
+      const message = encodeURIComponent("Hallo, ik heb een vraag voor jullie: ");
+      const url = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(url, '_blank');
+    }
 
-// Export search function for potential use
 window.searchFAQ = searchFAQ;
+window.openWhatsAppChat = openWhatsAppChat;
